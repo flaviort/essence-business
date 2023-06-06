@@ -10,21 +10,21 @@
 			<meta name='format-detection' content='telephone=no'>
 			<link rel='shortcut icon' href='favicon.png'>
 
-			<meta name='author' content='Essence Business - Consultoria e Treinamentos'>
+			<meta name='author' content='Essence Business - Importação e Exportação'>
 
-			<title>Essence Business - Consultoria e Treinamentos <?php echo htmlspecialchars($page);?></title>
+			<title>Essence Business - Importação e Exportação <?php echo htmlspecialchars($page);?></title>
 
 			<!-- google -->
-			<meta name='description' content='Essence Business - Consultoria e Treinamentos'/>
+			<meta name='description' content='Essence Business - Importação e Exportação'/>
 			<link rel='canonical' href='<?php echo($siteUrl); ?>' />
 				
 			<!-- facebook -->
 			<meta property='og:locale' content='pt_BR' />
 			<meta property='og:type' content='website' />
-			<meta property='og:title' content='Essence Business - Consultoria e Treinamentos' />
-			<meta property='og:description' content='Essence Business - Consultoria e Treinamentos' />
+			<meta property='og:title' content='Essence Business - Importação e Exportação' />
+			<meta property='og:description' content='Essence Business - Importação e Exportação' />
 			<meta property='og:url' content='<?php echo($siteUrl); ?>/' />
-			<meta property='og:site_name' content='Essence Business - Consultoria e Treinamentos' />
+			<meta property='og:site_name' content='Essence Business - Importação e Exportação' />
 			<meta property='og:image' content='<?php echo($siteUrl); ?>/assets/img/og-image.jpg' />
 			<meta property='og:image:secure_url' content='<?php echo($siteUrl); ?>/assets/img/og-image.jpg' />
 			<meta property='og:image:width' content='1200' />

@@ -25,7 +25,9 @@
 				</p>
 
 				<p class='address'>
-					<b>Endereço:</b> Av. Jaime Reis, 30 - Conj. 12 - São Francisco, Curitiba - PR, 80510-010
+					<b>Endereço:</b> <br />
+					Av. Anita Garibaldi, 850 - Infinity Prime Offices<br />
+					Sala 308 - Cabral - Curitiba / PR - CEP: 80540-400 
 				</p>
 
 			</div>
