@@ -52,11 +52,13 @@
     }
 }
 
-.green-light-button {
+.green-light-button,
+.blue-button {
     display: inline-block;
     padding: 1rem 2rem;
     margin: -1rem -2rem;
     transition: all .3s ease;
+    width: fit-content;
 
     span {
         position: relative;
@@ -67,8 +69,6 @@
         justify-content: center;
         width: fit-content;
         gap: .25rem;
-        background-color: $green-light;
-        color: darken($green, 15);
         font-weight: $bold;
         text-transform: uppercase;
         padding: 1.25rem 3rem;
@@ -78,9 +78,28 @@
         text-align: center;
         transition: transform .6s cubic-bezier(0.3, 1, 0.7, 1), background-color .3s, color .3s;
         will-change: transform;
+    }
+}
+
+.green-light-button {
+    span {
+        background-color: $green-light;
+        color: darken($green, 30);
 
         &:hover {
             background-color: darken($green, 15);
+            color: $white;
+        }
+    }
+}
+
+.blue-button {
+    span {
+        background-color: $blue;
+        color: $white;
+
+        &:hover {
+            background-color: darken($blue, 25);
             color: $white;
         }
     }

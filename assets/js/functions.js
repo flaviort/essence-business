@@ -219,7 +219,7 @@ function initScrollSmoother() {
 		const smoother = ScrollSmoother.create({
 			wrapper: '#smooth-content',
 			content: '#smooth-content .main-wrap',
-			smooth: 1.25,
+			smooth: 2,
 			effects: true,
 			normalizeScroll: true
 		})
@@ -378,8 +378,30 @@ barba.init({
 	views: [
 		{
 			namespace: 'home',
-			afterEnter() {
-				
+			beforeEnter() {
+
+				// fixed home banner
+				ScrollTrigger.create({
+					trigger: '#home-banner .bg',
+					pin: true,
+					start: 'top top',
+					end: vh(100),
+					markers: true
+				})
+
+				// block about
+				gsap.from('#about', {
+					y: vh(-12.5),
+					borderTopLeftRadius: '0.75rem',
+					borderTopRightRadius: '0.75rem',
+					scale: .9,
+					scrollTrigger: {
+						trigger: '#home-banner',
+						start: '1 top',
+						end: vh(90),
+						scrub: 2
+					},
+				})
 			},
 		}
 	]
