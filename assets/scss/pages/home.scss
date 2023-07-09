@@ -1,7 +1,39 @@
 #main-content {
     &.home {
         #home-banner {
+            text-align: center;
+            padding-top: 25vw;
+            color: $white;
+            background-color: darken($green, 50);
+
+            @media #{$mq-xs-min} {
+                padding-top: 6.75rem;
+            }
             
+            @media #{$mq-2xl-min} {
+                padding-top: 8rem;
+            }
+
+            .col-12 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2vw;
+                min-height: 100vh;
+                min-height: 110svh;
+
+                h1 {
+                    margin-top: -14.275vw;
+                }
+
+                p {
+                    display: block;
+                    margin: 0 auto .5rem auto;
+                    width: 22rem;
+                    max-width: 100%;
+                }
+            }
         }
     }
 }

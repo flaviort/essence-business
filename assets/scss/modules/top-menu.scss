@@ -1,3 +1,162 @@
 #top-menu {
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    margin: auto;
+    transform: translateY(-125%);
+    transition: 1s ease-in-out;
+    overflow: visible;
+
+    &.fixed {
+        transform: none;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.25rem;
+        border-radius: .25rem;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: $green-light;
+        overflow: hidden;
+        border: 1px solid darken($green-light, 7.5);
+
+        @media #{$mq-sm-min} {
+            margin-top: 1rem;
+            padding: 1rem 1.25rem;
+            gap: 1.5rem;
+        }
+
+        @media #{$mq-xl-min} {
+            padding: 1.5rem;
+            gap: 1rem;
+        }
+
+        @media #{$mq-2xl-min} {
+            padding: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            width: 20rem;
+            margin-left: -.5rem;
+
+            @media #{$mq-sm-min} {
+                margin-left: 0;
+            }
+
+            @media #{$mq-xl-min} {
+                width: 13rem;
+            }
+
+            @media #{$mq-2xl-min} {
+                width: 15rem;
+            }
+
+            svg {
+                width: 100%;
+                mix-blend-mode: darken;
+            }
+        }
+
+        .menu {
+            display: none;
+            align-items: center;
+            gap: 1.25rem;
+
+            @media #{$mq-xl-min} {
+                display: flex;
+            }
+
+            @media #{$mq-2xl-min} {
+                gap: 2rem;
+            }
+
+            a {
+                text-transform: uppercase;
+                font-size: 80%;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: .75rem;
+
+            @media #{$mq-sm-min} {
+                gap: 1rem;
+            }
+
+            .language {
+                position: relative;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .25rem;
+
+                @media #{$mq-sm-min} {
+                    gap: .5rem;
+                }
+
+                &:before {
+                    position: absolute;
+                    left: -2.5rem;
+                    top: -5rem;
+                    width: 1px;
+                    height: 20rem;
+                    background-color: $green;
+
+                    @media #{$mq-xl-min} {
+                        content: '';
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: .35rem .625rem;
+                    border-radius: 2rem;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    transition: .6s;
+
+                    &:hover {
+                        background-color: $blue-light;
+                    }
+
+                    &.active {
+                        background-color: $black;
+                        color: $green;
+                    }
+                }
+            }
+
+            .open-fs {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 1.25rem;
+                width: 1.25rem;
+                height: 1.25rem;
+                transition: .6s;
+
+                @media #{$mq-xl-min} {
+                    display: none;
+                }
+
+                &:hover {
+                    transform: rotate(-90deg);
+                }
+
+                svg {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

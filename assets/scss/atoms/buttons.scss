@@ -52,7 +52,7 @@
     }
 }
 
-.hollow-button {
+.green-light-button {
     display: inline-block;
     padding: 1rem 2rem;
     margin: -1rem -2rem;
@@ -67,13 +67,11 @@
         justify-content: center;
         width: fit-content;
         gap: .25rem;
-        background-color: transparent;
-        border: 1px solid $black;
-        color: $black;
+        background-color: $green-light;
+        color: darken($green, 15);
         font-weight: $bold;
         text-transform: uppercase;
-        padding: 1.25rem 2rem;
-        font-size: 80%;
+        padding: 1.25rem 3rem;
         line-height: 1;
         border-radius: 10rem;
         white-space: nowrap;
@@ -82,7 +80,7 @@
         will-change: transform;
 
         &:hover {
-            background-color: $black;
+            background-color: darken($green, 15);
             color: $white;
         }
     }

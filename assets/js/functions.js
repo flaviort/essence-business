@@ -112,6 +112,28 @@ function initFancybox() {
 	})
 }
 
+// init the top menu
+function initTopMenu() {
+	
+	let currentScroll = 0;
+	let isScrollingDown = true;
+	var topMenu = document.getElementById('top-menu')
+
+	window.addEventListener('scroll', function(){
+	
+		if ( window.pageYOffset > currentScroll ) {
+			isScrollingDown = true;
+			topMenu.classList.remove('fixed');
+		} else {
+			isScrollingDown = false;
+			topMenu.classList.add('fixed');
+		}
+		
+		currentScroll = window.pageYOffset
+		
+	})
+}
+
 // validate footer newsletter
 function validateForms() {
 	if(selectAll(".form-validate")) {
@@ -310,6 +332,7 @@ function initScript() {
 	scrollTriggerAnimations()
 	initScrollSmoother()
 	initCopyright()
+	initTopMenu()
 }
 
 // barba

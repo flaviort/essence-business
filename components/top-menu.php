@@ -1,4 +1,4 @@
-<section id='top-menu'>
+<section id='top-menu' class='fixed'>
     <div class='container container-big'>
         <div class='row'>
             <div class='col-12'>
@@ -42,25 +42,25 @@
 
                     </ul>
 
-                    <div class='language'>
+                    <div class='right'>
+                    
+                        <div class='language text-small'>
 
-                        <p class='text-small'>
-                            Língua
-                        </p>
+                            <a href='./' class='active'>
+                                PT
+                            </a>
 
-                        <a href='./'>
-                            PT
-                        </a>
+                            <a href='en'>
+                                EN
+                            </a>
 
-                        <a href='en'>
-                            EN
-                        </a>
+                        </div>
+
+                        <button class='open-fs'>
+                            <?php echo file_get_contents('assets/svg/ux/menu.svg') ?>
+                        </button>
 
                     </div>
-
-                    <button class='open-fs'>
-                        <?php echo file_get_contents('assets/svg/ux/menu.svg') ?>
-                    </button>
 
                 </div>
             </div>
