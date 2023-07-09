@@ -10,10 +10,40 @@
 
                     <ul class='menu'>
 
-                        <li>
-                            <a href='servicos' class='hover-underline'>
+                        <li class='has-sub'>
+                            
+                            <p class='hover-underline'>
                                 Serviços
-                            </a>
+                            </p>
+
+                            <ul class='sub'>
+
+                                <li>
+                                    <a href='importacao' class='hover-underline'>
+                                        Importação
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href='exportacao' class='hover-underline'>
+                                        Exportação
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href='transportes-e-cargas' class='hover-underline'>
+                                        Transportes e Cargas
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href='cursos-e-treinamentos' class='hover-underline'>
+                                        Cursos e Treinamentos
+                                    </a>
+                                </li>
+
+                            </ul>
+
                         </li>
 
                         <li>

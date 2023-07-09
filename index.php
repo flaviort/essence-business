@@ -17,7 +17,7 @@
         <div class='row'>
 			<div class='col-12'>
 				
-				<h1 class='text-bigger'>
+				<h1 class='text-bigger reveal-text'>
 					Soluções <br />
 					eficientes
 				</h1>
@@ -26,11 +26,11 @@
 					para impulsionar o crescimento do agronegócio
 				</p>
 
-				<a href='servicos' class='green-light-button magnet'>
+				<button class='green-light-button magnet'>
 					<span>
 						Explore
 					</span>
-				</a>
+				</button>
 
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 					<img data-src='assets/img/about-01.jpg' alt='Essence Business' class='lazy cover parallax-img'>
 				</div>
 
-				<div class='image-02'>
+				<div class='image-02' data-speed='1.2'>
 					<img data-src='assets/img/about-02.jpg' alt='Essence Business' class='lazy cover parallax-img'>
 				</div>
 
@@ -88,8 +88,8 @@
 	</div>
 </section>
 
-<section id='parallax' style='height: 200vh; background: green'>
-	
+<section id='parallax'>
+	<img data-src='assets/img/grains.jpg' alt='Grãos' class='lazy cover'>
 </section>
 
 <section id='services'>
@@ -103,9 +103,28 @@
 </section>
 
 <section id='world'>
+
+	<div class='bg'>
+		<img data-src='assets/img/solidarity.jpg' alt='Essence por um mundo solidário' class='lazy cover'>
+	</div>
+
 	<div class='container container-big'>
         <div class='row'>
-			<div class='col-12'>
+			<div class='col-md-10 col-lg-8 col-xl-6'>
+
+				<h2 class='text-bigger'>
+					Essence por um mundo solidário
+				</h2>
+
+				<p class='desc'>
+					Nós acreditamos firmemente na importância de fazer a diferença em nossa comunidade e contribuir para um mundo melhor. Por isso, temos o orgulho de apoiar e colaborar com organizações não governamentais (ONGs) que estão trabalhando arduamente para promover causas nobres.
+				</p>
+
+				<a href='projetos-sociais' class='blue-button magnet'>
+					<span>
+						Saiba Mais
+					</span>
+				</a>
 
 			</div>
 		</div>
@@ -116,7 +135,39 @@
 	<div class='container container-big'>
         <div class='row'>
 			<div class='col-12'>
+				<div class='box'>
+					<div class='row'>
 
+						<div class='col-md-6 left'>
+
+							<p class='text-big'>
+								<b>
+									Trabalhamos para impulsionar o sucesso de sua operação 
+								</b>
+							</p>
+
+							<p class='desc'>
+								e enfrentar os desafios do setor de forma eficiente e inovadora. 
+							</p>
+
+						</div>
+
+						<div class='col-md-6 right'>
+
+							<p>
+								Conte conosco para receber assistência profissional e dedicada em todas as etapas do processo.
+							</p>
+
+							<a href='contato' class='blue-button magnet'>
+								<span>
+									Fale Conosco
+								</span>
+							</a>
+
+						</div>
+
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

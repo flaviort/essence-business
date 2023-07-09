@@ -15,12 +15,12 @@ function initClickAndKeyFunctions() {
 	function isDoubleClicked(e) {
 
 		// if already clicked return TRUE to indicate this click is not allowed
-		if (e.data("isclicked")) return true;
+		if (e.data('isclicked')) return true;
 	
 		// mark as clicked for 1 second
-		e.data("isclicked", true);
+		e.data('isclicked', true);
 		setTimeout(function () {
-			e.removeData("isclicked")
+			e.removeData('isclicked')
 		}, 300)
 	
 		// return FALSE to indicate this click was allowed
@@ -34,6 +34,30 @@ function initClickAndKeyFunctions() {
 
 	var fsMenu = gsap.timeline({
 		paused: true
+	})
+
+	fsMenu.to('#fs-menu', {
+		pointerEvents: 'all',
+		duration: 0
+	})
+
+	fsMenu.to('#mouse', {
+		borderColor: '#fff',
+		duration: 1
+	})
+
+	fsMenu.to('#fs-menu .bg div', {
+		height: '100%',
+		stagger: .1
+	}, '-=1')
+
+	fsMenu.to('#fs-menu .close-fs', {
+		autoAlpha: 1
+	}, '-=.5')
+
+	fsMenu.to('#fs-menu .menu > li', {
+		autoAlpha: 1,
+		stagger: .1
 	})
 
 	// open / close fs menu
@@ -51,6 +75,12 @@ function initClickAndKeyFunctions() {
 			$('body').removeClass('fs-menu-open')
 			fsMenu.reverse()
 		}
+	})
+
+	// open / close fs menu sub menu
+	$('#fs-menu .menu .has-sub p, #fs-menu .menu .has-sub svg').click(function(){
+		$('#fs-menu .menu .has-sub .sub').slideToggle()
+		$('#fs-menu .menu .has-sub svg').toggleClass('active')
 	})
 
 	// faq open / close
@@ -136,7 +166,7 @@ function initTopMenu() {
 
 // validate footer newsletter
 function validateForms() {
-	if(selectAll(".form-validate")) {
+	if(selectAll('.form-validate')) {
 
 		const form = $('.form-validate')
 
@@ -164,7 +194,7 @@ function updateMenu() {
 	setTimeout(function(){
 
 		if($('#main-content').hasClass('home')) {
-			$('#fs-menu .menu li:first-child a').addClass('active')
+			$('#fs-menu .menu > li:first-child a').addClass('active')
 		}
 	}, 100)
 }
@@ -215,35 +245,41 @@ function delay(n) {
 
 // init scroll smoother
 function initScrollSmoother() {
-	if (ScrollTrigger.isTouch !== 1) {
-		const smoother = ScrollSmoother.create({
-			wrapper: '#smooth-content',
-			content: '#smooth-content .main-wrap',
-			smooth: 2,
-			effects: true,
-			normalizeScroll: true
-		})
+	const smoother = ScrollSmoother.create({
+		wrapper: '#smooth-content',
+		content: '#smooth-content .main-wrap',
+		smooth: 2,
+		effects: true,
+		//normalizeScroll: true
+	})
 
-		// parallax effect
-		smoother.effects('.parallax-img', {
-			speed: 'auto'
-		})
+	// parallax effect
+	smoother.effects('.parallax-img', {
+		speed: 'auto'
+	})
 
-		// pause / play scroll smoother on some determined actions
-		$('.open-fs').click(function(){
-			smoother.paused(true)
+	// scroll buttons
+	$('#home-banner button').click(function(){
+		gsap.to(smoother, {
+			scrollTop: Math.min(ScrollTrigger.maxScroll(window), smoother.offset('#about', '75 top')),
+			duration: 2
 		})
+	})
 
-		$('#fs-menu a, .close-fs').click(function(){
+	// pause / play scroll smoother on some determined actions
+	$('.open-fs').click(function(){
+		smoother.paused(true)
+	})
+
+	$('#fs-menu a, .close-fs').click(function(){
+		smoother.paused(false)
+	})
+
+	$(document).keyup(function(e) {
+		if(e.key === 'Escape') {
 			smoother.paused(false)
-		})
-
-		$(document).keyup(function(e) {
-			if(e.key === 'Escape') {
-				smoother.paused(false)
-			}
-		})
-	}
+		}
+	})
 }
 
 // here goes all the scroll related animations
@@ -277,7 +313,7 @@ function scrollTriggerAnimations() {
                 duration: .75, 
                 ease: 'circ.out', 
                 y: 100 + '%', 
-                stagger: .1
+                stagger: .05
             })
         })
 	}
@@ -315,10 +351,50 @@ function initSliders() {
 
 // disable console warnings and show skyline message
 function initCopyright() {
-	console.clear()
+	//console.clear()
 	const message = 'Masterpiece by Senz Design 🔗 www.senzdsn.com'
 	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
 	console.log(`%c${message}`, style)
+}
+
+// custom mouse cursor
+function initMouseCursor() {
+
+	let links = selectAll('a, button')
+	let mouse = document.getElementById('mouse');
+
+	for (let i = 0; i < links.length; i++) {
+		links[i].addEventListener('mouseover', function(){
+			gsap.to(mouse, {
+				scale: 2,
+				width: '3rem',
+				height: '3rem',
+				marginTop: '-1.5rem',
+				marginLeft: '-1.5rem'
+			})
+		});
+	};
+	
+	for (let i = 0; i < links.length; i++) {
+		links[i].addEventListener('mouseleave', function(){
+			gsap.to(mouse, {
+				scale: 1,
+				width: '1.5rem',
+				height: '1.5rem',
+				marginTop: '-.75rem',
+				marginLeft: '-.75rem'
+			})
+		});
+	};
+
+	function moveCircle(e) {
+		gsap.to(mouse, .5, {
+			x: e.clientX,
+			y: e.clientY
+		})
+	}
+	
+	window.addEventListener('mousemove', moveCircle)
 }
 
 // fire all scripts on page load
@@ -333,6 +409,7 @@ function initScript() {
 	initScrollSmoother()
 	initCopyright()
 	initTopMenu()
+	initMouseCursor()
 }
 
 // barba
@@ -385,13 +462,12 @@ barba.init({
 					trigger: '#home-banner .bg',
 					pin: true,
 					start: 'top top',
-					end: vh(100),
-					markers: true
+					end: vh(100)
 				})
 
-				// block about
+				// expading block about (below the home)
 				gsap.from('#about', {
-					y: vh(-12.5),
+					y: '-5rem',
 					borderTopLeftRadius: '0.75rem',
 					borderTopRightRadius: '0.75rem',
 					scale: .9,
@@ -400,7 +476,43 @@ barba.init({
 						start: '1 top',
 						end: vh(90),
 						scrub: 2
-					},
+					}
+				})
+
+				// fill text animation
+				gsap.to('#about .featured span', {
+					backgroundPositionX: 0,
+					ease: 'none',
+					scrollTrigger: {
+						trigger: '#about .featured',
+						scrub: 2,
+						start: 'top 90%',
+						end: 'bottom 75%'
+					}
+				})
+
+				// parallax bg in the grains section
+				gsap.to('#parallax img', {
+					y: '-25%',
+					ease: 'none',
+					scrollTrigger: {
+						trigger: '#parallax',
+						scrub: 2,
+						start: 'top bottom',
+						end: 'bottom top'
+					}
+				})
+
+				// parallax bg in the sustainability section
+				gsap.to('#world .bg', {
+					y: '-25%',
+					ease: 'none',
+					scrollTrigger: {
+						trigger: '#world',
+						scrub: 2,
+						start: 'top bottom',
+						end: 'bottom top'
+					}
 				})
 			},
 		}

@@ -48,6 +48,7 @@
 				<?php include('components/top-menu.php');?>
 				<?php include('components/fs-menu.php');?>
 				<?php include('components/page-transition.php');?>
+				<div id='mouse'></div>
 			</header>
 
 			<main id='main-content' data-barba='container' data-barba-namespace='<?php echo($currentPage); ?>' class='<?php echo($currentPage); ?>'>

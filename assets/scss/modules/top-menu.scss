@@ -22,7 +22,6 @@
         padding: 1rem;
         margin-top: 1rem;
         background-color: $green-light;
-        overflow: hidden;
         border: 1px solid darken($green-light, 7.5);
 
         @media #{$mq-sm-min} {
@@ -37,7 +36,7 @@
         }
 
         @media #{$mq-2xl-min} {
-            padding: 2rem;
+            padding: 1.5rem 2rem;
         }
 
         .logo {
@@ -76,9 +75,63 @@
                 gap: 2rem;
             }
 
-            a {
-                text-transform: uppercase;
-                font-size: 80%;
+            li {
+                a {
+                    text-transform: uppercase;
+                    font-size: 80%;
+                }
+
+                &.has-sub {
+                    position: relative;
+
+                    &:hover {
+                        p {
+                            background-size: 100% var(--border-width);
+                        }
+
+                        .sub {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+
+                    p {
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: 80%;
+                        margin-bottom: 2rem;
+                        transform: translateY(1.05rem);
+                    }
+
+                    .sub {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        background-color: darken($green, 30);
+                        color: $white;
+                        padding: .5rem 1rem;
+                        border-radius: .1rem;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .3s;
+
+                        &:before {
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            border-style: solid;
+                            border-width: 0 .5rem .5rem .5rem;
+                            border-color: transparent transparent darken($green, 30) transparent;
+                            position: absolute;
+                            top: -.4rem;
+                            left: 1rem;
+                        }
+
+                        a {
+                            white-space: nowrap;
+                        }
+                    }
+                }
             }
         }
 
@@ -107,9 +160,9 @@
                 &:before {
                     position: absolute;
                     left: -2.5rem;
-                    top: -5rem;
+                    top: -2.25rem;
                     width: 1px;
-                    height: 20rem;
+                    height: 6rem;
                     background-color: $green;
 
                     @media #{$mq-xl-min} {
