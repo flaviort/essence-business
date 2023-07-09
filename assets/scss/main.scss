@@ -1,24 +1,20 @@
 // use these to create a big main.scss
 @import 'atoms/variables';
-//@import 'atoms/breakpoints';
+@import 'atoms/breakpoints';
 @import 'atoms/scroll';
 @import 'atoms/containers';
-@import 'atoms/fonts';
 @import 'atoms/texts';
-//@import 'atoms/buttons';
-//@import 'atoms/form';
-//@import 'atoms/animations';
+@import 'atoms/buttons';
+@import 'atoms/form';
+@import 'atoms/animations';
 @import 'atoms/global';
 
 // modules
-//@import 'modules/opening-animation';
-//@import 'modules/top-menu';
-//@import 'modules/fs-menu';
-//@import 'modules/footer';
-//@import 'modules/popups';
-//@import 'modules/page-transition';
-//@import 'modules/image-reveal';
-//@import 'modules/faq-question';
+@import 'modules/top-menu';
+@import 'modules/fs-menu';
+@import 'modules/footer';
+@import 'modules/popups';
+@import 'modules/page-transition';
 
 // pages
 @import 'pages/home';

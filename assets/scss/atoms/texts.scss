@@ -1,14 +1,18 @@
 .text-small {
-	font-size: .75rem;
+	font-size: .85rem;
 
 	@media #{$mq-2xl-min} {
-		font-size: .65rem;
+		font-size: .75rem;
 	}
 }
 
 .text-medium {
-	font-size: 1.35rem;
+	font-size: 1.175rem;
 	line-height: 1.25;
+
+	@media #{$mq-sm-min} {
+		font-size: 1.35rem;
+	}
 }
 
 .text-big {

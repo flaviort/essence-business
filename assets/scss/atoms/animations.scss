@@ -8,24 +8,19 @@
 	}
 }
 
-@keyframes floating {
-	0% {
-		transform: translateY(0);
-	}
+.once-in {
+	will-change: transform;
+}
 
-	25% {
-		transform: translateY(-1rem);
-	}
-
-	75% {
-		transform: translateY(1rem);
-	}
-
-	100% {
-		transform: translateY(0);
+.split-line {
+	overflow: hidden;
+	
+	* {
+		will-change: transform;
 	}
 }
 
-.once-in {
-	will-change: transform;
+.reveal-text {
+	position: relative;
+	overflow: hidden;
 }

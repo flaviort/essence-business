@@ -1,5 +1,11 @@
 // register split text
-gsap.registerPlugin(SplitText)
+gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother)
+
+const body = document.body;
+const select = (e) => document.querySelector(e);
+const selectAll = (e) => document.querySelectorAll(e);
+const selectId = (id) => document.getElementById(id);
+const vh = (coef) => window.innerHeight * (coef/100);
 
 // init all click, mouseover and keyup functions
 function initClickAndKeyFunctions() {
@@ -7,85 +13,94 @@ function initClickAndKeyFunctions() {
 	// prevent barba from double clicking buttons more than once
 	// https://stackoverflow.com/a/36794629/4658966
 	function isDoubleClicked(e) {
+
 		// if already clicked return TRUE to indicate this click is not allowed
 		if (e.data("isclicked")) return true;
 	
 		// mark as clicked for 1 second
 		e.data("isclicked", true);
 		setTimeout(function () {
-			e.removeData("isclicked");
-		}, 300);
+			e.removeData("isclicked")
+		}, 300)
 	
 		// return FALSE to indicate this click was allowed
 		return false;
 	}
-
-	// make anchor links scroll smoothy
-	$('.sliding-link').click(function(e) {
-		e.preventDefault()
-		var aid = $(this).attr('href')
-		$('html, body').animate({ scrollTop: $(aid).offset().top }, 'slow')
-	})
 
 	// correct label click
 	$('label').click(function(e){
 		e.stopImmediatePropagation()
 	})
 
-	// open / close fs menu
-	$('.open-fs').click(function(){
-		if (isDoubleClicked($(this))) return;
-		$(this).toggleClass('opened')
-		$('body').toggleClass('fs-menu-open')
+	var fsMenu = gsap.timeline({
+		paused: true
 	})
 
-	$('#fs-menu a, #top-menu a').click(function(){
-		if (isDoubleClicked($(this))) return;
-		$('.open-fs').removeClass('opened')
-		$('body').removeClass('fs-menu-open')
+	// open / close fs menu
+	$('.open-fs').click(function(){
+		fsMenu.play()
+	})
+
+	$('.close-fs, #fs-menu .bg, #fs-menu a').click(function(){
+		fsMenu.reverse()
 	})
 
 	// close all opened menus when pressing the ESC key
 	$(document).keyup(function(e) {
 		if(e.key === 'Escape') {
 			$('body').removeClass('fs-menu-open')
-			$('.open-fs').removeClass('opened')
+			fsMenu.reverse()
 		}
 	})
 
 	// faq open / close
-	$('.faq-question .title').click(function(){
+	$('.faq-question .question').click(function(){
 		if (isDoubleClicked($(this))) return;
 		$(this).parent('.faq-question').toggleClass('active')
-		$(this).siblings('.desc').slideToggle()
+		$(this).siblings('.answer').slideToggle()
 		setTimeout(function(){
 			ScrollTrigger.refresh()
 		}, 450)
 	})
 
-	// show / hide password
-	$('.show-hide-pass').click(function(){
-		if (isDoubleClicked($(this))) return;
-		var that = $(this);
-		that.toggleClass('active');
+	// magnet links
+    if ($(window).width() > 993) {
+        const links = selectAll('.magnet')
+        const animateLink = function(e){
+            const link = this.querySelector('span');
+            const { offsetX: x, offsetY: y } = e
+            const { offsetWidth: width, offsetHeight: height } = this;
 
-		setTimeout(function() {
-			if (that.hasClass('active')){
-				that.siblings('input').attr('type','text');
-			} else {
-				that.siblings('input').attr('type','password');
-			}
-		}, 30)
-	})
+            intensity = 50;
+            xMove = x / width * (intensity * 2) - intensity;
+            yMove = y / height * (intensity * 2) - intensity;
+            link.style.transform = 'translate(' + xMove + 'px,' + yMove + 'px)';
+
+            if(e.type == 'mouseleave') link.style.transform = '';
+        }
+
+        links.forEach(link => {
+            link.addEventListener('mousemove', animateLink)
+            link.addEventListener('mouseleave', animateLink)
+        })
+    }
 }
 
 // init lazyload
 function initLazyLoad() {
 	const lazyLoadInstance = new LazyLoad({ 
 		elements_selector: '.lazy',
-	});
+		container: select('.main-wrap')
+	})
 
-	gsap.utils.toArray('.lazy').forEach(item => item.addEventListener('load', () => ScrollTrigger.refresh()));
+	// refrsh scrolltrigger once an image is loaded
+	gsap.utils.toArray('.lazy').forEach(item => {
+		item.addEventListener('load', () => {
+			if (!item.classList.contains('cover')) {
+				ScrollTrigger.refresh()
+			}
+		})
+	})
 }
 
 // init fancybox
@@ -97,9 +112,9 @@ function initFancybox() {
 	})
 }
 
-// validate all forms
+// validate footer newsletter
 function validateForms() {
-	if(document.querySelector(".form-validate")) {
+	if(selectAll(".form-validate")) {
 
 		const form = $('.form-validate')
 
@@ -120,98 +135,50 @@ function validateForms() {
 	}
 }
 
-// scroll related animations
-function scrollTriggerAnimations() {
-	
+// change the fs menu active item according to the url
+function updateMenu() {
+	$('#fs-menu .menu a').removeClass('active')
 
-}
+	setTimeout(function(){
 
-// init all sliders
-function initSliders() {
-
-	if(document.querySelector('.portfolio-slider')) {
-		if(window.innerWidth > 768) {
-			const portfolio_slider = new Swiper('.portfolio-slider', {
-				slidesPerView: 2,
-				loop: true,
-				simulateTouch: true,
-				allowTouchMove: true,
-				autoHeight: false,
-				calculateHeight: false,
-				spaceBetween: 20,
-				breakpoints: {
-					1201: {
-						slidesPerView: 3,
-						spaceBetween: 20,
-						loop: true,
-					}
-				},
-
-				// fix the loop for when you have lazyloaded images inside it
-				// https://github.com/verlok/vanilla-lazyload/blob/master/demos/swiper.html
-				on: {
-					afterInit: (swiper) => {
-						new LazyLoad({
-							container: swiper.el,
-							cancel_on_exit: false
-						});
-					}
-				}
-			});
-
-			setTimeout(function(){
-				portfolio_slider.update()
-			}, 10);
+		if($('#main-content').hasClass('home')) {
+			$('#fs-menu .menu li:first-child a').addClass('active')
 		}
-	}
-
-}
-
-// play videos when in view
-function playVideoInView() {
-
-	let allVideoDivs = gsap.utils.toArray('.play-pause');
-  
-	allVideoDivs.forEach((videoDiv) => {
-  
-		let videoElem = videoDiv.querySelector('video')
-  
-		ScrollTrigger.create({
-			trigger: videoElem,
-			start: '0% 120%',
-			end: '100% -20%',
-			onEnter: () => videoElem.play(),
-			onEnterBack: () => videoElem.play(),
-			onLeave: () => videoElem.pause(),
-			onLeaveBack: () => videoElem.pause(),
-		});
-  
-	});
-}
-
-// opening animation
-function openingAnimation() {
-	
-}
-
-// page transition out
-function pageTransitionOut() {
-	
+	}, 100)
 }
 
 // page transition in
 function pageTransitionIn() {
-	
+
+	var tl = gsap.timeline()
+
+	tl.set('.page-transition', {
+		pointerEvents: 'auto'
+	})
+
 }
 
-// page transition once
-function pageTransitionOnce() {
-	
-}
+// page transition out
+function pageTransitionOut() {
 
-// scroll to the top of the page
-function scrollTop() {
-	window.scrollTo(0, 0);
+	var tl = gsap.timeline();
+	
+	tl.set('main .once-in', {
+		y: '50vw',
+	})
+
+	tl.to('.page-transition', {
+		pointerEvents: 'none',
+		duration: 0
+	})
+
+	tl.to('main .once-in', {
+		duration: 1,
+		y: '0vh',
+		stagger: .05,
+		ease: 'Expo.easeOut',
+		clearProps: 'true'
+	}, '-=.55')
 }
 
 // delay function
@@ -224,68 +191,173 @@ function delay(n) {
 	});
 }
 
+// init scroll smoother
+function initScrollSmoother() {
+	if (ScrollTrigger.isTouch !== 1) {
+		const smoother = ScrollSmoother.create({
+			wrapper: '#smooth-content',
+			content: '#smooth-content .main-wrap',
+			smooth: 1.25,
+			effects: true,
+			normalizeScroll: true
+		})
+
+		// parallax effect
+		smoother.effects('.parallax-img', {
+			speed: 'auto'
+		})
+
+		// pause / play scroll smoother on some determined actions
+		$('.open-fs').click(function(){
+			smoother.paused(true)
+		})
+
+		$('#fs-menu a, .close-fs').click(function(){
+			smoother.paused(false)
+		})
+
+		$(document).keyup(function(e) {
+			if(e.key === 'Escape') {
+				smoother.paused(false)
+			}
+		})
+	}
+}
+
+// here goes all the scroll related animations
+function scrollTriggerAnimations() {
+
+    // reveal text animation
+	if(select('.reveal-text')) {
+
+        const texts = selectAll('.reveal-text')
+    
+        texts.forEach(text => {
+            
+            // reset if needed
+            if(text.anim) {
+                text.anim.progress(1).kill()
+            	text.split.revert()
+            }
+
+            text.split = new SplitText(text, { 
+                type: 'lines, words, chars',
+                linesClass: 'split-line'
+            })
+
+            // set up the anim
+            text.anim = gsap.from(text.split.chars, {
+                scrollTrigger: {
+                    trigger: text,
+                    toggleActions: 'restart pause resume reverse',
+                    start: 'top 95%'
+                },
+                duration: .75, 
+                ease: 'circ.out', 
+                y: 100 + '%', 
+                stagger: .1
+            })
+        })
+	}
+}
+
+// init all the sliders on the website
+function initSliders() {
+
+	// init the why choose slider on the homepage
+	if(select('.why-choose-slider')) {
+		const whyChooseSlider = new Swiper ('.why-choose-slider', {
+			slidesPerView: 1,
+			loop: true,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: true,
+			calculateHeight: true,
+			spaceBetween: 15,
+			pagination: {
+				el: '#why-choose .why-choose-nav',
+				type: 'bullets',
+				clickable: true,
+			},
+			autoplay: {
+				delay: 9750
+			},
+			breakpoints: {
+				767: {
+					spaceBetween: 30
+				}
+			}
+		})
+	}
+}
+
+// disable console warnings and show skyline message
+function initCopyright() {
+	console.clear()
+	const message = 'Masterpiece by Senz Design 🔗 www.senzdsn.com'
+	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
+	console.log(`%c${message}`, style)
+}
+
 // fire all scripts on page load
 function initScript() {
-	initClickAndKeyFunctions();
-	validateForms();
-	scrollTriggerAnimations();
-	initLazyLoad();
-	initFancybox();
-	initSliders();
-	playVideoInView();
-	setTimeout(function(){
-		scrollTop();
-	}, 50)
+	initClickAndKeyFunctions()
+	initFancybox()
+	validateForms()
+	initLazyLoad()
+	initSliders()
+	updateMenu()
+	scrollTriggerAnimations()
+	initScrollSmoother()
+	initCopyright()
 }
 
 // barba
 barba.init({
 	sync: true,
-	timeout: 7000,
-	debug: false,
-    transitions: [{
-        name: 'page-transition',
-		
+	timeout: 1000,
+	//debug: true,
+	transitions: [{
+		name: 'default',
 		once() {
 			initScript();
-			pageTransitionOnce();
 		},
 
-        async leave(data) {
-			pageTransitionIn(data.current);
-			await delay(495);
-			data.current.container.remove();
-        },
-
-        async enter(data) {
-			pageTransitionOut(data.next);
-        },
-
-		async beforeEnter() {
-			ScrollTrigger.getAll().forEach(t => t.kill());
-
-			setTimeout(function(){
-				initScript()
-			}, 10);
+		async leave(data) {
+			pageTransitionIn(data.current)
+			await delay(1100)
+			data.current.container.remove()
+			let triggers = ScrollTrigger.getAll();
+			triggers.forEach(function (trigger) {
+				trigger.kill(true)
+			});
 		},
-    }, {
+
+		async enter(data) {
+			initScript()
+			window.scrollTo(0, 0)
+			pageTransitionOut(data.next)
+		},
+
+		async afterEnter() {
+			ScrollTrigger.refresh()
+		},
+	}, {
 		name: 'opening-animation',
 		to: {
 			namespace: ['home']
 		},
 		once() {
-			openingAnimation()
-			initScript();
-		},
+			initScript()
+		}
 	}],
 
-	// go to a custom 404 page if the user click on a link that return a 404 response status
-	/*
-	requestError: (trigger, action, url, response) => {
-		if (action === 'click' && response.status && response.status === 404) {
-		  	barba.go('404');
+	views: [
+		{
+			namespace: 'home',
+			afterEnter() {
+				
+			},
 		}
-		return false;
-	},
-	*/
+	]
 })
