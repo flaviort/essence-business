@@ -3,6 +3,15 @@
 	include('components/head.php');
 ?>
 
+<div id='opening'>
+	<div class='bg'>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
 <section id='home-banner' class='once-in'>
 
 	<div class='bg'>
@@ -17,7 +26,7 @@
         <div class='row'>
 			<div class='col-12'>
 				
-				<h1 class='text-bigger reveal-text'>
+				<h1 class='text-bigger'>
 					Soluções <br />
 					eficientes
 				</h1>

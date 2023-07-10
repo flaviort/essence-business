@@ -149,6 +149,8 @@ function initTopMenu() {
 	let isScrollingDown = true;
 	var topMenu = document.getElementById('top-menu')
 
+	$('#top-menu').addClass('fixed')
+
 	window.addEventListener('scroll', function(){
 	
 		if ( window.pageYOffset > currentScroll ) {
@@ -397,6 +399,68 @@ function initMouseCursor() {
 	window.addEventListener('mousemove', moveCircle)
 }
 
+// fire the opening animation
+function openingAnimation() {
+	const opening = gsap.timeline();
+
+	opening.set('html', {
+		cursor: 'wait',
+	})
+
+	opening.call(function(){
+		initScript()
+	})
+
+	opening.to('#top-menu', {
+		y: '-110%',
+		duration: 0
+	})
+
+	opening.set('#home-banner .bg', {
+		autoAlpha: 0
+	})
+
+	opening.set('#home-banner .col-12', {
+		autoAlpha: 0
+	})
+
+	opening.set('#about', {
+		marginTop: '5rem'
+	})
+
+	opening.to('#opening .bg div', {
+		y: '-110%',
+		stagger: 0.1,
+		duration: 2
+	})
+
+	opening.to('html', {
+		cursor: 'auto',
+		duration: 0
+	})
+
+	opening.to('#home-banner .bg', {
+		autoAlpha: 1,
+		duration: 1
+	}, '-=1')
+
+	opening.to('#about', {
+		marginTop: 0,
+		duration: 1
+	}, '-=1')
+
+	opening.to('#home-banner .col-12', {
+		autoAlpha: 1,
+		duration: 1
+	}, '-=1')
+
+	opening.to('#top-menu', {
+		y: 0,
+		duration: 1,
+		clearProps: true
+	}, '-=2')
+}
+
 // fire all scripts on page load
 function initScript() {
 	initClickAndKeyFunctions()
@@ -448,7 +512,7 @@ barba.init({
 			namespace: ['home']
 		},
 		once() {
-			initScript()
+			openingAnimation()
 		}
 	}],
 
