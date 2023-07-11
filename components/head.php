@@ -19,7 +19,7 @@
 			<link rel='canonical' href='<?php echo($siteUrl); ?>' />
 				
 			<!-- facebook -->
-			<meta property='og:locale' content='en_US' />
+			<meta property='og:locale' content='pt_BR' />
 			<meta property='og:type' content='website' />
 			<meta property='og:title' content='Essence Business - Importação e Exportação' />
 			<meta property='og:description' content='Essence Business - Importação e Exportação - Soluções Eficientes para impulsionar o crescimento do agronegócio.' />
@@ -48,6 +48,7 @@
 				<?php include('components/top-menu.php');?>
 				<?php include('components/fs-menu.php');?>
 				<?php include('components/page-transition.php');?>
+				<?php include('components/floating-whatsapp.php');?>
 				<div id='mouse'></div>
 			</header>
 

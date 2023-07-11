@@ -97,11 +97,16 @@
             z-index: 3;
             background: $green url(../img/lines.png) center center / cover no-repeat;
             padding: 7.5vw 0 15vw 0;
-            border-bottom-left-radius: 1.25vw;
-            border-bottom-right-radius: 1.25vw;
+            transform: translateY(-1.5rem);
 
             @media #{$mq-md-min} {
                 padding: 5vw 0;
+            }
+
+            @media #{$mq-lg-min} {
+                border-bottom-left-radius: 1.25vw;
+                border-bottom-right-radius: 1.25vw;
+                transform: none;
             }
 
             .left {
@@ -199,7 +204,7 @@
                     position: absolute;
                     overflow: hidden;
                     z-index: 2;
-                    bottom: -2rem;
+                    bottom: 2rem;
                     right: 15px;
                     width: 45%;
                     height: 60%;
@@ -208,12 +213,12 @@
                     @media #{$mq-md-min} {
                         border-radius: .75rem;
                         width: 50%;
-                        bottom: 0;
                     }
 
                     @media #{$mq-lg-min} {
                         width: 40%;
                         height: 80%;
+                        bottom: 0;
                     }
                 }
             }
@@ -246,69 +251,102 @@
             background: $blue-light url(../img/lines.png) center center / cover no-repeat;
 
             .horizontal-scroll {
-                display: flex;
-                align-items: center;
-                width: calc(100vw * 5);
-                height: 100vh;
+                width: 100%;
+                max-width: calc(100% - .75rem);
+                margin: auto;
+                padding: 7.5vw 15px 7.5vw 15px;
+
+                @media #{$mq-xs-min} {
+                    max-width: 95%;
+                }
+
+                @media #{$mq-md-min} {
+                    max-width: 90%;
+                    padding-top: 5vw;
+                    padding-bottom: 5vw;
+                }
 
                 @media #{$mq-lg-min} {
+                    display: flex;
+                    align-items: center;
                     width: calc(100vh * 5);
+                    max-width: calc(100vh * 5);
+                    height: 100vh;
+                    margin: 0;
+                    padding: 0;
                 }
 
                 .slide {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                    flex-direction: column;
-                    width: 100vw;
-                    gap: 3vh;
+                    padding-bottom: 12.5vw;
+
+                    @media #{$mq-md-min} {
+                        padding-bottom: 10vw;
+                    }
 
                     @media #{$mq-lg-min} {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        flex-direction: column;
+                        gap: 3vh;
                         width: 100vh;
+                        padding-bottom: 0;
                     }
 
                     &:first-child {
-                        justify-content: flex-start;
-                        text-align: left;
-
-                        h2 {
-                            color: $white;
+                        @media #{$mq-lg-min} {
+                            justify-content: flex-start;
+                            text-align: left;
                         }
 
-                        .scroll {
-                            display: flex;
-                            justify-content: flex-start;
-                            width: 1.75rem;
-                            height: 3rem;
-                            border-radius: 1rem;
-                            border: 2px solid $white;
-                            margin-top: 1.25rem;
+                        .wrapper {
                             position: relative;
-                            padding: .45rem .65rem;
 
-                            @media #{$mq-lg-min} {
-                                transform: scale(.75);
-                                transform-origin: 0 0;
+                            h2 {
+                                color: $white;
                             }
 
-                            .inner {
-                                display: block;
-                                width: 100%;
-                                height: 50%;
+                            .scroll {
+                                display: flex;
+                                justify-content: flex-start;
+                                width: 1.75rem;
+                                height: 3rem;
                                 border-radius: 1rem;
-                                position: relative;
-                                overflow: hidden;
+                                border: 2px solid $white;
+                                position: absolute;
+                                padding: .45rem .65rem;
+                                transform-origin: 0 0;
+                                top: .5rem;
+                                right: 0;
+                                transform: scale(.8);
 
-                                .white {
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
+                                @media #{$mq-lg-min} {
+                                    position: relative;
+                                    top: auto;
+                                    right: auto;
+                                    transform: scale(.75);
+                                    margin-top: 1.25rem;
+                                }
+
+                                .inner {
+                                    display: block;
                                     width: 100%;
-                                    height: 100%;
-                                    background-color: $white;
-                                    transform: translateY(-110%);
-                                    animation: scroll 2s infinite ease-in-out;
+                                    height: 50%;
+                                    border-radius: 1rem;
+                                    position: relative;
+                                    overflow: hidden;
+
+                                    .white {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        background-color: $white;
+                                        transform: translateY(-110%);
+                                        animation: scroll 2s infinite ease-in-out;
+                                    }
                                 }
                             }
                         }
@@ -318,9 +356,16 @@
                         display: block;
                         position: relative;
                         overflow: hidden;
-                        width: 90%;
+                        width: 100%;
                         margin: auto;
-                        height: 65vh;
+                        height: 50vh;
+                        border-radius: .5rem;
+
+                        @media #{$mq-lg-min} {
+                            width: 90%;
+                            height: 65vh;
+                            border-radius: .75rem;
+                        }
 
                         img {
                             width: 130%;
@@ -333,6 +378,11 @@
                         z-index: 2;
                         font-weight: $bold;
                         color: $white;
+                        margin: 1rem 0 .75rem 0;
+
+                        @media #{$mq-lg-min} {
+                            margin: 0;
+                        }
 
                         span {
                             position: absolute;
@@ -397,12 +447,14 @@
         #contact {
             z-index: 3;
             color: $white;
-            margin-top: -5rem;
+            background-color: $white;
+            overflow: visible;
 
             .box {
                 background: $green url(../img/lines.png) center center / cover no-repeat;
                 padding: 7.5vw;
                 border-radius: 1rem;
+                margin-top: -5rem;
 
                 @media #{$mq-md-min} {
                     padding: 5vw;

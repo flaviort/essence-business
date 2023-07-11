@@ -115,6 +115,12 @@ function initClickAndKeyFunctions() {
             link.addEventListener('mouseleave', animateLink)
         })
     }
+
+	// close whatsapp button
+	$('.close-whats').click(function(){
+		if (isDoubleClicked($(this))) return;
+		$('#floating-whatsapp').fadeOut()
+	})
 }
 
 // init lazyload
@@ -248,41 +254,43 @@ function delay(n) {
 
 // init scroll smoother
 function initScrollSmoother() {
-	const smoother = ScrollSmoother.create({
-		wrapper: '#smooth-content',
-		content: '#smooth-content .main-wrap',
-		smooth: 2,
-		effects: true,
-		normalizeScroll: true
-	})
-
-	// parallax effect
-	smoother.effects('.parallax-img', {
-		speed: 'auto'
-	})
-
-	// scroll buttons
-	$('#home-banner button').click(function(){
-		gsap.to(smoother, {
-			scrollTop: Math.min(ScrollTrigger.maxScroll(window), smoother.offset('#about', '75 top')),
-			duration: 2
+	if (ScrollTrigger.isTouch !== 1) {
+		const smoother = ScrollSmoother.create({
+			wrapper: '#smooth-content',
+			content: '#smooth-content .main-wrap',
+			smooth: 2,
+			effects: true,
+			normalizeScroll: true
 		})
-	})
 
-	// pause / play scroll smoother on some determined actions
-	$('.open-fs').click(function(){
-		smoother.paused(true)
-	})
+		// parallax effect
+		smoother.effects('.parallax-img', {
+			speed: 'auto'
+		})
 
-	$('#fs-menu a, .close-fs').click(function(){
-		smoother.paused(false)
-	})
+		// scroll buttons
+		$('#home-banner button').click(function(){
+			gsap.to(smoother, {
+				scrollTop: Math.min(ScrollTrigger.maxScroll(window), smoother.offset('#about', '75 top')),
+				duration: 2
+			})
+		})
 
-	$(document).keyup(function(e) {
-		if(e.key === 'Escape') {
+		// pause / play scroll smoother on some determined actions
+		$('.open-fs').click(function(){
+			smoother.paused(true)
+		})
+
+		$('#fs-menu a, .close-fs').click(function(){
 			smoother.paused(false)
-		}
-	})
+		})
+
+		$(document).keyup(function(e) {
+			if(e.key === 'Escape') {
+				smoother.paused(false)
+			}
+		})
+	}
 }
 
 // here goes all the scroll related animations
@@ -532,31 +540,42 @@ barba.init({
 			beforeEnter() {
 
 				// fixed home banner
-				ScrollTrigger.create({
-					trigger: '#home-banner .bg',
-					pin: true,
-					start: 'top top',
-					end: '+=' + vh(100)
-				})
+				if ($(window).width() > 993) {
+					ScrollTrigger.create({
+						trigger: '#home-banner .bg',
+						pin: true,
+						start: 'top top',
+						end: '+=' + vh(100)
+					})
 
-				// expading block about (below the home)
-				gsap.from('#about', {
-					y: '-5rem',
-					borderTopLeftRadius: '0.75rem',
-					borderTopRightRadius: '0.75rem',
-					scale: .9,
-					ease: 'none',
-					scrollTrigger: {
-						trigger: '#home-banner',
-						start: '1 top',
-						end: '+=' + vh(90),
-						scrub: 2,
-						onComplete: () => {
-							ScrollTrigger.refresh()
-							console.log('test')
+					// expading block about (below the home)
+					gsap.from('#about', {
+						y: '-5rem',
+						borderTopLeftRadius: '0.75rem',
+						borderTopRightRadius: '0.75rem',
+						scale: .9,
+						ease: 'none',
+						scrollTrigger: {
+							trigger: '#home-banner',
+							start: '1 top',
+							end: '+=' + vh(90),
+							scrub: 2,
+							onComplete: () => {
+								ScrollTrigger.refresh()
+								console.log('test')
+							}
 						}
-					}
-				})
+					})
+				}
+
+				// explore button on the banner (mobile only)
+				if ($(window).width() < 993) {
+					$('#home-banner button').click(function(){
+						$('html, body').animate({
+							scrollTop: $('#about').offset().top
+						}, 600);
+					})
+				}
 
 				// fill text animation
 				gsap.to('#about .featured span', {
@@ -583,50 +602,52 @@ barba.init({
 				})
 
 				// horizontal scroll
-				let sections = gsap.utils.toArray('.horizontal-scroll .slide');
+				if ($(window).width() > 993) {
+					let sections = gsap.utils.toArray('.horizontal-scroll .slide');
 
-				let horizontalScroll = gsap.to(sections, {
-					xPercent: -100 * (sections.length - 1),
-					ease: 'none',
-					scrollTrigger: {
-						trigger: '#services',
-						pin: true,
-						scrub: 2,
-						end: (sections.length - 1) * vh(150)
-					}
-				})
-
-				gsap.utils.toArray('.horizontal-scroll .slide .text-big span').forEach(item => {
-					gsap.to(item, {
-						scaleX: 1,
+					let horizontalScroll = gsap.to(sections, {
+						xPercent: -100 * (sections.length - 1),
 						ease: 'none',
 						scrollTrigger: {
-							trigger: item,
-							containerAnimation: horizontalScroll,
-							start: 'left 60%',
-							end: 'right center',
-							scrub: 2
+							trigger: '#services',
+							pin: true,
+							scrub: 2,
+							end: (sections.length - 1) * vh(150)
 						}
 					})
-				})
 
-				gsap.utils.toArray('.horizontal-scroll .slide .image img').forEach(item => {
-					gsap.to(item, {
-						x: '-=15%',
-						ease: 'none',
-						scrollTrigger: {
-							trigger: item,
-							containerAnimation: horizontalScroll,
-							start: 'left right',
-							end: 'right left',
-							scrub: 2
-						}
+					gsap.utils.toArray('.horizontal-scroll .slide .text-big span').forEach(item => {
+						gsap.to(item, {
+							scaleX: 1,
+							ease: 'none',
+							scrollTrigger: {
+								trigger: item,
+								containerAnimation: horizontalScroll,
+								start: 'left 60%',
+								end: 'right center',
+								scrub: 2
+							}
+						})
 					})
-				})
+
+					gsap.utils.toArray('.horizontal-scroll .slide .image img').forEach(item => {
+						gsap.to(item, {
+							x: '-=15%',
+							ease: 'none',
+							scrollTrigger: {
+								trigger: item,
+								containerAnimation: horizontalScroll,
+								start: 'left right',
+								end: 'right left',
+								scrub: 2
+							}
+						})
+					})
+				}
 
 				// parallax bg in the sustainability section
 				gsap.to('#world .bg', {
-					y: '-25%',
+					y: '-5rem',
 					ease: 'none',
 					scrollTrigger: {
 						trigger: '#world',

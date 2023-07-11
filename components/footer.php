@@ -127,7 +127,8 @@
                                     <div class='bottom text-small'>
 
                                         <p>
-                                            Copyright © <?php echo date('Y'); ?>. All rights reserved.
+                                            Copyright © <?php echo date('Y'); ?>. <br />
+                                            All rights reserved.
                                         </p>
 
                                     </div>

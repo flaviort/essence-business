@@ -1,0 +1,55 @@
+#floating-whatsapp {
+    position: fixed;
+    bottom: 1rem;
+    right: 1.25rem;
+    z-index: 20;
+
+    @media #{$mq-lg-min} {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .close-whats {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        width: .75rem;
+        height: .75rem;
+        color: $black;
+        top: -.75rem;
+        right: -.075rem;
+        transition: .3s;
+
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+
+    .circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #52c769;
+        width: 4rem;
+        height: 4rem;
+        color: $white;
+        padding: 1rem .9rem 1rem 1rem;
+        transition: .3s;
+
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            bottom: .25rem;
+            left: .25rem;
+            background-color: #52c769;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        &:hover {
+            background-color: darken(#52c769, 10);
+        }
+    }
+}

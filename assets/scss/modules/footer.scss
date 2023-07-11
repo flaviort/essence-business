@@ -131,6 +131,12 @@
 
         p {
             opacity: .75;
+
+            br {
+                @media #{$mq-sm-min} {
+                    display: none;
+                }
+            }
         }
     }
 }
