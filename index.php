@@ -102,12 +102,102 @@
 </section>
 
 <section id='services'>
-	<div class='container container-big'>
-        <div class='row'>
-			<div class='col-12'>
+	<div class='horizontal-scroll'>
+
+		<div class='slide'>
+			<div class='wrapper'>
+
+				<h2 class='text-bigger reveal-text'>
+					Conheça<br />
+					nossos<br />
+					serviços
+				</h2>
+
+				<div class='scroll'>
+					<div class='inner'>
+						<div class='white'></div>
+					</div>
+				</div>
 
 			</div>
 		</div>
+
+		<div class='slide slide-01'>
+
+			<div class='image'>
+				<img data-src='assets/img/services-01.jpg' alt='Importação' class='lazy cover'>
+			</div>
+
+			<h3 class='text-big'>
+				Importação
+				<span></span>
+			</h3>
+
+			<a href='importacao' class='blue-button magnet'>
+				<span>
+					Conheça
+				</span>
+			</a>
+
+		</div>
+
+		<div class='slide slide-02'>
+
+			<div class='image'>
+				<img data-src='assets/img/services-02.jpg' alt='Expotação' class='lazy cover'>
+			</div>
+
+			<h3 class='text-big'>
+				Expotação
+				<span></span>
+			</h3>
+
+			<a href='importacao' class='blue-button magnet'>
+				<span>
+					Conheça
+				</span>
+			</a>
+
+		</div>
+
+		<div class='slide slide-03'>
+
+			<div class='image'>
+				<img data-src='assets/img/services-03.jpg' alt='Transporte e Carga' class='lazy cover'>
+			</div>
+
+			<h3 class='text-big'>
+				Transporte e Carga
+				<span></span>
+			</h3>
+
+			<a href='importacao' class='blue-button magnet'>
+				<span>
+					Conheça
+				</span>
+			</a>
+
+		</div>
+
+		<div class='slide slide-04'>
+
+			<div class='image'>
+				<img data-src='assets/img/services-04.jpg' alt='Cursos e Treinamentos' class='lazy cover'>
+			</div>
+
+			<h3 class='text-big'>
+				Cursos e Treinamentos
+				<span></span>
+			</h3>
+
+			<a href='importacao' class='blue-button magnet'>
+				<span>
+					Conheça
+				</span>
+			</a>
+
+		</div>
+
 	</div>
 </section>
 

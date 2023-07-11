@@ -8,6 +8,12 @@
 	}
 }
 
+@keyframes scroll {
+	to {
+		transform: translateY(110%);
+	}
+}
+
 .once-in {
 	will-change: transform;
 }

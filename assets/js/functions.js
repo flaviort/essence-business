@@ -6,6 +6,7 @@ const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 const selectId = (id) => document.getElementById(id);
 const vh = (coef) => window.innerHeight * (coef/100);
+const vw = (coef) => window.innerWidth * (coef/100);
 
 // init all click, mouseover and keyup functions
 function initClickAndKeyFunctions() {
@@ -252,7 +253,7 @@ function initScrollSmoother() {
 		content: '#smooth-content .main-wrap',
 		smooth: 2,
 		effects: true,
-		//normalizeScroll: true
+		normalizeScroll: true
 	})
 
 	// parallax effect
@@ -456,9 +457,18 @@ function openingAnimation() {
 
 	opening.to('#top-menu', {
 		y: 0,
-		duration: 1,
-		clearProps: true
+		duration: 1
 	}, '-=2')
+
+	opening.call(function(){
+		ScrollTrigger.refresh()
+		$('#top-menu').addClass('fixed')
+	})
+
+	opening.to('#top-menu', {
+		clearProps: true,
+		duration: 0
+	})
 }
 
 // fire all scripts on page load
@@ -526,7 +536,7 @@ barba.init({
 					trigger: '#home-banner .bg',
 					pin: true,
 					start: 'top top',
-					end: vh(100)
+					end: '+=' + vh(100)
 				})
 
 				// expading block about (below the home)
@@ -535,11 +545,16 @@ barba.init({
 					borderTopLeftRadius: '0.75rem',
 					borderTopRightRadius: '0.75rem',
 					scale: .9,
+					ease: 'none',
 					scrollTrigger: {
 						trigger: '#home-banner',
 						start: '1 top',
-						end: vh(90),
-						scrub: 2
+						end: '+=' + vh(90),
+						scrub: 2,
+						onComplete: () => {
+							ScrollTrigger.refresh()
+							console.log('test')
+						}
 					}
 				})
 
@@ -565,6 +580,48 @@ barba.init({
 						start: 'top bottom',
 						end: 'bottom top'
 					}
+				})
+
+				// horizontal scroll
+				let sections = gsap.utils.toArray('.horizontal-scroll .slide');
+
+				let horizontalScroll = gsap.to(sections, {
+					xPercent: -100 * (sections.length - 1),
+					ease: 'none',
+					scrollTrigger: {
+						trigger: '#services',
+						pin: true,
+						scrub: 2,
+						end: (sections.length - 1) * vh(150)
+					}
+				})
+
+				gsap.utils.toArray('.horizontal-scroll .slide .text-big span').forEach(item => {
+					gsap.to(item, {
+						scaleX: 1,
+						ease: 'none',
+						scrollTrigger: {
+							trigger: item,
+							containerAnimation: horizontalScroll,
+							start: 'left 60%',
+							end: 'right center',
+							scrub: 2
+						}
+					})
+				})
+
+				gsap.utils.toArray('.horizontal-scroll .slide .image img').forEach(item => {
+					gsap.to(item, {
+						x: '-=15%',
+						ease: 'none',
+						scrollTrigger: {
+							trigger: item,
+							containerAnimation: horizontalScroll,
+							start: 'left right',
+							end: 'right left',
+							scrub: 2
+						}
+					})
 				})
 
 				// parallax bg in the sustainability section
