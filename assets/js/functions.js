@@ -410,7 +410,9 @@ function initMouseCursor() {
 
 // fire the opening animation
 function openingAnimation() {
-	const opening = gsap.timeline();
+	const opening = gsap.timeline({
+		delay: 1
+	});
 
 	opening.set('html', {
 		cursor: 'wait',
