@@ -84,6 +84,14 @@
                     gap: 1.75vw;
                 }
 
+                @media #{$mq-xl-min} {
+                    gap: 1vw;
+                }
+
+                @media #{$mq-2xl-min} {
+                    gap: .5vw;
+                }
+
                 h1 {
                     margin-top: -3vw;
 

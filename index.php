@@ -144,11 +144,11 @@
 		<div class='slide slide-02'>
 
 			<div class='image'>
-				<img data-src='assets/img/services-02.jpg' alt='Expotação' class='lazy cover'>
+				<img data-src='assets/img/services-02.jpg' alt='Exportação' class='lazy cover'>
 			</div>
 
 			<h3 class='text-big'>
-				Expotação
+				Exportação
 				<span></span>
 			</h3>
 
