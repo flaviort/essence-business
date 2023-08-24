@@ -6,7 +6,7 @@
                                     <div class='top'>
                                         <div class='row'>
 
-                                            <div class='col-xl-3'>
+                                            <div class='col-xl-2 left'>
 
                                                 <a href='./' class='logo'>
                                                     <?php echo file_get_contents('assets/svg/logo.svg'); ?>
@@ -29,96 +29,128 @@
                                                 </ul>
                                                 
                                             </div>
+                                            
+                                            <div class='col-xl-10 right'>
+                                                <div class='row'>
 
-                                            <div class='col-sm-6 col-xl-3'>
+                                                    <div class='col-sm-6 col-lg-3'>
 
-                                                <h4>
-                                                    <b>
-                                                        Serviços
-                                                    </b>
-                                                </h4>
+                                                        <h4>
+                                                            <b>
+                                                                Serviços
+                                                            </b>
+                                                        </h4>
 
-                                                <ul>
+                                                        <ul>
 
-                                                    <li>
-                                                        <a href='importacao' class='hover-underline'>
-                                                            Importação
-                                                        </a>
-                                                    </li>
+                                                            <li>
+                                                                <a href='importacao' class='hover-underline'>
+                                                                    Importação
+                                                                </a>
+                                                            </li>
 
-                                                    <li>
-                                                        <a href='exportacao' class='hover-underline'>
-                                                            Exportação
-                                                        </a>
-                                                    </li>
+                                                            <li>
+                                                                <a href='exportacao' class='hover-underline'>
+                                                                    Exportação
+                                                                </a>
+                                                            </li>
 
-                                                    <li>
-                                                        <a href='transportes-e-cargas' class='hover-underline'>
-                                                            Transportes e Cargas
-                                                        </a>
-                                                    </li>
+                                                            <li>
+                                                                <a href='transportes-e-cargas' class='hover-underline'>
+                                                                    Transportes e Cargas
+                                                                </a>
+                                                            </li>
 
-                                                    <li>
-                                                        <a href='cursos-e-treinamentos' class='hover-underline'>
-                                                            Cursos e Treinamentos
-                                                        </a>
-                                                    </li>
+                                                            <li>
+                                                                <a href='cursos-e-treinamentos' class='hover-underline'>
+                                                                    Cursos e Treinamentos
+                                                                </a>
+                                                            </li>
 
-                                                </ul>
-                                                
-                                            </div>
+                                                        </ul>
+                                                        
+                                                    </div>
 
-                                            <div class='col-sm-6 col-xl-3'>
+                                                    <div class='col-sm-6 col-lg-3'>
 
-                                                <h4>
-                                                    <b>
-                                                        A Essence
-                                                    </b>
-                                                </h4>
+                                                        <h4>
+                                                            <b>
+                                                                Sobre Nós
+                                                            </b>
+                                                        </h4>
 
-                                                <ul>
+                                                        <ul>
 
-                                                    <li>
-                                                        <a href='sobre' class='hover-underline'>
-                                                            Sobre
-                                                        </a>
-                                                    </li>
+                                                            <li>
+                                                                <a href='quem-somos' class='hover-underline'>
+                                                                    Quem Somos
+                                                                </a>
+                                                            </li>
 
-                                                    <li>
-                                                        <a href='comercializacao-e-logistica' class='hover-underline'>
-                                                            Comercialização e Logística
-                                                        </a>
-                                                    </li>
+                                                            <li>
+                                                                <a href='valores' class='hover-underline'>
+                                                                    Valores
+                                                                </a>
+                                                            </li>
 
-                                                    <li>
-                                                        <a href='projetos-sociais' class='hover-underline'>
-                                                            Projetos Sociais
-                                                        </a>
-                                                    </li>
+                                                            <li>
+                                                                <a href='especialistas' class='hover-underline'>
+                                                                    Especialistas
+                                                                </a>
+                                                            </li>
 
-                                                    <li>
-                                                        <a href='contato' class='hover-underline'>
-                                                            Contato
-                                                        </a>
-                                                    </li>
+                                                        </ul>
+                                                        
+                                                    </div>
 
-                                                </ul>
-                                                
-                                            </div>
+                                                    <div class='col-sm-6 col-lg-3'>
 
-                                            <div class='col-xl-3'>
+                                                        <h4>
+                                                            <b>
+                                                                Mais
+                                                            </b>
+                                                        </h4>
 
-                                                <h4>
-                                                    <b>
-                                                        Endereço
-                                                    </b>
-                                                </h4>
+                                                        <ul>
 
-                                                <p>
-                                                    Avenida Anita Garibaldi, 850 <br />
-                                                    Cabral, Curitiba / PR
-                                                </p>
-                                                
+                                                            <li>
+                                                                <a href='projetos-sociais' class='hover-underline'>
+                                                                    Projetos Sociais
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href='trabalhe-conosco' class='hover-underline'>
+                                                                    Trabalhe Conosco
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href='contato' class='hover-underline'>
+                                                                    Contato
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                        
+                                                    </div>
+
+                                                    <div class='col-sm-6 col-lg-3'>
+
+                                                        <h4>
+                                                            <b>
+                                                                Endereço
+                                                            </b>
+                                                        </h4>
+
+                                                        <p>
+                                                            Avenida Anita Garibaldi, 850 <br />
+                                                            Cabral, Curitiba / PR
+                                                        </p>
+                                                        
+                                                    </div>
+
+                                                </div>
                                             </div>
 
                                         </div>
@@ -130,6 +162,10 @@
                                             Copyright © <?php echo date('Y'); ?>. <br />
                                             All rights reserved.
                                         </p>
+
+                                        <a href='https://paandadesign.com.br/' target='_blank' class='paanda'>
+                                            <?php echo file_get_contents('assets/svg/paanda.svg'); ?>
+                                        </a>
 
                                     </div>
 

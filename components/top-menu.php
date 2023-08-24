@@ -46,10 +46,33 @@
 
                         </li>
 
-                        <li>
-                            <a href='sobre' class='hover-underline'>
+                        <li class='has-sub'>
+
+                            <p class='hover-underline'>
                                 Sobre Nós
-                            </a>
+                            </p>
+
+                            <ul class='sub'>
+
+                                <li>
+                                    <a href='quem-somos' class='hover-underline'>
+                                        Quem Somos
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href='valores' class='hover-underline'>
+                                        Valores
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href='especialistas' class='hover-underline'>
+                                        Especialistas
+                                    </a>
+                                </li>
+
+                            </ul>
                         </li>
 
                         <li>
@@ -64,10 +87,28 @@
                             </a>
                         </li>
 
-                        <li>
-                            <a href='contato' class='hover-underline'>
+                        <li class='has-sub'>
+
+                            <p class='hover-underline'>
                                 Contato
-                            </a>
+                            </p>
+
+                            <ul class='sub'>
+
+                                <li>
+                                    <a href='contato' class='hover-underline'>
+                                        Entre em Contato
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href='trabalhe-conosco' class='hover-underline'>
+                                        Trabalhe Conosco
+                                    </a>
+                                </li>
+
+                            </ul>
+
                         </li>
 
                     </ul>

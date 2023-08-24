@@ -41,20 +41,7 @@
 
         .logo {
             display: flex;
-            width: 20rem;
-            margin-left: -.5rem;
-
-            @media #{$mq-sm-min} {
-                margin-left: 0;
-            }
-
-            @media #{$mq-xl-min} {
-                width: 13rem;
-            }
-
-            @media #{$mq-2xl-min} {
-                width: 15rem;
-            }
+            width: 7rem;
 
             svg {
                 width: 100%;
@@ -63,16 +50,20 @@
         }
 
         .menu {
+            position: relative;
+            z-index: 2;
             display: none;
             align-items: center;
             gap: 1.25rem;
 
             @media #{$mq-xl-min} {
                 display: flex;
+                gap: 2.5rem;
+                margin-left: -2rem;
             }
 
             @media #{$mq-2xl-min} {
-                gap: 2rem;
+                gap: 3.5rem;
             }
 
             li {

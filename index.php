@@ -17,7 +17,7 @@
 	<div class='bg'>
 		<div class='play-pause'>
 			<video autoplay playsinline muted loop class='lazy' preload='none'>
-				<source data-src='assets/videos/banner-bg.mp4'>
+				<source data-src='assets/videos/banner.mp4'>
 			</video>
 		</div>
 	</div>
@@ -212,7 +212,7 @@
 			<div class='col-md-10 col-lg-8 col-xl-6'>
 
 				<h2 class='text-bigger'>
-					Essence Atuante e Solidária
+					Essence por um mundo solidário
 				</h2>
 
 				<p class='desc'>

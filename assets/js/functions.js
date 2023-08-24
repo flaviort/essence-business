@@ -80,8 +80,8 @@ function initClickAndKeyFunctions() {
 
 	// open / close fs menu sub menu
 	$('#fs-menu .menu .has-sub p, #fs-menu .menu .has-sub svg').click(function(){
-		$('#fs-menu .menu .has-sub .sub').slideToggle()
-		$('#fs-menu .menu .has-sub svg').toggleClass('active')
+		$(this).siblings('.sub').slideToggle()
+		$(this).parent('.has-sub').children('svg').toggleClass('active')
 	})
 
 	// faq open / close
