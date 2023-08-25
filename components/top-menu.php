@@ -97,7 +97,7 @@
 
                                 <li>
                                     <a href='contato' class='hover-underline'>
-                                        Entre em Contato
+                                        Fale Conosco
                                     </a>
                                 </li>
 

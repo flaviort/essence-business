@@ -1,44 +1,32 @@
 <?php
-	$currentPage = 'home';
+	$currentPage = 'about';
 	include('components/head.php');
 ?>
 
-<div id='opening'>
-	<div class='bg'>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-</div>
-
-<section id='home-banner' class='top-banner'>
+<section id='internal-banner' class='top-banner'>
 
 	<div class='bg'>
-		<div class='play-pause'>
-			<video autoplay playsinline muted loop class='lazy' preload='none'>
-				<source data-src='assets/videos/banner.mp4'>
-			</video>
-		</div>
+		<img data-src='assets/img/silos.jpg' alt='Quem Somos' class='lazy cover'>
 	</div>
 
 	<div class='container container-big once-in'>
         <div class='row'>
 			<div class='col-12'>
 				
-				<h1 class='text-bigger'>
-					Soluções <br />
-					eficientes
-				</h1>
-
 				<p class='text-medium'>
-					para impulsionar o crescimento do agronegócio
+					Sobre Nós
 				</p>
 
-				<button class='green-light-button magnet top-scroll'>
+				<h1 class='text-bigger'>
 					<span>
-						Explore
+						Quem Somos
 					</span>
+				</h1>
+
+				<button class='scroll top-scroll'>
+					<div class='inner'>
+						<div class='white'></div>
+					</div>
 				</button>
 
 			</div>
@@ -46,50 +34,23 @@
 	</div>
 </section>
 
-<section id='top-box'>
+<section id='top-box' class='light'>
 	<div class='container'>
         <div class='row'>
 
 			<div class='col-md-6 col-md-push-6 right'>
-
-				<div class='image image-01'>
-					<img data-src='assets/img/smiling-man-crop-fields.jpg' alt='Essence Business' class='lazy cover parallax-img' />
+				<div class='image image-full'>
+					<img data-src='assets/img/smiling-man.jpg' alt='Essence Business' class='lazy cover parallax-img'>
 				</div>
-
-				<div class='image image-02' data-speed='1.2'>
-					<img data-src='assets/img/hand-grains.jpg' alt='Essence Business' class='lazy cover parallax-img' />
-				</div>
-
 			</div>
 
 			<div class='col-md-6 col-md-pull-6 left'>
 
-				<h2 id='about' class='text-bigger'>
-					Quem <br />
-					Somos
-				</h2>
+				<p>
+					<strong>Desde 2016, somos especialistas em consultorias Contábeis, Financeiras e Fiscais no Agro e nas importações de fertilizantes e exportações de grãos</strong>, dedicados a oferecer soluções personalizadas e eficientes para impulsionar o crescimento e o sucesso de nossos clientes. Com profundo conhecimento e experiência de preciosos insumos, dentre eles a uréia, compreendemos os desafios e as oportunidades únicas que o mercado apresenta.<br /><br />
 
-				<div class='line'></div>
-
-				<p class='text-big'>
-					Desde 2016, consolidamos nossa expertise como especialistas.
+					Nossa equipe é formada por especialistas apaixonados pelo setor, com <strong>mais de 20 anos de experiência</strong>, que acompanham de perto as tendências, inovações tecnológicas e tendência do mercado, para oferecer as melhores práticas e estratégias. Estamos sempre atualizados com as últimas informações, possuindo vasta experiência nacional e internacional como Estados Unidos, Itália, França, Suíça, Ásia e nos Emirados Árabes onde também possuímos grandes parceiros comerciais, clientes,fornecedores e investidores.
 				</p>
-
-				<p class='featured'>
-					<span>
-						&nbsp;Consultorias Contábeis, Financeiras e Fiscais no setor Agro,&nbsp;
-					</span>
-				</p>
-
-				<p class='desc'>
-					assim como nas importações de fertilizantes e exportações de grãos. Nosso foco está em proporcionar soluções personalizadas e eficientes para impulsionar o crescimento e o sucesso de nossos clientes. 
-				</p>
-
-				<a href='quem-somos' class='blue-button magnet'>
-					<span>
-						Saiba Mais
-					</span>
-				</a>
 
 			</div>
 
@@ -98,7 +59,7 @@
 </section>
 
 <section id='parallax'>
-	<img data-src='assets/img/grains.jpg' alt='Grãos' class='lazy cover parallax-img' />
+	<img data-src='assets/img/grains.jpg' alt='Grãos' class='lazy cover'>
 </section>
 
 <section id='services'>
@@ -125,7 +86,7 @@
 		<div class='slide slide-01'>
 
 			<a href='importacao' class='image'>
-				<img data-src='assets/img/services-01.jpg' alt='Importação' class='lazy cover' />
+				<img data-src='assets/img/services-01.jpg' alt='Importação' class='lazy cover'>
 			</a>
 
 			<h3 class='text-big'>
@@ -144,7 +105,7 @@
 		<div class='slide slide-02'>
 
 			<a href='exportacao' class='image'>
-				<img data-src='assets/img/services-02.jpg' alt='Exportação' class='lazy cover' />
+				<img data-src='assets/img/services-02.jpg' alt='Exportação' class='lazy cover'>
 			</a>
 
 			<h3 class='text-big'>
@@ -163,7 +124,7 @@
 		<div class='slide slide-03'>
 
 			<a href='transporte-e-carga' class='image'>
-				<img data-src='assets/img/services-03.jpg' alt='Transporte e Carga' class='lazy cover' />
+				<img data-src='assets/img/services-03.jpg' alt='Transporte e Carga' class='lazy cover'>
 			</a>
 
 			<h3 class='text-big'>
@@ -182,7 +143,7 @@
 		<div class='slide slide-04'>
 
 			<a href='cursos-e-treinamentos' class='image'>
-				<img data-src='assets/img/services-04.jpg' alt='Cursos e Treinamentos' class='lazy cover' />
+				<img data-src='assets/img/services-04.jpg' alt='Cursos e Treinamentos' class='lazy cover'>
 			</a>
 
 			<h3 class='text-big'>
@@ -204,14 +165,14 @@
 <section id='world'>
 
 	<div class='bg'>
-		<img data-src='assets/img/hands.jpg' alt='Essence por um mundo solidário' class='lazy cover parallax-img' />
+		<img data-src='assets/img/solidarity.jpg' alt='Essence por um mundo solidário' class='lazy cover'>
 	</div>
 
 	<div class='container container-big'>
         <div class='row'>
 			<div class='col-md-10 col-lg-8 col-xl-6'>
 
-				<h2 class='text-bigger reveal-text'>
+				<h2 class='text-bigger'>
 					Essence por um mundo solidário
 				</h2>
 

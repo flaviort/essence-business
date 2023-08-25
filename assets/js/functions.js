@@ -1,32 +1,52 @@
 // register split text
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother)
 
-const body = document.body;
-const select = (e) => document.querySelector(e);
-const selectAll = (e) => document.querySelectorAll(e);
-const selectId = (id) => document.getElementById(id);
-const vh = (coef) => window.innerHeight * (coef/100);
-const vw = (coef) => window.innerWidth * (coef/100);
+const body = document.body
+const select = (e) => document.querySelector(e)
+const selectAll = (e) => document.querySelectorAll(e)
+const selectId = (id) => document.getElementById(id)
+const vh = (coef) => window.innerHeight * (coef/100)
+const vw = (coef) => window.innerWidth * (coef/100)
+
+// prevent barba from double clicking buttons more than once
+// https://stackoverflow.com/a/36794629/4658966
+function isDoubleClicked(e) {
+
+	// if already clicked return TRUE to indicate this click is not allowed
+	if (e.data('isclicked')) return true
+
+	// mark as clicked for 1 second
+	e.data('isclicked', true)
+	setTimeout(function () {
+		e.removeData('isclicked')
+	}, 300)
+
+	// return FALSE to indicate this click was allowed
+	return false
+}
 
 // init all click, mouseover and keyup functions
 function initClickAndKeyFunctions() {
 
-	// prevent barba from double clicking buttons more than once
-	// https://stackoverflow.com/a/36794629/4658966
-	function isDoubleClicked(e) {
+	// make anchor links scroll smoothy
+	$('.sliding-link').click(function(e) {
+		if (isDoubleClicked($(this))) return
+		e.preventDefault()
+		var aid = $(this).attr('href')
+		$('html, body').animate({ scrollTop: $(aid).offset().top }, 1000)
+	})
 
-		// if already clicked return TRUE to indicate this click is not allowed
-		if (e.data('isclicked')) return true;
-	
-		// mark as clicked for 1 second
-		e.data('isclicked', true);
-		setTimeout(function () {
-			e.removeData('isclicked')
-		}, 300)
-	
-		// return FALSE to indicate this click was allowed
-		return false;
-	}
+	// top scroll link
+	$('.top-scroll').click(function(e) {
+		if (isDoubleClicked($(this))) return
+		e.preventDefault()
+
+		if ($(window).width() > 993) {
+			$('html, body').animate({ scrollTop: $('body').offset().top + vh(135) }, 1000)
+		} else {
+			$('html, body').animate({ scrollTop: $('body').offset().top + vh(97) }, 1000)
+		}
+	})
 
 	// correct label click
 	$('label').click(function(e){
@@ -59,19 +79,22 @@ function initClickAndKeyFunctions() {
 	fsMenu.to('#fs-menu .menu > li', {
 		autoAlpha: 1,
 		stagger: .1
-	})
+	}, '-=.5')
 
 	// open / close fs menu
 	$('.open-fs').click(function(){
+		if (isDoubleClicked($(this))) return
 		fsMenu.play()
 	})
 
 	$('.close-fs, #fs-menu .bg, #fs-menu a').click(function(){
+		if (isDoubleClicked($(this))) return
 		fsMenu.reverse()
 	})
 
 	// close all opened menus when pressing the ESC key
 	$(document).keyup(function(e) {
+		if (isDoubleClicked($(this))) return
 		if(e.key === 'Escape') {
 			$('body').removeClass('fs-menu-open')
 			fsMenu.reverse()
@@ -80,13 +103,14 @@ function initClickAndKeyFunctions() {
 
 	// open / close fs menu sub menu
 	$('#fs-menu .menu .has-sub p, #fs-menu .menu .has-sub svg').click(function(){
+		if (isDoubleClicked($(this))) return
 		$(this).siblings('.sub').slideToggle()
 		$(this).parent('.has-sub').children('svg').toggleClass('active')
 	})
 
 	// faq open / close
 	$('.faq-question .question').click(function(){
-		if (isDoubleClicked($(this))) return;
+		if (isDoubleClicked($(this))) return
 		$(this).parent('.faq-question').toggleClass('active')
 		$(this).siblings('.answer').slideToggle()
 		setTimeout(function(){
@@ -98,16 +122,16 @@ function initClickAndKeyFunctions() {
     if ($(window).width() > 993) {
         const links = selectAll('.magnet')
         const animateLink = function(e){
-            const link = this.querySelector('span');
+            const link = this.querySelector('span')
             const { offsetX: x, offsetY: y } = e
-            const { offsetWidth: width, offsetHeight: height } = this;
+            const { offsetWidth: width, offsetHeight: height } = this
 
-            intensity = 50;
-            xMove = x / width * (intensity * 2) - intensity;
-            yMove = y / height * (intensity * 2) - intensity;
-            link.style.transform = 'translate(' + xMove + 'px,' + yMove + 'px)';
+            intensity = 50
+            xMove = x / width * (intensity * 2) - intensity
+            yMove = y / height * (intensity * 2) - intensity
+            link.style.transform = 'translate(' + xMove + 'px,' + yMove + 'px)'
 
-            if(e.type == 'mouseleave') link.style.transform = '';
+            if(e.type == 'mouseleave') link.style.transform = ''
         }
 
         links.forEach(link => {
@@ -118,7 +142,7 @@ function initClickAndKeyFunctions() {
 
 	// close whatsapp button
 	$('.close-whats').click(function(){
-		if (isDoubleClicked($(this))) return;
+		if (isDoubleClicked($(this))) return
 		$('#floating-whatsapp').fadeOut()
 	})
 }
@@ -152,8 +176,8 @@ function initFancybox() {
 // init the top menu
 function initTopMenu() {
 	
-	let currentScroll = 0;
-	let isScrollingDown = true;
+	let currentScroll = 0
+	let isScrollingDown = true
 	var topMenu = document.getElementById('top-menu')
 
 	$('#top-menu').addClass('fixed')
@@ -161,11 +185,11 @@ function initTopMenu() {
 	window.addEventListener('scroll', function(){
 	
 		if ( window.pageYOffset > currentScroll ) {
-			isScrollingDown = true;
-			topMenu.classList.remove('fixed');
+			isScrollingDown = true
+			topMenu.classList.remove('fixed')
 		} else {
-			isScrollingDown = false;
-			topMenu.classList.add('fixed');
+			isScrollingDown = false
+			topMenu.classList.add('fixed')
 		}
 		
 		currentScroll = window.pageYOffset
@@ -213,8 +237,21 @@ function pageTransitionIn() {
 
 	var tl = gsap.timeline()
 
+	tl.set('html', {
+		cursor: 'wait',
+	})
+
+	tl.set('body', {
+		overflow: 'hidden',
+	})
+
 	tl.set('.page-transition', {
 		pointerEvents: 'auto'
+	})
+
+	tl.to('.page-transition > div', {
+		scaleY: 1,
+		stagger: .1
 	})
 
 }
@@ -222,10 +259,17 @@ function pageTransitionIn() {
 // page transition out
 function pageTransitionOut() {
 
-	var tl = gsap.timeline();
+	var tl = gsap.timeline()
 	
 	tl.set('main .once-in', {
-		y: '50vw',
+		y: '10vh',
+		autoAlpha: 0
+	})
+
+	tl.to('.page-transition > div', {
+		y: '-110%',
+		stagger: .1,
+		delay: .75
 	})
 
 	tl.to('.page-transition', {
@@ -234,22 +278,37 @@ function pageTransitionOut() {
 	})
 
 	tl.to('main .once-in', {
-		duration: 1,
-		y: '0vh',
-		stagger: .05,
+		duration: 1.5,
+		autoAlpha: 1,
+		y: 0,
 		ease: 'Expo.easeOut',
-		clearProps: 'true'
-	}, '-=.55')
+		clearProps: 'all'
+	}, '-=.425')
+
+	tl.to('html', {
+		cursor: 'auto',
+		duration: 0
+	})
+
+	tl.to('body', {
+		overflow: 'visible',
+		duration: 0
+	})
+
+	tl.to('.page-transition > div', {
+		clearProps: 'all',
+		duration: 0
+	})
 }
 
 // delay function
 function delay(n) {
-	n = n || 2000;
+	n = n || 2000
 	return new Promise((done) => {
 		setTimeout(() => {
-			done();
-		}, n);
-	});
+			done()
+		}, n)
+	})
 }
 
 // init scroll smoother
@@ -259,6 +318,8 @@ function initScrollSmoother() {
 			wrapper: '#smooth-content',
 			content: '#smooth-content .main-wrap',
 			smooth: 2,
+			speed: .75,
+			smoothTouch: .1,
 			effects: true,
 			normalizeScroll: true
 		})
@@ -268,28 +329,31 @@ function initScrollSmoother() {
 			speed: 'auto'
 		})
 
-		// scroll buttons
-		$('#home-banner button').click(function(){
-			gsap.to(smoother, {
-				scrollTop: Math.min(ScrollTrigger.maxScroll(window), smoother.offset('#about', '75 top')),
-				duration: 2
-			})
-		})
-
 		// pause / play scroll smoother on some determined actions
 		$('.open-fs').click(function(){
+			if (isDoubleClicked($(this))) return
 			smoother.paused(true)
 		})
 
 		$('#fs-menu a, .close-fs').click(function(){
+			if (isDoubleClicked($(this))) return
 			smoother.paused(false)
 		})
 
 		$(document).keyup(function(e) {
+			if (isDoubleClicked($(this))) return
 			if(e.key === 'Escape') {
 				smoother.paused(false)
 			}
 		})
+
+		// scroll to the top of the page on page load
+		smoother.scrollTop(0)
+
+	} else {
+
+		// scroll to the top of the page on page load (on mobile)
+		window.scrollTo(0, 0)
 	}
 }
 
@@ -328,6 +392,35 @@ function scrollTriggerAnimations() {
             })
         })
 	}
+
+	// fixed top banner banner + expanding box animation
+	if ($(window).width() > 993) {
+		setTimeout(function() {
+
+			ScrollTrigger.create({
+				trigger: '#main-content',
+				pin: '.top-banner .bg',
+				start: 'top top',
+				end: '+=' + vh(100)
+			})
+	
+			gsap.from('#top-box', {
+				y: '-5rem',
+				scale: .9,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '#main-content',
+					start: '1 top',
+					end: '+=' + vh(90),
+					scrub: 2,
+					onComplete: () => {
+						ScrollTrigger.refresh()
+					}
+				}
+			})
+			
+		}, 50)
+	}
 }
 
 // init all the sliders on the website
@@ -360,10 +453,10 @@ function initSliders() {
 	}
 }
 
-// disable console warnings and show skyline message
+// disable console warnings and show copyright message
 function initCopyright() {
-	//console.clear()
-	const message = 'Masterpiece by Senz Design 🔗 www.senzdsn.com'
+	console.clear()
+	const message = 'Design Paanda Design 🔗 www.paandadesign.com.br \nCode Senz Design 🔗 www.senzdsn.com'
 	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
 	console.log(`%c${message}`, style)
 }
@@ -372,7 +465,7 @@ function initCopyright() {
 function initMouseCursor() {
 
 	let links = selectAll('a, button')
-	let mouse = document.getElementById('mouse');
+	let mouse = document.getElementById('mouse')
 
 	for (let i = 0; i < links.length; i++) {
 		links[i].addEventListener('mouseover', function(){
@@ -383,8 +476,8 @@ function initMouseCursor() {
 				marginTop: '-1.5rem',
 				marginLeft: '-1.5rem'
 			})
-		});
-	};
+		})
+	}
 	
 	for (let i = 0; i < links.length; i++) {
 		links[i].addEventListener('mouseleave', function(){
@@ -395,8 +488,8 @@ function initMouseCursor() {
 				marginTop: '-.75rem',
 				marginLeft: '-.75rem'
 			})
-		});
-	};
+		})
+	}
 
 	function moveCircle(e) {
 		gsap.to(mouse, .5, {
@@ -411,8 +504,8 @@ function initMouseCursor() {
 // fire the opening animation
 function openingAnimation() {
 	const opening = gsap.timeline({
-		delay: 1
-	});
+		delay: .5
+	})
 
 	opening.set('html', {
 		cursor: 'wait',
@@ -435,7 +528,7 @@ function openingAnimation() {
 		autoAlpha: 0
 	})
 
-	opening.set('#about', {
+	opening.set('#top-box', {
 		marginTop: '5rem'
 	})
 
@@ -455,7 +548,7 @@ function openingAnimation() {
 		duration: 1
 	}, '-=1')
 
-	opening.to('#about', {
+	opening.to('#top-box', {
 		marginTop: 0,
 		duration: 1
 	}, '-=1')
@@ -504,28 +597,31 @@ barba.init({
 	transitions: [{
 		name: 'default',
 		once() {
-			initScript();
+			initScript()
 		},
 
 		async leave(data) {
 			pageTransitionIn(data.current)
 			await delay(1100)
 			data.current.container.remove()
-			let triggers = ScrollTrigger.getAll();
+			let triggers = ScrollTrigger.getAll()
 			triggers.forEach(function (trigger) {
 				trigger.kill(true)
-			});
+			})
+		},
+
+		async beforeEnter() {
+			if ($('#main-content').attr('class').includes('home')) {
+				$('#opening').remove()
+			}
+			initScrollSmoother()
+			ScrollTrigger.refresh()
 		},
 
 		async enter(data) {
-			initScript()
-			window.scrollTo(0, 0)
 			pageTransitionOut(data.next)
-		},
-
-		async afterEnter() {
-			ScrollTrigger.refresh()
-		},
+			initScript()
+		}
 	}, {
 		name: 'opening-animation',
 		to: {
@@ -539,73 +635,23 @@ barba.init({
 	views: [
 		{
 			namespace: 'home',
-			beforeEnter() {
-
-				// fixed home banner
-				if ($(window).width() > 993) {
-					ScrollTrigger.create({
-						trigger: '#home-banner .bg',
-						pin: true,
-						start: 'top top',
-						end: '+=' + vh(100)
-					})
-
-					// expading block about (below the home)
-					gsap.from('#about', {
-						y: '-5rem',
-						borderTopLeftRadius: '0.75rem',
-						borderTopRightRadius: '0.75rem',
-						scale: .9,
-						ease: 'none',
-						scrollTrigger: {
-							trigger: '#home-banner',
-							start: '1 top',
-							end: '+=' + vh(90),
-							scrub: 2,
-							onComplete: () => {
-								ScrollTrigger.refresh()
-								console.log('test')
-							}
-						}
-					})
-				}
-
-				// explore button on the banner (mobile only)
-				if ($(window).width() < 993) {
-					$('#home-banner button').click(function(){
-						$('html, body').animate({
-							scrollTop: $('#about').offset().top
-						}, 600);
-					})
-				}
+			afterEnter() {
 
 				// fill text animation
-				gsap.to('#about .featured span', {
+				gsap.to('#top-box .featured span', {
 					backgroundPositionX: 0,
 					ease: 'none',
 					scrollTrigger: {
-						trigger: '#about .featured',
+						trigger: '#top-box .featured',
 						scrub: 2,
 						start: 'top 90%',
 						end: 'bottom 75%'
 					}
 				})
 
-				// parallax bg in the grains section
-				gsap.to('#parallax img', {
-					y: '-25%',
-					ease: 'none',
-					scrollTrigger: {
-						trigger: '#parallax',
-						scrub: 2,
-						start: 'top bottom',
-						end: 'bottom top'
-					}
-				})
-
 				// horizontal scroll
 				if ($(window).width() > 993) {
-					let sections = gsap.utils.toArray('.horizontal-scroll .slide');
+					let sections = gsap.utils.toArray('.horizontal-scroll .slide')
 
 					let horizontalScroll = gsap.to(sections, {
 						xPercent: -100 * (sections.length - 1),
@@ -646,19 +692,7 @@ barba.init({
 						})
 					})
 				}
-
-				// parallax bg in the sustainability section
-				gsap.to('#world .bg', {
-					y: '-5rem',
-					ease: 'none',
-					scrollTrigger: {
-						trigger: '#world',
-						scrub: 2,
-						start: 'top bottom',
-						end: 'bottom top'
-					}
-				})
-			},
+			}
 		}
 	]
 })

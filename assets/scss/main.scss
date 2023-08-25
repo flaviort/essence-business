@@ -1,6 +1,6 @@
 // use these to create a big main.scss
 @import 'atoms/variables';
-//@import 'atoms/breakpoints';
+@import 'atoms/breakpoints';
 @import 'atoms/scroll';
 @import 'atoms/containers';
 @import 'atoms/texts';
@@ -17,6 +17,13 @@
 @import 'modules/page-transition';
 @import 'modules/mouse';
 @import 'modules/floating-whatsapp';
+@import 'modules/internal-banner';
+@import 'modules/top-box';
 
 // pages
 @import 'pages/home';
+//@import 'pages/about';
+//@import 'pages/specialists';
+//@import 'pages/mission';
+//@import 'pages/services';
+//@import 'pages/about';

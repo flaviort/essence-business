@@ -109,137 +109,6 @@
             }
         }
 
-        #about {
-            z-index: 3;
-            background: $green url(../img/lines.png) center center / cover no-repeat;
-            padding: 7.5vw 0 15vw 0;
-            transform: translateY(-1.5rem);
-
-            @media #{$mq-md-min} {
-                padding: 5vw 0;
-            }
-
-            @media #{$mq-lg-min} {
-                border-bottom-left-radius: 1.25vw;
-                border-bottom-right-radius: 1.25vw;
-                transform: none;
-            }
-
-            .left {
-                padding-top: 7vw;
-
-                @media #{$mq-md-min} {
-                    padding-top: 0;
-                }
-
-                @media #{$mq-xl-min} {
-                    padding-right: 5rem;
-                }
-
-                h2 {
-                    color: $white;
-
-                    br {
-                        display: none;
-
-                        @media #{$mq-md-min} {
-                            display: block;
-                        }
-                    }
-                }
-
-                .line {
-                    display: block;
-                    width: 5rem;
-                    height: .25rem;
-                    background-color: $blue;
-                    margin: 3vw 0 7vw 0;
-
-                    @media #{$mq-md-min} {
-                        margin: 1vw 0 2vw 0;
-                    }
-                }
-
-                .text-big {
-                    font-weight: $bold;
-                }
-
-                .featured {
-                    display: inline-block;
-                    margin: 5vw 0;
-
-                    @media #{$mq-md-min} {
-                        margin: 1vw 0;
-                    }
-
-                    span {
-                        display: inline;
-                        padding: .15rem 0;
-                        background: linear-gradient(
-                            to right,
-                            $blue 50%,
-                            transparent 50%
-                        );
-                        background-size: 200% 100%;
-                        background-position-x: 100%;
-                        color: $white;
-                    }
-                }
-
-                .desc {
-                    display: block;
-                    margin-bottom: 5vw;
-
-                    @media #{$mq-md-min} {
-                        margin-bottom: 2.5vw;
-                    }
-                }
-            }
-
-            .right {
-                .image-01 {
-                    position: relative;
-                    overflow: hidden;
-                    border-radius: .5rem;
-                    width: 95%;
-                    height: 25rem;
-
-                    @media #{$mq-md-min} {
-                        width: 90%;
-                        height: 95%;
-                        border-radius: .75rem;
-                    }
-
-                    @media #{$mq-lg-min} {
-                        width: 80%;
-                        height: 90%;
-                    }
-                }
-
-                .image-02 {
-                    position: absolute;
-                    overflow: hidden;
-                    z-index: 2;
-                    bottom: 2rem;
-                    right: 15px;
-                    width: 45%;
-                    height: 60%;
-                    border-radius: .5rem;
-
-                    @media #{$mq-md-min} {
-                        border-radius: .75rem;
-                        width: 50%;
-                    }
-
-                    @media #{$mq-lg-min} {
-                        width: 40%;
-                        height: 80%;
-                        bottom: 0;
-                    }
-                }
-            }
-        }
-
         #parallax {
             z-index: 2;
             width: 100%;
@@ -256,10 +125,6 @@
 
             @media #{$mq-2xl-min} {
                 height: 35vw;
-            }
-
-            img {
-                height: 150%;
             }
         }
 
@@ -433,7 +298,6 @@
                 background-color: $black;
 
                 img {
-                    height: 150%;
                     filter: brightness(.5);
 
                     @media #{$mq-md-min} {
