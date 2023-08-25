@@ -1,0 +1,17 @@
+#main-content {
+    &.team {
+        #top-box {
+            .floating-icon {
+                display: none;
+            }
+        }
+
+        .team-slider {
+            .infos {
+                .photo {
+                    display: none;
+                }
+            }
+        }
+    }
+}

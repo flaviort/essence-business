@@ -1,0 +1,31 @@
+.title-desc {
+    padding: 15vw 0;
+
+    @media #{$mq-md-min} {
+        padding: 5vw 0 10vw 0;
+    }
+
+    @media #{$mq-lg-min} {
+        padding-bottom: 5vw;
+    }
+
+    &.has-texture {
+        background-image: url('../img/lines-white.png');
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .right {
+        padding-top: 5vw;
+
+        @media #{$mq-md-min} {
+            padding-top: 2vw;
+        }
+
+        @media #{$mq-lg-min} {
+            display: flex;
+            align-items: center;
+            padding-top: 0;
+        }
+    }
+}

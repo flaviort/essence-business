@@ -19,11 +19,13 @@
 @import 'modules/floating-whatsapp';
 @import 'modules/internal-banner';
 @import 'modules/top-box';
+@import 'modules/title-desc';
+@import 'modules/parallax';
 
 // pages
 @import 'pages/home';
-//@import 'pages/about';
-//@import 'pages/specialists';
+@import 'pages/about';
+@import 'pages/team';
 //@import 'pages/mission';
 //@import 'pages/services';
 //@import 'pages/about';

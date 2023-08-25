@@ -3,6 +3,7 @@
     background: $green url(../img/lines.png) center center / cover no-repeat;
     padding: 7.5vw 0 15vw 0;
     transform: translateY(-1.5rem);
+    margin-bottom: -1.5rem;
 
     @media #{$mq-md-min} {
         padding: 5vw 0;
@@ -61,7 +62,7 @@
             margin: 5vw 0;
 
             @media #{$mq-md-min} {
-                margin: 1vw 0;
+                margin: 1vw 0 2vw 0;
             }
 
             span {

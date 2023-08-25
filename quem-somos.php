@@ -58,177 +58,70 @@
 	</div>
 </section>
 
-<section id='parallax'>
-	<img data-src='assets/img/grains.jpg' alt='Grãos' class='lazy cover'>
-</section>
+<section class='title-desc bg-green'>
+	<div class='container'>
+        <div class='row'>
 
-<section id='services'>
-	<div class='horizontal-scroll'>
+			<div class='col-lg-5 left'>
 
-		<div class='slide'>
-			<div class='wrapper'>
-
-				<h2 class='text-bigger reveal-text'>
-					Conheça<br />
-					nossos<br />
-					serviços
+				<h2 class='text-bigger white reveal-text'>
+					<b>
+						Nossa Abordagem
+					</b>
 				</h2>
-
-				<div class='scroll'>
-					<div class='inner'>
-						<div class='white'></div>
-					</div>
-				</div>
 
 			</div>
-		</div>
 
-		<div class='slide slide-01'>
+			<div class='col-lg-7 right'>
 
-			<a href='importacao' class='image'>
-				<img data-src='assets/img/services-01.jpg' alt='Importação' class='lazy cover'>
-			</a>
-
-			<h3 class='text-big'>
-				Importação
-				<span></span>
-			</h3>
-
-			<a href='importacao' class='blue-button magnet'>
-				<span>
-					Conheça
-				</span>
-			</a>
-
-		</div>
-
-		<div class='slide slide-02'>
-
-			<a href='exportacao' class='image'>
-				<img data-src='assets/img/services-02.jpg' alt='Exportação' class='lazy cover'>
-			</a>
-
-			<h3 class='text-big'>
-				Exportação
-				<span></span>
-			</h3>
-
-			<a href='exportacao' class='blue-button magnet'>
-				<span>
-					Conheça
-				</span>
-			</a>
-
-		</div>
-
-		<div class='slide slide-03'>
-
-			<a href='transporte-e-carga' class='image'>
-				<img data-src='assets/img/services-03.jpg' alt='Transporte e Carga' class='lazy cover'>
-			</a>
-
-			<h3 class='text-big'>
-				Transporte e Carga
-				<span></span>
-			</h3>
-
-			<a href='transporte-e-carga' class='blue-button magnet'>
-				<span>
-					Conheça
-				</span>
-			</a>
-
-		</div>
-
-		<div class='slide slide-04'>
-
-			<a href='cursos-e-treinamentos' class='image'>
-				<img data-src='assets/img/services-04.jpg' alt='Cursos e Treinamentos' class='lazy cover'>
-			</a>
-
-			<h3 class='text-big'>
-				Cursos e Treinamentos
-				<span></span>
-			</h3>
-
-			<a href='cursos-e-treinamentos' class='blue-button magnet'>
-				<span>
-					Conheça
-				</span>
-			</a>
-
-		</div>
-
-	</div>
-</section>
-
-<section id='world'>
-
-	<div class='bg'>
-		<img data-src='assets/img/solidarity.jpg' alt='Essence por um mundo solidário' class='lazy cover'>
-	</div>
-
-	<div class='container container-big'>
-        <div class='row'>
-			<div class='col-md-10 col-lg-8 col-xl-6'>
-
-				<h2 class='text-bigger'>
-					Essence por um mundo solidário
-				</h2>
-
-				<p class='desc'>
-					Nós acreditamos firmemente na importância de fazer a diferença em nossa comunidade e contribuir para um mundo melhor. Por isso, temos o orgulho de apoiar e colaborar com organizações não governamentais (ONGs) que estão trabalhando arduamente para promover causas nobres.
+				<p>
+					Nossa abordagem personalizada e orientada para resultados visa maximizar a eficiência operacional, reduzir os riscos e aumentar a rentabilidade de seu negócio.
 				</p>
 
-				<a href='projetos-sociais' class='blue-button magnet'>
-					<span>
-						Saiba Mais
-					</span>
-				</a>
-
 			</div>
+
 		</div>
 	</div>
 </section>
 
-<section id='contact'>
-	<div class='container container-big'>
+<section id='parallax'>
+	<img data-src='assets/img/grains-harvest.jpg' alt='Grãos' class='lazy cover parallax-img' />
+</section>
+
+<section class='title-desc bg-blue has-texture'>
+	<div class='container'>
         <div class='row'>
-			<div class='col-12'>
-				<div class='box'>
-					<div class='row'>
 
-						<div class='col-md-6 left'>
+			<div class='col-lg-5 left'>
 
-							<p class='text-big'>
-								<b>
-									Trabalhamos para impulsionar o sucesso de sua operação 
-								</b>
-							</p>
+				<h2 class='text-bigger white reveal-text'>
+					<b>
+						O Grupo
+					</b>
+				</h2>
 
-							<p class='desc'>
-								e enfrentar os desafios do setor de forma eficiente e inovadora. 
-							</p>
-
-						</div>
-
-						<div class='col-md-6 right'>
-
-							<p>
-								Conte conosco para receber assistência profissional e dedicada em todas as etapas do processo.
-							</p>
-
-							<a href='contato' class='blue-button magnet'>
-								<span>
-									Fale Conosco
-								</span>
-							</a>
-
-						</div>
-
-					</div>
-				</div>
 			</div>
+
+			<div class='col-lg-7 right'>
+
+				<div class='floating-icon' data-speed='1.025'>
+					
+					<div class='rotating-bg'>
+						<?php echo file_get_contents('assets/svg/floating-icon-text.svg'); ?>
+					</div>
+
+					<?php echo file_get_contents('assets/svg/icon.svg'); ?>
+
+				</div>
+
+				<p class='white'>
+					<strong>O Grupo ESSENCE BUSINESS</strong> está preparado para enfrentar os desafios específicos de sua operação. Valorizamos a parceria com nossos clientes, trabalhando lado a lado para identificar oportunidades de crescimento, superar obstáculos e alcançar resultados duradouros.<br /><br />
+
+					<strong>Conte conosco para fornecer soluções especializadas</strong>, conhecimento de ponta e um compromisso inabalável. Estamos prontos para fazer parte de sua jornada e ajudá-lo a alcançar todo o potencial de seu empreendimento no setor do agronegócio.
+				</p>
+
+			</div>
+
 		</div>
 	</div>
 </section>

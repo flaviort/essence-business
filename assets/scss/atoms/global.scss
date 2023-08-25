@@ -168,3 +168,17 @@ body {
 	font-size: clamp(16px, 1.2vw, 21px);
 	line-height: 1.5;
 }
+
+// colors
+.bg-green 		{ background-color: $green; }
+.green 			{ color: $green; }
+.bg-green-light { background-color: $green-light; }
+.green-light 	{ color: $green-light; }
+.bg-blue 		{ background-color: $blue; }
+.blue 			{ color: $blue; }
+.bg-blue-light 	{ background-color: $blue-light; }
+.blue-light 	{ color: $blue-light; }
+.bg-white 		{ background-color: $white; }
+.white 			{ color: $white; }
+.bg-black 		{ background-color: $black; }
+.black 			{ color: $black; }

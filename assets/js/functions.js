@@ -421,6 +421,20 @@ function scrollTriggerAnimations() {
 			
 		}, 50)
 	}
+
+	// check if the #top-box has the class featured and apply the animation to it
+	if ($('#top-box .featured').length) {
+		gsap.to('#top-box .featured span', {
+			backgroundPositionX: 0,
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '#top-box .featured',
+				scrub: 2,
+				start: 'top 90%',
+				end: 'bottom 75%'
+			}
+		})
+	}
 }
 
 // init all the sliders on the website
@@ -636,18 +650,6 @@ barba.init({
 		{
 			namespace: 'home',
 			afterEnter() {
-
-				// fill text animation
-				gsap.to('#top-box .featured span', {
-					backgroundPositionX: 0,
-					ease: 'none',
-					scrollTrigger: {
-						trigger: '#top-box .featured',
-						scrub: 2,
-						start: 'top 90%',
-						end: 'bottom 75%'
-					}
-				})
 
 				// horizontal scroll
 				if ($(window).width() > 993) {
