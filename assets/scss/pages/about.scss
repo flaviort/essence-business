@@ -59,6 +59,14 @@
                                 transform: translateX(.2vw);
                             }
                         }
+
+                        svg {
+                            path,
+                            rect,
+                            polygon {
+                                fill: $white;
+                            }
+                        }
                     }
                 }
             }

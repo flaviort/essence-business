@@ -40,7 +40,7 @@
 
 			<div class='col-md-6 col-md-push-6 right'>
 
-				<div class='floating-icon' data-speed='1.025'>
+				<div class='floating-icon' data-speed='1.125'>
 					
 					<div class='rotating-bg'>
 						<?php echo file_get_contents('assets/svg/floating-icon-text.svg'); ?>
@@ -127,7 +127,7 @@
 
 			<div class='col-lg-6 infos'>
 
-				<h2 class='text-bigger reveal-text white'>
+				<h2 class='text-bigger white big-title'>
 					<b>
 						Conheça nosso time
 					</b>
@@ -137,7 +137,7 @@
 					<img data-src='assets/img/team-marcelo.jpg' alt='Marcelo Vieira' class='lazy cover'>
 				</div>
 
-				<div class='block'>
+				<div class='block pin-01'>
 
 					<h3 class='text-big name'>
 						<b>
@@ -161,7 +161,7 @@
 					<img data-src='assets/img/team-pedro.jpg' alt='Pedro Diehl' class='lazy cover'>
 				</div>
 
-				<div class='block'>
+				<div class='block pin-02'>
 
 					<h3 class='text-big name'>
 						<b>
@@ -185,7 +185,7 @@
 					<img data-src='assets/img/team-elielson.jpg' alt='Elielson Vulczak' class='lazy cover'>
 				</div>
 
-				<div class='block'>
+				<div class='block pin-03'>
 
 					<h3 class='text-big name'>
 						<b>

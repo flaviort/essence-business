@@ -695,6 +695,56 @@ barba.init({
 					})
 				}
 			}
+		}, {
+			namespace: 'team',
+			afterEnter() {
+				if ($(window).width() > 993) {
+					ScrollTrigger.create({
+						trigger: '.team-slider',
+						pin: '.team-slider .photos',
+						pinSpacing: false,
+						start: 'top top',
+						endTrigger: '#footer',
+						end: 'top bottom'
+					})
+
+					gsap.to('.team-slider .photos .photo:nth-child(1)', {
+						autoAlpha: 0,
+						scrollTrigger: {
+							trigger: '.team-slider .pin-02',
+							start: '0 60%',
+							toggleActions: 'restart pause resume reverse'
+						}
+					})
+
+					gsap.to('.team-slider .pin-02', {
+						autoAlpha: 1,
+						scrollTrigger: {
+							trigger: '.team-slider .pin-02',
+							start: '0 60%',
+							toggleActions: 'restart pause resume reverse'
+						}
+					})
+
+					gsap.to('.team-slider .photos .photo:nth-child(2)', {
+						autoAlpha: 0,
+						scrollTrigger: {
+							trigger: '.team-slider .pin-03',
+							start: '0 60%',
+							toggleActions: 'restart pause resume reverse'
+						}
+					})
+
+					gsap.to('.team-slider .pin-03', {
+						autoAlpha: 1,
+						scrollTrigger: {
+							trigger: '.team-slider .pin-03',
+							start: '0 60%',
+							toggleActions: 'restart pause resume reverse'
+						}
+					})
+				}
+			}
 		}
 	]
 })
