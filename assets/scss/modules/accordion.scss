@@ -1,0 +1,54 @@
+.accordion {
+    display: block;
+    margin-top: .75rem;
+    margin-bottom: 2rem;
+
+    @media #{$mq-md-min} {
+        margin-top: 1.25rem;
+    }
+
+    li {
+        display: block;
+
+        .question {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            border-bottom: 1px solid $white;
+            cursor: pointer;
+            padding: 1rem 0;
+
+            @media #{$mq-md-min} {
+                padding: .5rem 0;
+                margin-bottom: .25rem;
+            }
+
+            &.active {
+                svg {
+                    transform: rotate(135deg);
+                }
+            }
+
+            svg {
+                min-width: .875rem;
+                width: .875rem;
+                height: .875rem;
+                transition: .3s ease-in-out;
+            }
+        }
+
+        .answer {
+            display: none;
+            font-size: 90%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+
+            @media #{$mq-md-min} {
+                font-size: 87.25%;
+                padding-top: .75rem;
+            }
+        }
+    }
+}

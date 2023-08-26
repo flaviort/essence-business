@@ -104,6 +104,7 @@
                     height: 0;
                     padding-bottom: 100%;
                     margin-bottom: 5vw;
+                    border-radius: .5rem;
 
                     @media #{$mq-sm-min} {
                         padding-bottom: 75%;

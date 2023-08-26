@@ -1,0 +1,63 @@
+.full-section {
+    background-color: $blue-light;
+
+    .big-image {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        width: 100vw;
+        height: 150vw;
+
+        @media #{$mq-sm-min} {
+            height: 100vw;
+        }
+
+        @media #{$mq-md-min} {
+            height: 45vw;
+        }
+
+        @media #{$mq-lg-min} {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45vw;
+            height: 100%;
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        padding-top: 9vw;
+        padding-bottom: 10vw;
+        gap: 6vw;
+
+        @media #{$mq-md-min} {
+            padding-top: 5vw;
+            padding-bottom: 5vw;
+            gap: 3vw;
+        }
+
+        @media #{$mq-lg-min} {
+            padding-top: 7.5vw;
+            padding-bottom: 6vw;
+        }
+
+        .featured {
+            display: inline-block;
+
+            span {
+                display: inline;
+                padding: .15rem 0;
+                background: linear-gradient(
+                    to right,
+                    $blue 50%,
+                    transparent 50%
+                );
+                background-size: 200% 100%;
+                background-position-x: 100%;
+                color: $white;
+            }
+        }
+    }
+}

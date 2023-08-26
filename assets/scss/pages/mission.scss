@@ -1,0 +1,143 @@
+#main-content {
+    &.mission {
+        #top-box {
+            .left {
+                @media #{$mq-xl-min} {
+                    padding-right: 0;
+                    padding-left: 3rem;
+                }
+            }
+
+            .right {
+                @media #{$mq-md-min} {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                }
+
+                .floating-icon {
+                    position: absolute;
+                    z-index: 2;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white;
+                    top: 5rem;
+                    left: -3.5rem;
+                    width: 9rem;
+                    height: 9rem;
+                    padding: 3rem;
+
+                    @media #{$mq-lg-min} {
+                        display: flex;
+                    }
+
+                    .rotating-bg {
+                        position: absolute;
+                        z-index: 0;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+
+                        svg {
+                            animation: rotation 10s infinite linear;
+                            width: 100%;
+                        }
+                    }
+
+                    > svg {
+                        transform: translateX(.2rem);
+                    }
+
+                    svg {
+                        path,
+                        rect,
+                        polygon {
+                            fill: $white;
+                        }
+                    }
+                }
+
+                .image-full {
+                    margin-bottom: 7vw;
+
+                    @media #{$mq-md-min} {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+
+        .image-text {
+            padding: 7.5vw 0 15vw 0;
+
+            @media #{$mq-md-min} {
+                padding: 5vw 0;
+            }
+
+            &.box-blue {
+                background: $blue-light url(../img/lines-white.png) center center / cover no-repeat;
+            }
+
+            &.box-green {
+                background-color: $green;
+            }
+
+            .left {
+                padding-top: 7vw;
+
+                @media #{$mq-md-min} {
+                    padding-top: 0;
+                }
+
+                @media #{$mq-xl-min} {
+                    padding-right: 5rem;
+                }
+
+                &.no-padding {
+                    @media #{$mq-xl-min} {
+                        padding-right: 0;
+                    }
+                }
+
+                .accordion {
+                    li {
+                        .question {
+                            border-bottom-color: $black;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                @media #{$mq-md-min} {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                }
+
+                .image {
+                    &.image-full {
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: .5rem;
+                        width: 100%;
+                        height: 25rem;
+                        margin-bottom: 7vw;
+
+                        @media #{$mq-md-min} {
+                            height: 100%;
+                            border-radius: .75rem;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

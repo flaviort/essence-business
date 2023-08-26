@@ -109,9 +109,9 @@ function initClickAndKeyFunctions() {
 	})
 
 	// faq open / close
-	$('.faq-question .question').click(function(){
+	$('.accordion .question').click(function(){
 		if (isDoubleClicked($(this))) return
-		$(this).parent('.faq-question').toggleClass('active')
+		$(this).toggleClass('active')
 		$(this).siblings('.answer').slideToggle()
 		setTimeout(function(){
 			ScrollTrigger.refresh()
@@ -432,6 +432,21 @@ function scrollTriggerAnimations() {
 				scrub: 2,
 				start: 'top 90%',
 				end: 'bottom 75%'
+			}
+		})
+	}
+
+	// expanding blue contact box
+	if ($('.has-blue-box .bottom .box').length) {
+		gsap.from('.has-blue-box .bottom .box', {
+			scale: 0,
+			y: '10vh',
+			ease: 'none',
+			scrollTrigger: {
+				trigger: '.has-blue-box .bottom',
+				scrub: 2,
+				start: 'top 110%',
+				end: '50% 85%'
 			}
 		})
 	}
