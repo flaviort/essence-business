@@ -1,4 +1,5 @@
 .has-blue-box {
+    overflow: visible;
     background: $green url(../img/lines-white.png) center center / cover no-repeat;
     padding: 7.5vw 0 15vw 0;
 
@@ -7,12 +8,16 @@
     }
 
     .left {
+        display: flex;
+        flex-direction: column;
         margin-bottom: 7.5vw;
+        gap: 7.5vw;
 
         @media #{$mq-md-min} {
             padding-top: 5vw;
             padding-bottom: 5vw;
             margin-bottom: 5vw;
+            gap: 5vw;
         }
 
         @media #{$mq-xl-min} {
@@ -31,6 +36,10 @@
             justify-content: center;
             gap: 2rem;
             margin-bottom: 5vw;
+        }
+
+        &.has-logos {
+            gap: 1rem;
         }
 
         .floating-icon {
@@ -91,9 +100,81 @@
                 margin-bottom: 0;
             }
         }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 9rem;
+            padding: 1.5rem;
+            background-color: $white;
+            border-radius: .5rem;
+            margin-bottom: 1rem;
+            transition: .3s ease-in-out;
+
+            @media #{$mq-md-min} {
+                border-radius: .75rem;
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                transform: scale(.95);
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
     }
 
     .bottom {
+        .floating-icon {
+            position: absolute;
+            z-index: 2;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: $white;
+            top: -6rem;
+            left: 3rem;
+            width: 9rem;
+            height: 9rem;
+            padding: 3rem;
+
+            @media #{$mq-lg-min} {
+                display: flex;
+            }
+
+            .rotating-bg {
+                position: absolute;
+                z-index: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+
+                svg {
+                    animation: rotation 10s infinite linear;
+                    width: 100%;
+                }
+            }
+
+            > svg {
+                transform: translateX(.2rem);
+            }
+
+            svg {
+                path,
+                rect,
+                polygon {
+                    fill: $white;
+                }
+            }
+        }
+
         .box {
             display: flex;
             flex-direction: column;
