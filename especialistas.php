@@ -83,9 +83,7 @@
 			<div class='col-lg-5 left'>
 
 				<h2 class='text-bigger reveal-text'>
-					<b>
-						Diferencial
-					</b>
+					Diferencial
 				</h2>
 
 			</div>

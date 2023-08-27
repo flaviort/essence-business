@@ -2,9 +2,7 @@
 	<div class='wrap'>
 
 		<h2 class='text-bigger'>
-			<b>
-				Successo
-			</b>
+			Successo
 		</h2>
 
 		<p class='desc'>
@@ -12,7 +10,7 @@
             Entraremos em contato o mais breve possível.
         </p>
 
-		<button class='hollow-button magnet' onclick='Fancybox.close();'>
+		<button class='blue-button magnet' onclick='Fancybox.close();'>
 			<span>
 				Fechar
 			</span>
@@ -25,13 +23,11 @@
 	<div class='wrap'>
 
 		<h2 class='text-bigger'>
-			<b>
-				Oops!
-			</b>
+			Oops!
 		</h2>
 
 		<p class='desc'>
-			Ocorreu um erro ao enviarmos a sua mensagem. Por favor tente novamente em alguns minutos. Se o problema persistir entr em contato conosco diretamente através do telefone: <?php echo ($phone); ?>.
+			Ocorreu um erro ao enviarmos a sua mensagem. Por favor tente novamente em alguns minutos.
         </p>
 
 		<button class='hollow-button magnet' onclick='Fancybox.close();'>

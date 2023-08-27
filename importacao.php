@@ -88,9 +88,7 @@
 			<div class='col-lg-6 right'>
 
 				<h2 class='text-bigger reveal-text white'>
-					<b>
-						Fertilizantes
-					</b>
+					Fertilizantes
 				</h2>
 
 				<p>
@@ -148,7 +146,7 @@
 						Entre em contato conosco para obter mais informações, solicitar cotações ou esclarecer quaisquer dúvidas. Estamos ansiosos para ser seu parceiro confiável no fornecimento de fertilizantes de qualidade premium.
 					</p>
 
-					<a href='contato' class='hollow-white-button magnet'>
+					<a href='<?php echo($contact); ?>' class='hollow-white-button magnet'>
 						<span>
 							Clique aqui
 						</span>

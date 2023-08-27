@@ -19,25 +19,25 @@
                             <ul class='sub'>
 
                                 <li>
-                                    <a href='importacao' class='hover-underline'>
+                                    <a href='<?php echo($importation); ?>' class='hover-underline'>
                                         Importação
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='exportacao' class='hover-underline'>
+                                    <a href='<?php echo($exportation); ?>' class='hover-underline'>
                                         Exportação
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='transportes-e-cargas' class='hover-underline'>
+                                    <a href='<?php echo($transports); ?>' class='hover-underline'>
                                         Transportes e Cargas
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='cursos-e-treinamentos' class='hover-underline'>
+                                    <a href='<?php echo($courses); ?>' class='hover-underline'>
                                         Cursos e Treinamentos
                                     </a>
                                 </li>
@@ -55,19 +55,19 @@
                             <ul class='sub'>
 
                                 <li>
-                                    <a href='quem-somos' class='hover-underline'>
+                                    <a href='<?php echo($about); ?>' class='hover-underline'>
                                         Quem Somos
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='valores' class='hover-underline'>
+                                    <a href='<?php echo($mission); ?>' class='hover-underline'>
                                         Valores
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='especialistas' class='hover-underline'>
+                                    <a href='<?php echo($team); ?>' class='hover-underline'>
                                         Especialistas
                                     </a>
                                 </li>
@@ -76,13 +76,13 @@
                         </li>
 
                         <li>
-                            <a href='comercializacao-e-logistica' class='hover-underline'>
+                            <a href='<?php echo($logistics); ?>' class='hover-underline'>
                                 Comercialização e Logística
                             </a>
                         </li>
 
                         <li>
-                            <a href='projetos-sociais' class='hover-underline'>
+                            <a href='<?php echo($social); ?>' class='hover-underline'>
                                 Projetos Sociais
                             </a>
                         </li>
@@ -96,13 +96,13 @@
                             <ul class='sub'>
 
                                 <li>
-                                    <a href='contato' class='hover-underline'>
+                                    <a href='<?php echo($contact); ?>' class='hover-underline'>
                                         Fale Conosco
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='trabalhe-conosco' class='hover-underline'>
+                                    <a href='<?php echo($work); ?>' class='hover-underline'>
                                         Trabalhe Conosco
                                     </a>
                                 </li>
@@ -117,11 +117,11 @@
                     
                         <div class='language text-small'>
 
-                            <a href='./' class='active'>
+                            <a href='<?php echo($pt); ?>' class='active'>
                                 PT
                             </a>
 
-                            <a href='en'>
+                            <a href='<?php echo($en); ?>'>
                                 EN
                             </a>
 

@@ -65,9 +65,7 @@
 			<div class='col-lg-5 left'>
 
 				<h2 class='text-bigger white reveal-text'>
-					<b>
-						Nossa Abordagem
-					</b>
+					Nossa Abordagem
 				</h2>
 
 			</div>
@@ -95,9 +93,7 @@
 			<div class='col-lg-5 left'>
 
 				<h2 class='text-bigger white reveal-text'>
-					<b>
-						O Grupo
-					</b>
+					O Grupo
 				</h2>
 
 			</div>

@@ -4,7 +4,7 @@
         <?php echo file_get_contents('assets/svg/ux/close.svg'); ?>
     </button>
 
-    <a href='#' class='circle'>
+    <a href='<?php echo($whatsapp); ?>' class='circle'>
         <?php echo file_get_contents('assets/svg/social/whatsapp.svg'); ?>
     </a>
 

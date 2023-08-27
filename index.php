@@ -85,7 +85,7 @@
 					assim como nas importações de fertilizantes e exportações de grãos. Nosso foco está em proporcionar soluções personalizadas e eficientes para impulsionar o crescimento e o sucesso de nossos clientes. 
 				</p>
 
-				<a href='quem-somos' class='blue-button magnet'>
+				<a href='<?php echo($about); ?>' class='blue-button magnet'>
 					<span>
 						Saiba Mais
 					</span>
@@ -124,7 +124,7 @@
 
 		<div class='slide slide-01'>
 
-			<a href='importacao' class='image'>
+			<a href='<?php echo($importation); ?>' class='image'>
 				<img data-src='assets/img/services-01.jpg' alt='Importação' class='lazy cover' />
 			</a>
 
@@ -133,7 +133,7 @@
 				<span></span>
 			</h3>
 
-			<a href='importacao' class='blue-button magnet'>
+			<a href='<?php echo($importation); ?>' class='blue-button magnet'>
 				<span>
 					Conheça
 				</span>
@@ -143,7 +143,7 @@
 
 		<div class='slide slide-02'>
 
-			<a href='exportacao' class='image'>
+			<a href='<?php echo($exportation); ?>' class='image'>
 				<img data-src='assets/img/services-02.jpg' alt='Exportação' class='lazy cover' />
 			</a>
 
@@ -152,7 +152,7 @@
 				<span></span>
 			</h3>
 
-			<a href='exportacao' class='blue-button magnet'>
+			<a href='<?php echo($exportation); ?>' class='blue-button magnet'>
 				<span>
 					Conheça
 				</span>
@@ -162,7 +162,7 @@
 
 		<div class='slide slide-03'>
 
-			<a href='transporte-e-carga' class='image'>
+			<a href='<?php echo($transports); ?>' class='image'>
 				<img data-src='assets/img/services-03.jpg' alt='Transporte e Carga' class='lazy cover' />
 			</a>
 
@@ -171,7 +171,7 @@
 				<span></span>
 			</h3>
 
-			<a href='transporte-e-carga' class='blue-button magnet'>
+			<a href='<?php echo($transports); ?>' class='blue-button magnet'>
 				<span>
 					Conheça
 				</span>
@@ -181,7 +181,7 @@
 
 		<div class='slide slide-04'>
 
-			<a href='cursos-e-treinamentos' class='image'>
+			<a href='<?php echo($courses); ?>' class='image'>
 				<img data-src='assets/img/services-04.jpg' alt='Cursos e Treinamentos' class='lazy cover' />
 			</a>
 
@@ -190,7 +190,7 @@
 				<span></span>
 			</h3>
 
-			<a href='cursos-e-treinamentos' class='blue-button magnet'>
+			<a href='<?php echo($courses); ?>' class='blue-button magnet'>
 				<span>
 					Conheça
 				</span>
@@ -219,7 +219,7 @@
 					Nós acreditamos firmemente na importância de fazer a diferença em nossa comunidade e contribuir para um mundo melhor. Por isso, temos o orgulho de apoiar e colaborar com organizações não governamentais (ONGs) que estão trabalhando arduamente para promover causas nobres.
 				</p>
 
-				<a href='projetos-sociais' class='blue-button magnet'>
+				<a href='<?php echo($social); ?>' class='blue-button magnet'>
 					<span>
 						Saiba Mais
 					</span>
@@ -257,7 +257,7 @@
 								Conte conosco para receber assistência profissional e dedicada em todas as etapas do processo.
 							</p>
 
-							<a href='contato' class='blue-button magnet'>
+							<a href='<?php echo($contact); ?>' class='blue-button magnet'>
 								<span>
 									Fale Conosco
 								</span>

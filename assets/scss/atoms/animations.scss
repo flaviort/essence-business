@@ -33,4 +33,9 @@
 
 .parallax-img {
 	height: 120%;
+
+	&.cover,
+	&.lazy {
+		height: 120%;
+	}
 }

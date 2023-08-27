@@ -439,7 +439,7 @@ function scrollTriggerAnimations() {
 	// expanding blue contact box
 	if ($('.has-blue-box .bottom .box').length) {
 		gsap.from('.has-blue-box .bottom .box', {
-			scale: 0,
+			scale: .75,
 			y: '10vh',
 			ease: 'none',
 			scrollTrigger: {
@@ -449,6 +449,92 @@ function scrollTriggerAnimations() {
 				end: '50% 85%'
 			}
 		})
+	}
+
+	// full slider effects inside the exportation page
+	if ($('.full-section.full-section-slider').length) {
+		if ($(window).width() > 993) {
+			ScrollTrigger.create({
+				trigger: '.full-section.full-section-slider',
+				pin: '.full-section.full-section-slider .full-slider',
+				pinSpacing: false,
+				start: 'top top',
+				endTrigger: '.has-blue-box',
+				end: 'top bottom'
+			})
+
+			gsap.to('.full-section.full-section-slider .full-slider .photo:nth-child(1)', {
+				autoAlpha: 0,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-02',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			gsap.to('.full-section.full-section-slider .pin-02', {
+				autoAlpha: 1,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-02',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			gsap.to('.full-section.full-section-slider .full-slider .photo:nth-child(2)', {
+				autoAlpha: 0,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-03',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			gsap.to('.full-section.full-section-slider .pin-03', {
+				autoAlpha: 1,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-03',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			gsap.to('.full-section.full-section-slider .full-slider .photo:nth-child(3)', {
+				autoAlpha: 0,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-04',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			gsap.to('.full-section.full-section-slider .pin-04', {
+				autoAlpha: 1,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-04',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			gsap.to('.full-section.full-section-slider .full-slider .photo:nth-child(4)', {
+				autoAlpha: 0,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-05',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			gsap.to('.full-section.full-section-slider .pin-05', {
+				autoAlpha: 1,
+				scrollTrigger: {
+					trigger: '.full-section.full-section-slider .pin-05',
+					start: '0 60%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+		}
 	}
 }
 

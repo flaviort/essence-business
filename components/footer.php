@@ -8,7 +8,7 @@
 
                                             <div class='col-xl-2 left'>
 
-                                                <a href='./' class='logo'>
+                                                <a href='<?php echo($pt); ?>' class='logo'>
                                                     <?php echo file_get_contents('assets/svg/logo.svg'); ?>
                                                 </a>
 
@@ -44,25 +44,25 @@
                                                         <ul>
 
                                                             <li>
-                                                                <a href='importacao' class='hover-underline'>
+                                                                <a href='<?php echo($importation); ?>' class='hover-underline'>
                                                                     Importação
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='exportacao' class='hover-underline'>
+                                                                <a href='<?php echo($exportation); ?>' class='hover-underline'>
                                                                     Exportação
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='transportes-e-cargas' class='hover-underline'>
+                                                                <a href='<?php echo($transports); ?>' class='hover-underline'>
                                                                     Transportes e Cargas
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='cursos-e-treinamentos' class='hover-underline'>
+                                                                <a href='<?php echo($courses); ?>' class='hover-underline'>
                                                                     Cursos e Treinamentos
                                                                 </a>
                                                             </li>
@@ -82,19 +82,19 @@
                                                         <ul>
 
                                                             <li>
-                                                                <a href='quem-somos' class='hover-underline'>
+                                                                <a href='<?php echo($about); ?>' class='hover-underline'>
                                                                     Quem Somos
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='valores' class='hover-underline'>
+                                                                <a href='<?php echo($mission); ?>' class='hover-underline'>
                                                                     Valores
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='especialistas' class='hover-underline'>
+                                                                <a href='<?php echo($team); ?>' class='hover-underline'>
                                                                     Especialistas
                                                                 </a>
                                                             </li>
@@ -114,19 +114,19 @@
                                                         <ul>
 
                                                             <li>
-                                                                <a href='projetos-sociais' class='hover-underline'>
+                                                                <a href='<?php echo($social); ?>' class='hover-underline'>
                                                                     Projetos Sociais
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='trabalhe-conosco' class='hover-underline'>
+                                                                <a href='<?php echo($work); ?>' class='hover-underline'>
                                                                     Trabalhe Conosco
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='contato' class='hover-underline'>
+                                                                <a href='<?php echo($contact); ?>' class='hover-underline'>
                                                                     Contato
                                                                 </a>
                                                             </li>
