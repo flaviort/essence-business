@@ -1,0 +1,11 @@
+#main-content {
+    &.error-404 {
+        #internal-banner {
+            .bg {
+                img {
+                    opacity: .1;
+                }
+            }
+        }
+    }
+}

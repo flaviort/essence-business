@@ -22,6 +22,62 @@
         background-color: $blue;
     }
 
+    &.has-form {
+        overflow: hidden;
+        padding-bottom: 7.5vw;
+
+        @media #{$mq-md-min} {
+            padding-bottom: 5vw;
+        }
+
+        .left {
+            padding-bottom: 10vw;
+
+            @media #{$mq-md-min} {
+                display: flex;
+                align-items: center;
+                padding-right: 3rem;
+                padding-bottom: 0;
+            }
+
+            @media #{$mq-lg-min} {
+                padding-right: 5rem;
+            }
+        }
+
+        .right {
+            padding-top: 10vw;
+
+            @media #{$mq-md-min} {
+                padding-top: 0;
+            }
+
+            @media #{$mq-lg-min} {
+                padding-left: 3rem;
+            }
+
+            .bg {
+                position: absolute;
+                z-index: 0;
+                left: -5rem;
+                top: 0;
+                width: 200vw;
+                height: 100rem;
+                background-color: $blue;
+
+                @media #{$mq-md-min} {
+                    top: -10rem;
+                    left: -15px;
+                }
+            }
+
+            form {
+                position: relative;
+                z-index: 2;
+            }
+        }
+    }
+
     .left {
         padding-top: 7vw;
 

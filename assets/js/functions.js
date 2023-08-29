@@ -214,6 +214,11 @@ function validateForms() {
 				},
 				unhighlight: function (element){
 					$(element).closest('.form-line').removeClass('error')
+				},
+				messages: {
+					Nome: "Este campo é obrigatório",
+					Email: "Este campo é obrigatório",
+					Mensagem: "Este campo é obrigatório",
 				}
 			})
 		})
@@ -241,6 +246,10 @@ function pageTransitionIn() {
 		cursor: 'wait',
 	})
 
+	tl.set('.page-transition .icon svg', {
+		y: '110%'
+	})
+
 	tl.set('body', {
 		overflow: 'hidden',
 	})
@@ -254,6 +263,10 @@ function pageTransitionIn() {
 		stagger: .1
 	})
 
+	tl.to('.page-transition .icon svg', {
+		y: 0
+	}, '-=.5')
+
 }
 
 // page transition out
@@ -266,11 +279,15 @@ function pageTransitionOut() {
 		autoAlpha: 0
 	})
 
+	tl.to('.page-transition .icon svg', {
+		y: '-110%',
+		delay: .5
+	})
+
 	tl.to('.page-transition > div', {
 		y: '-110%',
-		stagger: .1,
-		delay: .75
-	})
+		stagger: .1
+	}, '-=.5')
 
 	tl.to('.page-transition', {
 		pointerEvents: 'none',
