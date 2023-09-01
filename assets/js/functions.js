@@ -111,8 +111,27 @@ function initClickAndKeyFunctions() {
 	// faq open / close
 	$('.accordion .question').click(function(){
 		if (isDoubleClicked($(this))) return
-		$(this).toggleClass('active')
-		$(this).siblings('.answer').slideToggle()
+
+		var that = $(this)
+
+		if (that.hasClass('active')) {
+			$('.accordion .question').removeClass('active')
+			$('.accordion .answer').slideUp()
+
+			setTimeout(function(){
+				that.removeClass('active')
+				that.siblings('.answer').slideUp()
+			}, 10)
+		} else {
+			$('.accordion .question').removeClass('active')
+			$('.accordion .answer').slideUp()
+			
+			setTimeout(function(){
+				that.addClass('active')
+				that.siblings('.answer').slideDown()
+			}, 10)
+		}
+
 		setTimeout(function(){
 			ScrollTrigger.refresh()
 		}, 450)

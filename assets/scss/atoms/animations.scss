@@ -20,6 +20,14 @@
 
 .split-line {
 	overflow: hidden;
+
+	&:not(:first-child) {
+		margin-top: -.875rem;
+
+		@media #{$mq-lg-min} {
+			margin-top: -1.25rem;
+		}
+	}
 	
 	* {
 		will-change: transform;

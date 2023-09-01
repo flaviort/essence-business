@@ -91,6 +91,9 @@
 
                 .big-title {
                     margin-bottom: 7.5vw;
+                    width: 20rem;
+                    max-width: 100%;
+                    line-height: 1.1;
 
                     @media #{$mq-md-min} {
                         margin-bottom: 5vw;

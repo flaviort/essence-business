@@ -11,8 +11,8 @@
 	$siteUrl = 'https://dev.senzdsn.com/essence-business';
 	$facebook = 'https://www.facebook.com/';
 	$instagram = 'https://www.instagram.com/';
-	$email = 'email@email.com';
-	$whatsapp = '#';
+	$email = 'contato@essencebusiness.com.br';
+	$whatsapp = 'https://api.whatsapp.com/send?phone=41985106276';
 
 	// link
 	$about = 'quem-somos';

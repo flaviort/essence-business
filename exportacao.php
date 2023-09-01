@@ -52,9 +52,9 @@
 					Somos especialistas em exportar uma ampla variedade de <b>grãos essenciais para o mercado global</b>, e temos orgulho em fornecer grãos certificados, tais como soja, milho, algodão, sorgo e trigo, atendendo às demandas dos clientes em todo o mundo.
 				</p>
 
-				<p class='featured'>
+				<p class='featured no-space'>
 					<span>
-						&nbsp;Possuímos registro no Ministério da Agricultura, Pecuária e Abastecimento (MAPA),&nbsp;
+						Possuímos registro no Ministério da Agricultura, Pecuária e Abastecimento (MAPA),
 					</span>
 				</p>
 

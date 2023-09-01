@@ -58,7 +58,7 @@
 
 				<p class='featured'>
 					<span>
-						&nbsp;Tudo é certificado por empresas referenciadas no mercado como SGS, Control Union e outros.&nbsp;
+						Tudo é certificado por empresas referenciadas no mercado como SGS, Control Union e outros.
 					</span>
 				</p>
 

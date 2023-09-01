@@ -6,7 +6,7 @@
 <section id='internal-banner' class='top-banner'>
 
 	<div class='bg'>
-		<img data-src='assets/img/smiling-woman-sac.jpg' alt='Fale Conosco' class='lazy cover'>
+		<img data-src='assets/img/smiling-woman-sac.jpg' alt='Fale Conosco' class='lazy cover top'>
 	</div>
 
 	<div class='container container-big once-in'>

@@ -70,13 +70,15 @@
                 a {
                     text-transform: uppercase;
                     font-size: 80%;
+                    --border-width: 2px;
+                    --border-color: var(--blue);
                 }
 
                 &.has-sub {
                     position: relative;
 
                     &:hover {
-                        p {
+                        .flex {
                             background-size: 100% var(--border-width);
                         }
 
@@ -86,40 +88,75 @@
                         }
                     }
 
-                    p {
-                        display: block;
-                        text-transform: uppercase;
-                        font-size: 80%;
+                    .flex {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: .5rem;
                         margin-bottom: 2rem;
                         transform: translateY(1.05rem);
+                        --border-width: 2px;
+                    
+                        &.hover-underline {
+                            --border-color: var(--blue);
+                        }
+
+                        p {
+                            text-transform: uppercase;
+                            font-size: 80%;
+                        }
+
+                        svg {
+                            width: .5rem;
+                            height: .5rem;
+                            min-width: .5rem;
+                            color: $blue;
+                        }
                     }
 
                     .sub {
                         position: absolute;
                         top: 100%;
                         left: 0;
-                        background-color: darken($green, 30);
+                        background: $blue url(../img/texture.png) center center / cover no-repeat;
                         color: $white;
-                        padding: .5rem 1rem;
-                        border-radius: .1rem;
+                        padding: 1rem 1.5rem;
+                        border-radius: .5rem;
                         opacity: 0;
                         visibility: hidden;
                         transition: .3s;
 
-                        &:before {
-                            content: '';
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 0 .5rem .5rem .5rem;
-                            border-color: transparent transparent darken($green, 30) transparent;
-                            position: absolute;
-                            top: -.4rem;
-                            left: 1rem;
-                        }
+                        li {
+                            display: block;
 
-                        a {
-                            white-space: nowrap;
+                            a {
+                                white-space: nowrap;
+                                transition: color .3s ease-in-out;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 2rem;
+                                margin: .5rem 0;
+
+                                svg {
+                                    width: 1rem;
+                                    min-width: 1rem;
+                                    height: 1rem;
+                                    opacity: 0;
+                                    transform: translateX(-1rem);
+                                    transition: .3s ease-in-out;
+                                    color: $gray-dark;
+                                }
+
+                                &:hover {
+                                    color: $gray-dark;
+
+                                    svg {
+                                        opacity: 1;
+                                        transform: none;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

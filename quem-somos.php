@@ -73,7 +73,7 @@
 			<div class='col-lg-7 right'>
 
 				<p>
-					Nossa abordagem personalizada e orientada para resultados visa maximizar a eficiência operacional, reduzir os riscos e aumentar a rentabilidade de seu negócio.
+					Nossa abordagem personalizada e orientada para resultados visa <b>maximizar a eficiência operacional</b>, reduzir os riscos e aumentar a rentabilidade de seu negócio.
 				</p>
 
 			</div>

@@ -12,33 +12,43 @@
 
                         <li class='has-sub'>
                             
-                            <p class='hover-underline'>
-                                Serviços
-                            </p>
+                            <div class='flex hover-underline'>
+
+                                <p>
+                                    Serviços
+                                </p>
+
+                                <?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
+
+                            </div>
 
                             <ul class='sub'>
 
                                 <li>
-                                    <a href='<?php echo($importation); ?>' class='hover-underline'>
-                                        Importação
+                                    <a href='<?php echo($importation); ?>'>
+                                        <span>Importação</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='<?php echo($exportation); ?>' class='hover-underline'>
-                                        Exportação
+                                    <a href='<?php echo($exportation); ?>'>
+                                        <span>Exportação</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='<?php echo($transports); ?>' class='hover-underline'>
-                                        Transportes e Cargas
+                                    <a href='<?php echo($transports); ?>'>
+                                        <span>Transportes e Cargas</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='<?php echo($courses); ?>' class='hover-underline'>
-                                        Cursos e Treinamentos
+                                    <a href='<?php echo($courses); ?>'>
+                                        <span>Cursos e Treinamentos</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
@@ -48,27 +58,36 @@
 
                         <li class='has-sub'>
 
-                            <p class='hover-underline'>
-                                Sobre Nós
-                            </p>
+                            <div class='flex hover-underline'>
+
+                                <p>
+                                    Sobre Nós
+                                </p>
+
+                                <?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
+
+                            </div>
 
                             <ul class='sub'>
 
                                 <li>
-                                    <a href='<?php echo($about); ?>' class='hover-underline'>
-                                        Quem Somos
+                                    <a href='<?php echo($about); ?>'>
+                                        <span>Quem Somos</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='<?php echo($mission); ?>' class='hover-underline'>
-                                        Valores
+                                    <a href='<?php echo($mission); ?>'>
+                                        <span>Valores</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='<?php echo($team); ?>' class='hover-underline'>
-                                        Especialistas
+                                    <a href='<?php echo($team); ?>'>
+                                        <span>Especialistas</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
@@ -89,21 +108,30 @@
 
                         <li class='has-sub'>
 
-                            <p class='hover-underline'>
-                                Contato
-                            </p>
+
+                            <div class='flex hover-underline'>
+
+                                <p>
+                                    Contato
+                                </p>
+
+                                <?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>
+
+                            </div>
 
                             <ul class='sub'>
 
                                 <li>
-                                    <a href='<?php echo($contact); ?>' class='hover-underline'>
-                                        Fale Conosco
+                                    <a href='<?php echo($contact); ?>'>
+                                        <span>Fale Conosco</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href='<?php echo($work); ?>' class='hover-underline'>
-                                        Trabalhe Conosco
+                                    <a href='<?php echo($work); ?>'>
+                                        <span>Trabalhe Conosco</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 

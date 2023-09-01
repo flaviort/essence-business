@@ -40,6 +40,10 @@
 
 			<div class='col-md-6 right'>
 
+				<div class='leaf' data-speed='1.1'>
+					<?php echo file_get_contents('assets/svg/leaf.svg'); ?>
+				</div>
+
 				<div class='floating-icon' data-speed='1.1'>
 					
 					<div class='rotating-bg'>
@@ -176,6 +180,46 @@
 								Acreditamos na força das parcerias para alcançar resultados significativos. Estabelecemos colaborações estratégicas com outras empresas, instituições e stakeholders do setor. Juntos, buscamos impulsionar a inovação, compartilhar conhecimentos e recursos, e criar um ambiente propício para o crescimento e desenvolvimento sustentável do agronegócio.
 							</p>
 
+							<div class='logos'>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/araguaia.png?v2' alt='Araguaia' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/cocamar.png?v2' alt='Cocamar' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/cooperfarms.png?v2' alt='CooperFarms' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/fecoagro.png?v2' alt='FecoAgro' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/fertipar.png?v2' alt='Fertipar' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/fertisolo.png?v2' alt='Frtisolo' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/harbor.png?v2' alt='Harbor' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/multitrans.png?v2' alt='Multitrans' class='lazy'>
+								</a>
+
+								<a href='#' target='_blank'>
+									<img data-src='assets/img/clients/oceanfertil.png?v2' alt='OceanFertil' class='lazy'>
+								</a>
+
+							</div>
+
 						</div>
 
 					</li>
@@ -195,10 +239,14 @@
 </section>
 
 <section class='image-text box-blue'>
-	<div class="container">
-		<div class="row">
+	<div class='container'>
+		<div class='row'>
 
 			<div class='col-md-6 col-md-push-6 right'>
+
+				<div class='leaf' data-speed='1.1'>
+					<?php echo file_get_contents('assets/svg/leaf.svg'); ?>
+				</div>
 
 				<div class='image image-full'>
 					<img data-src='assets/img/scientist.jpg' alt='Essence Business' class='lazy cover parallax-img'>
@@ -299,10 +347,14 @@
 </section>
 
 <section class='image-text box-green'>
-	<div class="container">
-		<div class="row">
+	<div class='container'>
+		<div class='row'>
 
 			<div class='col-md-6 right'>
+
+				<div class='leaf' data-speed='1.1'>
+					<?php echo file_get_contents('assets/svg/leaf.svg'); ?>
+				</div>
 
 				<div class='image image-full'>
 					<img data-src='assets/img/farmer.jpg' alt='Essence Business' class='lazy cover parallax-img'>

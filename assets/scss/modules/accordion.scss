@@ -49,6 +49,32 @@
                 font-size: 87.25%;
                 padding-top: .75rem;
             }
+
+            .logos {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: .25rem;
+                margin-top: 1rem;
+
+                @media #{$mq-md-min} {
+                    margin-top: 1.5rem;
+                    gap: .5rem;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $white;
+                    border-radius: .275rem;
+                    padding: .75rem;
+
+                    @media #{$mq-md-min} {
+                        border-radius: .5rem;
+                        padding: 1rem;
+                    }
+                }
+            }
         }
     }
 }

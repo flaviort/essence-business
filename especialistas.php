@@ -60,7 +60,7 @@
 
 				<p class='featured'>
 					<span>
-						&nbsp;Nossa equipe é composta por um grupo de especialistas altamente capacitados e dedicados no campo do agronegócio.&nbsp;
+						Nossa equipe é composta por um grupo de especialistas altamente capacitados e dedicados no campo do agronegócio.
 					</span>
 				</p>
 

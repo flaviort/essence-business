@@ -6,7 +6,7 @@
 <section id='internal-banner' class='top-banner'>
 
 	<div class='bg'>
-		<img data-src='assets/img/services-04.jpg' alt='Cursos e Treinamentos' class='lazy cover'>
+		<img data-src='assets/img/services-04.jpg' alt='Cursos e Treinamentos' class='lazy cover top'>
 	</div>
 
 	<div class='container container-big once-in'>
@@ -41,7 +41,7 @@
 			<div class='col-md-6 col-md-push-6 right'>
 
 				<div class='image image-full'>
-					<img data-src='assets/img/lecture.jpg' alt='Essence Business' class='lazy cover parallax-img'>
+					<img data-src='assets/img/lecture.jpg' alt='Essence Business' class='lazy cover parallax-img top'>
 				</div>
 
 			</div>
@@ -50,7 +50,7 @@
 
 				<p class='featured'>
 					<span>
-						&nbsp;Desenvolva suas habilidades e alcance seu potencial máximo com nossos cursos, treinamentos e coaching!&nbsp;
+						Desenvolva suas habilidades e alcance seu potencial máximo com nossos cursos, treinamentos e coaching!
 					</span>
 				</p>
 
@@ -79,16 +79,6 @@
 
 			<div class='col-lg-6 right'>
 
-				<div class='floating-icon' data-speed='1.05'>
-					
-					<div class='rotating-bg'>
-						<?php echo file_get_contents('assets/svg/floating-icon-text.svg'); ?>
-					</div>
-
-					<?php echo file_get_contents('assets/svg/icon.svg'); ?>
-
-				</div>
-
 				<p>
 					<b>Nossos treinamentos são focados em fornecer habilidades práticas e aplicáveis para o seu ambiente de trabalho.</b> Eles podem ser conduzidos em formato presencial ou online, permitindo que você escolha a opção mais conveniente para sua agenda e preferências. Independentemente do formato, nossa equipe de instrutores experientes e qualificados está comprometida em fornecer uma experiência de aprendizado envolvente e enriquecedora.<br /><br />
 
@@ -108,6 +98,16 @@
 		<div class='row'>
 
 			<div class='col-md-6 col-md-push-6 right'>
+
+				<div class='floating-icon' data-speed='1.1'>
+					
+					<div class='rotating-bg'>
+						<?php echo file_get_contents('assets/svg/floating-icon-text.svg'); ?>
+					</div>
+
+					<?php echo file_get_contents('assets/svg/icon.svg'); ?>
+
+				</div>
 
 				<div class='image'>
 					<img data-src='assets/img/man-smiling-computer.jpg' alt='Essence Business' class='lazy cover parallax-img'>

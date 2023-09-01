@@ -6,7 +6,7 @@
 <section id='internal-banner' class='top-banner'>
 
 	<div class='bg'>
-		<img data-src='assets/img/shaking-hands.jpg' alt='Trabalhe Conosco' class='lazy cover'>
+		<img data-src='assets/img/shaking-hands.jpg' alt='Trabalhe Conosco' class='lazy cover top-full'>
 	</div>
 
 	<div class='container container-big once-in'>
@@ -59,12 +59,15 @@
 							
 							<select id='area' name='Area' class='input select' required>
 								<option value='' selected disabled>Área de Atuação</option>
-								<option value='001'>001</option>
-								<option value='002'>002</option>
-								<option value='003'>003</option>
-								<option value='004'>004</option>
-								<option value='005'>005</option>
-								<option value='006'>006</option>
+								<option value='Administrativo'>Administrativo</option>
+								<option value='Comercial'>Comercial</option>
+								<option value='Operacional'>Operacional</option>
+								<option value='Logística'>Logística</option>
+								<option value='Faturamento'>Faturamento</option>
+								<option value='Representates'>Representates</option>
+								<option value='Jurídico'>Jurídico</option>
+								<option value='Institucional'>Institucional</option>
+								<option value='Outros'>Outros</option>
 							</select>
 
 							<?php echo file_get_contents('assets/svg/ux/angle-down.svg'); ?>

@@ -54,9 +54,9 @@
 					Com essa iniciativa, pretendemos fortalecer nossa posição no mercado, aumentar nossa
 				</p>
 
-				<p class='featured'>
+				<p class='featured no-space-top'>
 					<span>
-						&nbsp;eficiência operacional e garantir maior controle e agilidade na logística.&nbsp;
+						eficiência operacional e garantir maior controle e agilidade na logística.
 					</span>
 				</p>
 

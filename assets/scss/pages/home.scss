@@ -109,16 +109,6 @@
             }
         }
 
-        #top-box {
-            .left {
-                .featured {
-                    @media #{$mq-md-min} {
-                        margin-bottom: 1vw;
-                    }
-                }
-            }
-        }
-
         #services {
             background: $blue-light url(../img/lines.png) center center / cover no-repeat;
 

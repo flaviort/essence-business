@@ -75,9 +75,9 @@
 					Desde 2016, consolidamos nossa expertise como especialistas.
 				</p>
 
-				<p class='featured'>
+				<p class='featured no-space'>
 					<span>
-						&nbsp;Consultorias Contábeis, Financeiras e Fiscais no setor Agro,&nbsp;
+						Consultorias Contábeis, Financeiras e Fiscais no setor Agro,
 					</span>
 				</p>
 

@@ -125,9 +125,17 @@
                 margin: 1vw 0 2vw 0;
             }
 
+            &.no-space {
+                margin-bottom: .25vw;
+            }
+
+            &.no-space-top {
+                margin-top: .25vw;
+            }
+
             span {
                 display: inline;
-                padding: .15rem 0;
+                padding: .15rem .5rem;
                 background: linear-gradient(
                     to right,
                     $blue 50%,
@@ -136,6 +144,8 @@
                 background-size: 200% 100%;
                 background-position-x: 100%;
                 color: $white;
+                -webkit-box-decoration-break: clone;
+	            box-decoration-break: clone;
             }
         }
 

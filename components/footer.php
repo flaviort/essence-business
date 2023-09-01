@@ -120,14 +120,14 @@
                                                             </li>
 
                                                             <li>
-                                                                <a href='<?php echo($work); ?>' class='hover-underline'>
-                                                                    Trabalhe Conosco
+                                                                <a href='<?php echo($contact); ?>' class='hover-underline'>
+                                                                    Fale Conosco
                                                                 </a>
                                                             </li>
 
                                                             <li>
-                                                                <a href='<?php echo($contact); ?>' class='hover-underline'>
-                                                                    Contato
+                                                                <a href='<?php echo($work); ?>' class='hover-underline'>
+                                                                    Trabalhe Conosco
                                                                 </a>
                                                             </li>
 
