@@ -1,81 +1,124 @@
-.form-line {
-    position: relative;
-    display: block;
-    margin-bottom: 1.5rem;
+form {
+    &.sending {
+        pointer-events: none;
 
-    &.error {
-        .line-wrapper {
-            .input {
-                border-color: $red;
-                color: $red;
-
-                &::placeholder {
-                    color: $red;
+        .hollow-white-button {
+            span {
+                color: transparent!important;
+                background-color: $white;
+                
+                .loading {
+                    opacity: 1;
                 }
             }
         }
-
-        label.error {
-            position: absolute;
-            bottom: -.415rem;
-            right: 0;
-            background-color: $red;
-            color: $white;
-            font-size: .625rem;
-            padding: 0 .5rem;
-            border-radius: 1rem;
-        }
     }
 
-    .line-wrapper {
+    .form-line {
         position: relative;
         display: block;
+        margin-bottom: 1.5rem;
 
-        .input {
+        &.error {
+            .line-wrapper {
+                .input {
+                    border-color: $red;
+                    color: $red;
+
+                    &::placeholder {
+                        color: $red;
+                    }
+                }
+            }
+
+            label.error {
+                position: absolute;
+                bottom: -.415rem;
+                right: 0;
+                background-color: $red;
+                color: $white;
+                font-size: .625rem;
+                padding: 0 .5rem;
+                border-radius: 1rem;
+            }
+        }
+
+        .line-wrapper {
+            position: relative;
             display: block;
-            width: 100%;
-            border: none;
-            border-bottom: 1px solid $white;
-            background-color: transparent;
-            box-shadow: none;
-            padding: .375rem 0;
-            border-radius: 0;
-            color: $white;
 
-            &::placeholder {
+            .input {
+                display: block;
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid $white;
+                background-color: transparent;
+                box-shadow: none;
+                padding: .375rem 0;
+                border-radius: 0;
+                color: $white;
+
+                &::placeholder {
+                    color: $white;
+                }
+
+                &.select {
+                    cursor: pointer;
+                }
+
+                &.textarea {
+                    min-height: 9rem;
+                    height: 9rem;
+                    resize: vertical;
+
+                    @media #{$mq-md-min} {
+                        min-height: 7.5rem;
+                        height: 7.5rem;
+                    }
+                }
+
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover, 
+                &:-webkit-autofill:focus, 
+                &:-webkit-autofill:active {
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: $white;
+                    transition: background-color 5000s ease-in-out 0s;
+                    box-shadow: inset 0 0 0 1rem transparent;
+                    font-size: 1rem;
+                }
+
+                &:-webkit-autofill::first-line {
+                    font-size: 1rem!important;
+                }
+            }
+
+            svg {
+                position: absolute;
+                z-index: 2;
+                top: 50%;
+                transform: translateY(-50%);
+                right: .25rem;
+                pointer-events: none;
+                width: .75rem;
+                height: .75rem;
                 color: $white;
             }
 
-            &.select {
-                cursor: pointer;
-            }
-
-            &.textarea {
-                min-height: 9rem;
-                height: 9rem;
-                resize: vertical;
+            .max-size {
+                display: block;
+                width: 100%;
+                color: $white;
+                margin-top: .5rem;
 
                 @media #{$mq-md-min} {
-                    min-height: 7.5rem;
-                    height: 7.5rem;
+                    text-align: right;
                 }
             }
         }
 
-        svg {
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            transform: translateY(-50%);
-            right: .25rem;
-            pointer-events: none;
-            width: .75rem;
-            height: .75rem;
-            color: $white;
+        input[type='submit'] {
+            display: none;
         }
-    }
-
-    input[type='submit'] {
-        display: none;
     }
 }

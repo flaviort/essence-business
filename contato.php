@@ -80,13 +80,14 @@
 
 					<div class='form-line last'>
 
-						<div class='h-captcha' data-sitekey='32e67768-4d3f-419f-9396-45aef0380381'></div>
-
-						<input type='submit' id='contact-send'>
+						<input type='submit' id='contact-send' name='send-contact'>
 
 						<label for='contact-send' class='hollow-white-button magnet'>
 							<span>
 								Enviar
+								<div class='loading'>
+									<?php echo file_get_contents('assets/svg/ux/loading.svg'); ?>
+								</div>
 							</span>
 						</label>
 

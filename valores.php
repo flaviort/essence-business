@@ -183,39 +183,39 @@
 							<div class='logos'>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/araguaia.png?v2' alt='Araguaia' class='lazy'>
+									<img data-src='assets/img/clients/araguaia.png' alt='Araguaia' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/cocamar.png?v2' alt='Cocamar' class='lazy'>
+									<img data-src='assets/img/clients/cocamar.png' alt='Cocamar' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/cooperfarms.png?v2' alt='CooperFarms' class='lazy'>
+									<img data-src='assets/img/clients/cooperfarms.png' alt='CooperFarms' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/fecoagro.png?v2' alt='FecoAgro' class='lazy'>
+									<img data-src='assets/img/clients/fecoagro.png' alt='FecoAgro' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/fertipar.png?v2' alt='Fertipar' class='lazy'>
+									<img data-src='assets/img/clients/fertipar.png' alt='Fertipar' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/fertisolo.png?v2' alt='Frtisolo' class='lazy'>
+									<img data-src='assets/img/clients/fertisolo.png' alt='Frtisolo' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/harbor.png?v2' alt='Harbor' class='lazy'>
+									<img data-src='assets/img/clients/harbor.png' alt='Harbor' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/multitrans.png?v2' alt='Multitrans' class='lazy'>
+									<img data-src='assets/img/clients/multitrans.png' alt='Multitrans' class='lazy'>
 								</a>
 
 								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/oceanfertil.png?v2' alt='OceanFertil' class='lazy'>
+									<img data-src='assets/img/clients/oceanfertil.png' alt='OceanFertil' class='lazy'>
 								</a>
 
 							</div>

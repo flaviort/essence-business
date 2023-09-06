@@ -109,6 +109,10 @@
             }
         }
 
+        #top-box {
+            background: $green url(../img/lines-white.png) center center / cover no-repeat;
+        }
+
         #services {
             background: $blue-light url(../img/lines.png) center center / cover no-repeat;
 
@@ -318,7 +322,7 @@
             overflow: visible;
 
             .box {
-                background: $green url(../img/lines.png) center center / cover no-repeat;
+                background: $green url(../img/lines-white.png) center center / cover no-repeat;
                 padding: 7.5vw;
                 border-radius: 1rem;
                 margin-top: -5rem;

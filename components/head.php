@@ -12,6 +12,8 @@
 
 			<meta name='author' content='Essence Business - Importação e Exportação'>
 
+			<meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests'>
+
 			<title>Essence Business - Importação e Exportação <?php echo htmlspecialchars($page);?></title>
 
 			<!-- google -->

@@ -52,7 +52,7 @@
 
 				<div class='bg'></div>
 
-				<form method='post' id='work-form' class='form-validate'>
+				<form method='post' id='work-form' class='form-validate' enctype='multipart/form-data'>
 
 					<div class='form-line'>
 						<div class='line-wrapper'>
@@ -95,19 +95,26 @@
 
 					<div class='form-line'>
 						<div class='line-wrapper'>
-							<input type='file' id='cv' name='Curriculo' class='input' placeholder='Currículo' accept='image/png, image/jpg, image/jpeg, image/gif, image/webp, .doc, .docx, .xls, .xlsx, .pdf, .csv'>
+
+							<input type='file' id='file' name='file' class='input' placeholder='Currículo' accept='.doc, .docx, .pdf'>
+							
+							<p class='text-small max-size'>
+								Permitido pdf/doc com no máximo 5mb
+							</p>
+
 						</div>
 					</div>
 
 					<div class='form-line last'>
 
-						<div class='h-captcha' data-sitekey='32e67768-4d3f-419f-9396-45aef0380381'></div>
-
-						<input type='submit' id='work-send'>
+						<input type='submit' id='work-send' name='send-work'>
 
 						<label for='work-send' class='hollow-white-button magnet'>
 							<span>
 								Enviar
+								<div class='loading'>
+									<?php echo file_get_contents('assets/svg/ux/loading.svg'); ?>
+								</div>
 							</span>
 						</label>
 

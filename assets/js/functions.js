@@ -164,6 +164,15 @@ function initClickAndKeyFunctions() {
 		if (isDoubleClicked($(this))) return
 		$('#floating-whatsapp').fadeOut()
 	})
+
+	// check if the uploaded file (on the work with us page) has more than 5mb
+	$('#file').on('change', function() {
+        if (this.files.length > 0 && this.files[0].size > 5 * 1024 * 1024) {
+            alert('O arquivo excede o tamanho máximo de 5MB')
+            $(this).val('')
+        }
+    })
+
 }
 
 // init lazyload
@@ -218,26 +227,61 @@ function initTopMenu() {
 
 // validate footer newsletter
 function validateForms() {
-	if(selectAll('.form-validate')) {
+	if ($('.form-validate').length) {
+		$('.form-validate').each(function () {
+			var theForm = $(this)
 
-		const form = $('.form-validate')
-
-		$.each(form, function() {
-			$(this).validate({
-				errorPlacement: function(error, element) {
+			// initialize the jquery validation plugin for the form
+			theForm.validate({
+				errorPlacement: function (error, element) {
 					error.appendTo(element.closest('.form-line'))
 					error.addClass('error-msg')
 				},
-				highlight: function (element){
+				highlight: function(element) {
 					$(element).closest('.form-line').addClass('error')
 				},
-				unhighlight: function (element){
+				unhighlight: function(element) {
 					$(element).closest('.form-line').removeClass('error')
 				},
-				messages: {
-					Nome: "Este campo é obrigatório",
-					Email: "Este campo é obrigatório",
-					Mensagem: "Este campo é obrigatório",
+				submitHandler: function(form) {
+					let originalForm = $(form).get(0)
+					let dataparam = new FormData(originalForm)
+
+					// check if the form has an upload field and attach the file
+					if ($('#file').length) {
+						let attachment = $("#file")[0].files[0]
+						dataparam.append('attachment', attachment)
+					}
+
+					$.ajax({
+						type: 'POST',
+						// this is the localhost location of the php file (comment when going live)
+						url: location.origin + '/clients/essence-business/assets/php/sender.php',
+						// and this if the final location of the php file (comment the code above, uncomment this one and rename it accordingly)
+						// url: location.origin + '/_temp/assets/php/sender.php',
+						data: dataparam,
+						dataType: 'html',
+                		crossDomain: true,
+						async: true,
+						cache: false,
+						contentType: false,
+						processData: false,
+						beforeSend: function() {
+							theForm.addClass('sending')
+						},
+						success: function(response) {
+							theForm[0].reset()
+							select('.contact-success').click()
+							//console.log("success", response)
+						},
+						error: function(e) {
+							select('.contact-error').click()
+							//console.log("Unsuccessful:", e)
+						},
+						complete: function() {
+							theForm.removeClass('sending')
+						}
+					})
 				}
 			})
 		})
