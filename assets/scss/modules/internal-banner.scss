@@ -79,6 +79,12 @@
                 margin-top: -.5rem;
             }
 
+            &.small {
+                @media #{$mq-sm-max} {
+                    font-size: 10vw;
+                }
+            }
+
             span {
                 background-color: $blue;
                 box-shadow: 1rem 0 0 $blue, -1rem 0 0 $blue;

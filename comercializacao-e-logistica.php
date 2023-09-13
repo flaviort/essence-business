@@ -13,7 +13,7 @@
         <div class='row'>
 			<div class='col-12'>
 
-				<h1 class='text-bigger'>
+				<h1 class='text-bigger small'>
 					<span>
 						Comercialização e Logística
 					</span>
@@ -87,7 +87,7 @@
 <section class='full-section'>
 
 	<div class='big-image'>
-		<img data-src='assets/img/harvest.jpg' alt='Comercialização' class='lazy cover parallax-img'>
+		<img data-src='assets/img/harvest.jpg' alt='Comercialização' class='lazy cover parallax-img position-right'>
 	</div>
 
 	<div class='container'>

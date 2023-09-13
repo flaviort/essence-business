@@ -17,11 +17,12 @@
 	// link
 	$about = 'quem-somos';
 	$team = 'especialistas';
-	$mission = 'valores';
+	$mission = 'missao-visao-valores';
 	$importation = 'importacao';
 	$exportation = 'exportacao';
 	$transports = 'transportes-e-cargas';
 	$courses = 'cursos-e-treinamentos';
+	$fuel = 'combustiveis';
 	$logistics = 'comercializacao-e-logistica';
 	$social = 'projetos-sociais';
 	$contact = 'contato';

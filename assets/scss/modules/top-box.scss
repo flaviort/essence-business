@@ -119,7 +119,7 @@
 
         .featured {
             display: inline-block;
-            margin: 5vw 0;
+            margin: 5vw 0 8vw 0;
 
             @media #{$mq-md-min} {
                 margin: 1vw 0 2vw 0;

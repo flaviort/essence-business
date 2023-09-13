@@ -64,6 +64,11 @@ form {
 
                 &.select {
                     cursor: pointer;
+
+                    option {
+                        background-color: $white;
+                        color: $blue;
+                    }
                 }
 
                 &.textarea {

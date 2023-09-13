@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     pointer-events: none;
     color: $white;
 
@@ -22,27 +22,21 @@
         div {
             width: 100%;
             height: 0;
-            background-color: darken($blue, 20);
+            background-color: $blue;
         }
     }
 
     .container,
     .row,
     .col-12 {
-        height: 100%;
+        height: 100vh;
     }
 
     .col-12 {
-        overflow-y: scroll;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
-
         .close-fs {
-            float: right;
+            position: absolute;
+            top: 0;
+            right: 0;
             margin-top: 2rem;
             margin-right: 1.1rem;
             display: flex;
@@ -65,65 +59,138 @@
             }
         }
 
-        .menu {
-            padding-top: 3rem;
-            padding-left: 1rem;
-            padding-bottom: 3rem;
-            font-weight: $bold;
+        .scroll-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-y: scroll;
+            padding-bottom: 9vh;
+            padding-top: 9vh;
 
-            > li {
-                padding: .75rem 0;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .menu {
+                margin-top: auto;
+
+                > li {
+                    opacity: 0;
+                    padding: 1vh 0;
+                    width: fit-content;
+
+                    @media #{$mq-md-min} {
+                        padding: 1vw 0;
+                    }
+
+                    > a,
+                    > p {
+                        font-size: 7vw;
+                        transition: .3s ease-in-out;
+                        line-height: 1.1;
+
+                        @media #{$mq-md-min} {
+                            font-size: 4vw;
+                            line-height: 1;
+                        }
+
+                        &:hover {
+                            color: $black;
+                        }
+                    }
+
+                    &.has-sub {
+                        position: relative;
+
+                        &:hover {
+                            p,
+                            svg {
+                                color: $black;
+                            }
+                        }
+
+                        p {
+                            display: inline-block;
+                            vertical-align: middle;
+                            margin-right: .425rem;
+                            cursor: pointer;
+
+                            @media #{$mq-sm-min} {
+                                margin-right: .75rem;
+                            }
+                        }
+
+                        svg {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: .75rem;
+                            height: .75rem;
+                            transition: .3s;
+                            cursor: pointer;
+                            transform: translateY(.15rem);
+
+                            @media #{$mq-sm-min} {
+                                width: 1rem;
+                                height: 1rem;
+                                transform: translateY(.25rem);
+                            }
+
+                            &.active {
+                                transform: rotate(180deg);
+                            }
+                        }
+
+                        .sub {
+                            display: none;
+                            font-weight: $regular;
+                            padding-bottom: .5rem;
+
+                            li {
+                                padding-top: .5rem;
+
+                                a {
+                                    font-size: 5vw;
+                                    transition: .3s ease-in-out;
+                                    line-height: 1;
+                                    transition: .3s ease-in-out;
+
+                                    @media #{$mq-md-min} {
+                                        font-size: 2vw;
+                                        line-height: 1.4;
+                                    }
+
+                                    &:hover {
+                                        color: $black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .social {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 1.5rem;
+                margin-top: 6vh;
+                width: fit-content;
                 opacity: 0;
 
-                @media #{$mq-sm-min} {
-                    padding: 1rem 0;
-                }
+                a {
+                    display: flex;
+                    width: 1.375rem;
+                    height: 1.375rem;
+                    transition: .3s ease-in-out;
 
-                @media #{$mq-sm-max} {
-                    font-size: 80%;
-                }
-
-                &.has-sub {
-                    position: relative;
-
-                    p {
-                        display: inline-block;
-                        vertical-align: middle;
-                        margin-right: .75rem;
-
-                        @media #{$mq-sm-min} {
-                            margin-right: 1rem;
-                        }
+                    &:hover {
+                        color: $black;
                     }
 
                     svg {
-                        display: inline-block;
-                        vertical-align: middle;
-                        width: 1rem;
-                        height: 1rem;
-                        transition: .3s;
-
-                        @media #{$mq-sm-min} {
-                            width: 2rem;
-                            height: 2rem;
-                            transform: translateY(.25rem);
-                        }
-
-                        &.active {
-                            transform: rotate(180deg);
-                        }
-                    }
-
-                    .sub {
-                        display: none;
-                        font-size: 80%;
-                        font-weight: $regular;
-                        padding-top: .75rem;
-                        padding-bottom: 1rem;
-
-                        li {
-                            padding-top: 1rem;
-                        }
+                        width: 100%;
+                        height: 100%;
                     }
                 }
             }

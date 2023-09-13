@@ -198,6 +198,25 @@
 
 		</div>
 
+		<div class='slide slide-05'>
+
+			<a href='<?php echo($fuel); ?>' class='image'>
+				<img data-src='assets/img/services-05.jpg' alt='Combustíveis' class='lazy cover' />
+			</a>
+
+			<h3 class='text-big'>
+				Combustíveis
+				<span></span>
+			</h3>
+
+			<a href='<?php echo($fuel); ?>' class='blue-button magnet'>
+				<span>
+					Conheça
+				</span>
+			</a>
+
+		</div>
+
 	</div>
 </section>
 

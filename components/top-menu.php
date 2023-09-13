@@ -52,6 +52,13 @@
                                     </a>
                                 </li>
 
+                                <li>
+                                    <a href='<?php echo($fuel); ?>'>
+                                        <span>Combustíveis</span>
+                                        <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
+                                    </a>
+                                </li>
+
                             </ul>
 
                         </li>
@@ -79,7 +86,7 @@
 
                                 <li>
                                     <a href='<?php echo($mission); ?>'>
-                                        <span>Valores</span>
+                                        <span>Missão, Visão e Valores</span>
                                         <?php echo file_get_contents('assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>

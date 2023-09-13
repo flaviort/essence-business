@@ -149,9 +149,20 @@
                     .desc {
                         display: block;
                         margin-top: .75rem;
+                        margin-bottom: 1rem;
 
                         @media #{$mq-md-min} {
                             margin-top: 1rem;
+                            margin-bottom: 1.25rem;
+                        }
+                    }
+
+                    a {
+                        color: $white;
+                        font-weight: $bold;
+
+                        &:after {
+                            background-color: $blue-light;
                         }
                     }
                 }

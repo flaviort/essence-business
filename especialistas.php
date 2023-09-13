@@ -91,7 +91,7 @@
 			<div class='col-lg-7 right'>
 
 				<p>
-					Acreditamos que a combinação de <strong>conhecimento especializado, experiência prática e paixão pelo agronegócio</strong> é o que nos diferencia. Estão comprometidos em ajudar nossos clientes a alcançarem seus objetivos, maximizarem sua produtividade e rentabilidade, ao mesmo tempo em que promovem a sustentabilidade e o desenvolvimento responsável.
+					Acreditamos que a combinação de <strong>conhecimento especializado, experiência prática e paixão pelo agronegócio</strong> é o que nos diferencia. Estamos comprometidos em ajudar nossos clientes a alcançarem seus objetivos, maximizarem sua produtividade e rentabilidade, ao mesmo tempo em que promovem a sustentabilidade e o desenvolvimento responsável.
 				</p>
 
 			</div>
@@ -153,6 +153,10 @@
 						Graduado em Ciências Contábeis com MBA em Gestão Empresarial e Certificado de Gestão de Pessoas. Vivência em multinacionais nos Estados Unidos, França, Suíça e Itália. Gerente de Controladoria com vasta experiência em implantação de sistemas e acompanhamento de resultados. Habilidade na elaboração de relatórios internacionais, Budgets, Forecast entre outros. Experiência em empresas como LANSING, AMAGGI, Limagrain, Fugro e outras.
 					</p>
 
+					<a href='https://www.linkedin.com/in/marcelo-vieira/' target='_blank' class='hover-underline-white'>
+						Linkedin
+					</a>
+
 				</div>
 
 				<div class='photo'>
@@ -177,6 +181,10 @@
 						Graduado em Administração de Empresas pela PUC/RS. Vasta experiência como broker no mercado de grãos e fertilizantes. Atuante como consultor de mercado dando entrevistas quinzenalmente para canais de agronegócio e atuando diretamente como broker junto a grandes clientes e produtores.
 					</p>
 
+					<a href='https://www.linkedin.com/in/pedro-diehl-730757148/' target='_blank' class='hover-underline-white'>
+						Linkedin
+					</a>
+
 				</div>
 
 				<div class='photo'>
@@ -200,6 +208,10 @@
 					<p class='desc'>
 						Graduando em Ciências Contábeis. Vasta experiência em implantação de sistemas operacionais como TOTVS, por exemplo. Consultor de processos administrativos e operacionais visualizando demonstração de resultados por atividade, produto, linha de negócio. Experiência em grandes empresas como Fugro Geotecnia, Agrinvest Commodities, Lansing Brasil entre outras.
 					</p>
+
+					<a href='https://www.linkedin.com/in/eavulczaki/' target='_blank' class='hover-underline-white'>
+						Linkedin
+					</a>
 
 				</div>
 

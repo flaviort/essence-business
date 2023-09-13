@@ -81,6 +81,10 @@ function initClickAndKeyFunctions() {
 		stagger: .1
 	}, '-=.5')
 
+	fsMenu.to('#fs-menu .social', {
+		autoAlpha: 1
+	}, '-=.3')
+
 	// open / close fs menu
 	$('.open-fs').click(function(){
 		if (isDoubleClicked($(this))) return

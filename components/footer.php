@@ -67,6 +67,12 @@
                                                                 </a>
                                                             </li>
 
+                                                            <li>
+                                                                <a href='<?php echo($fuel); ?>' class='hover-underline'>
+                                                                    Combustíveis
+                                                                </a>
+                                                            </li>
+
                                                         </ul>
                                                         
                                                     </div>
@@ -89,7 +95,7 @@
 
                                                             <li>
                                                                 <a href='<?php echo($mission); ?>' class='hover-underline'>
-                                                                    Valores
+                                                                    Missão, Visão e Valores
                                                                 </a>
                                                             </li>
 
