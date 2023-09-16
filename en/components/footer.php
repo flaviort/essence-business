@@ -9,20 +9,20 @@
                                             <div class='col-xl-2 left'>
 
                                                 <a href='<?php echo($pt); ?>' class='logo'>
-                                                    <?php echo file_get_contents('assets/svg/logo.svg'); ?>
+                                                    <?php echo file_get_contents('../assets/svg/logo-en.svg'); ?>
                                                 </a>
 
                                                 <ul class='social'>
 
                                                     <li>
                                                         <a href='<?php echo($instagram); ?>' target='_blank'>
-                                                            <?php echo file_get_contents('assets/svg/social/instagram.svg'); ?>
+                                                            <?php echo file_get_contents('../assets/svg/social/instagram.svg'); ?>
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href='<?php echo($facebook); ?>' target='_blank'>
-                                                            <?php echo file_get_contents('assets/svg/social/facebook.svg'); ?>
+                                                            <?php echo file_get_contents('../assets/svg/social/facebook.svg'); ?>
                                                         </a>
                                                     </li>
 
@@ -37,7 +37,7 @@
 
                                                         <h4>
                                                             <b>
-                                                                Serviços
+                                                                Services
                                                             </b>
                                                         </h4>
 
@@ -45,31 +45,31 @@
 
                                                             <li>
                                                                 <a href='<?php echo($importation); ?>' class='hover-underline'>
-                                                                    Importação
+                                                                    Importation
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($exportation); ?>' class='hover-underline'>
-                                                                    Exportação
+                                                                    Exportation
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($transports); ?>' class='hover-underline'>
-                                                                    Transportes e Cargas
+                                                                    Transport and Cargo
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($courses); ?>' class='hover-underline'>
-                                                                    Cursos e Treinamentos
+                                                                    Courses and Training
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($fuel); ?>' class='hover-underline'>
-                                                                    Combustíveis
+                                                                    Fuels
                                                                 </a>
                                                             </li>
 
@@ -81,7 +81,7 @@
 
                                                         <h4>
                                                             <b>
-                                                                Sobre Nós
+                                                                About Us
                                                             </b>
                                                         </h4>
 
@@ -89,19 +89,19 @@
 
                                                             <li>
                                                                 <a href='<?php echo($about); ?>' class='hover-underline'>
-                                                                    Quem Somos
+                                                                    Who We Are
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($mission); ?>' class='hover-underline'>
-                                                                    Missão, Visão e Valores
+                                                                    Mission, Vision and Values
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($team); ?>' class='hover-underline'>
-                                                                    Especialistas
+                                                                    Experts
                                                                 </a>
                                                             </li>
 
@@ -113,7 +113,7 @@
 
                                                         <h4>
                                                             <b>
-                                                                Mais
+                                                                More
                                                             </b>
                                                         </h4>
 
@@ -121,19 +121,19 @@
 
                                                             <li>
                                                                 <a href='<?php echo($social); ?>' class='hover-underline'>
-                                                                    Projetos Sociais
+                                                                    Social Projects
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($contact); ?>' class='hover-underline'>
-                                                                    Fale Conosco
+                                                                    Contact Us
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($work); ?>' class='hover-underline'>
-                                                                    Trabalhe Conosco
+                                                                    Work with Us
                                                                 </a>
                                                             </li>
 
@@ -145,12 +145,12 @@
 
                                                         <h4>
                                                             <b>
-                                                                Endereço
+                                                                Address
                                                             </b>
                                                         </h4>
 
                                                         <p>
-                                                            Avenida Anita Garibaldi, 850 <br />
+                                                            Av. Anita Garibaldi, 850 <br />
                                                             Cabral, Curitiba / PR
                                                         </p>
                                                         
@@ -166,11 +166,11 @@
 
                                         <p>
                                             Copyright © <?php echo date('Y'); ?>. <br />
-                                            Todos os direitos reservados.
+                                            All rights reserved.
                                         </p>
 
                                         <a href='https://paandadesign.com.br/' target='_blank' class='paanda'>
-                                            <?php echo file_get_contents('assets/svg/paanda.svg'); ?>
+                                            <?php echo file_get_contents('../assets/svg/paanda.svg'); ?>
                                         </a>
 
                                     </div>
@@ -193,8 +193,8 @@
             <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js'></script>
             <script src='https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js'></script>
             <script src='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js'></script>
-            <script src='assets/js/framework.js'></script>
-            <script src='assets/js/functions.js' defer></script>
+            <script src='../assets/js/framework.js'></script>
+            <script src='../assets/js/functions.js' defer></script>
         </footer>
 
 	</body>

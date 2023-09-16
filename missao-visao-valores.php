@@ -182,41 +182,41 @@
 
 							<div class='logos'>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/araguaia.png' alt='Araguaia' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/araguaia.png' alt='Araguaia' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/cocamar.png' alt='Cocamar' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/cocamar.png' alt='Cocamar' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/cooperfarms.png' alt='CooperFarms' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/cooperfarms.png' alt='CooperFarms' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/fecoagro.png' alt='FecoAgro' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/fecoagro.png' alt='FecoAgro' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/fertipar.png' alt='Fertipar' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/fertipar.png' alt='Fertipar' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/fertisolo.png' alt='Frtisolo' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/fertisolo.png' alt='Frtisolo' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/harbor.png' alt='Harbor' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/harbor.png' alt='Harbor' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/multitrans.png' alt='Multitrans' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/multitrans.png' alt='Multitrans' class='lazy'>
+								</div>
 
-								<a href='#' target='_blank'>
-									<img data-src='assets/img/clients/oceanfertil.png' alt='OceanFertil' class='lazy'>
-								</a>
+								<div class='logo'>
+									<img data-src='../assets/img/clients/oceanfertil.png' alt='OceanFertil' class='lazy'>
+								</div>
 
 							</div>
 

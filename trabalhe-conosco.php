@@ -64,7 +64,7 @@
 								<option value='Operacional'>Operacional</option>
 								<option value='Logística'>Logística</option>
 								<option value='Faturamento'>Faturamento</option>
-								<option value='Representates'>Representates</option>
+								<option value='Representantes'>Representantes</option>
 								<option value='Jurídico'>Jurídico</option>
 								<option value='Institucional'>Institucional</option>
 								<option value='Outros'>Outros</option>
