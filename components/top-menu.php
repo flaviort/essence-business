@@ -152,11 +152,11 @@
                     
                         <div class='language text-small'>
 
-                            <a href='<?php echo($pt); ?>' class='active'>
+                            <a href='<?php echo($pt); ?>' class='active no-barba'>
                                 PT
                             </a>
 
-                            <a href='<?php echo($en); ?>'>
+                            <a href='<?php echo($en); ?>' class='no-barba'>
                                 EN
                             </a>
 

@@ -350,11 +350,7 @@
 
                     .desc {
                         display: block;
-                        margin-top: 1.5rem;
-
-                        @media #{$mq-md-min} {
-                            margin-top: 1.5vw;
-                        }
+                        margin-top: .375rem;
                     }
                 }
 

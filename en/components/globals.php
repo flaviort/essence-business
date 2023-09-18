@@ -9,6 +9,7 @@
 
 	// global vars
 	$siteUrl = 'https://essencebusiness.com.br';
+	$siteUrlEn = 'https://essencebusiness.com.br/en';
 	$facebook = 'https://www.facebook.com/';
 	$instagram = 'https://www.instagram.com/';
 	$email = 'contato@essencebusiness.com.br';
@@ -27,7 +28,7 @@
 	$social = 'social-projects';
 	$contact = 'contact';
 	$work = 'work-with-us';
-	$pt = '../';
-	$en = './';
+	$pt = $siteUrl;
+	$en = $siteUrlEn;
 	
 ?>

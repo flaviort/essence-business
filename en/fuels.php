@@ -6,7 +6,7 @@
 <section id='internal-banner' class='top-banner'>
 
 	<div class='bg'>
-		<img data-src='../assets/img/services-05.jpg' alt='Fuels' class='lazy cover'>
+		<img data-src='../assets/img/services-05.jpg' alt='Fuels' class='lazy cover align-bottom'>
 	</div>
 
 	<div class='container container-big once-in'>

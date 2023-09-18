@@ -8,7 +8,8 @@
 	}
 
 	// global vars
-	$siteUrl = 'https://dev.senzdsn.com/essence-business';
+	$siteUrl = 'https://essencebusiness.com.br';
+	$siteUrlEn = 'https://essencebusiness.com.br/en';
 	$facebook = 'https://www.facebook.com/';
 	$instagram = 'https://www.instagram.com/';
 	$email = 'contato@essencebusiness.com.br';
@@ -27,7 +28,7 @@
 	$social = 'projetos-sociais';
 	$contact = 'contato';
 	$work = 'trabalhe-conosco';
-	$pt = './';
-	$en = 'en';
+	$pt = $siteUrl;
+	$en = $siteUrlEn;
 	
 ?>

@@ -59,7 +59,7 @@ form {
                 color: $white;
 
                 &::placeholder {
-                    color: $white;
+                    color: transparentize($white, .425);
                 }
 
                 &.select {
