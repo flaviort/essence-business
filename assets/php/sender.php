@@ -13,7 +13,7 @@
     require "passcode.php";
     $emailPassword = $passcode;
 
-    $emailAddress = "flavioczuk@gmail.com";
+    $emailAddress = "contato@essencebusiness.com.br";
     $emailName = "Essence Business";
 
     if(isset($_POST['send-contact'])) {

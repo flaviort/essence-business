@@ -10,8 +10,8 @@
 	// global vars
 	$siteUrl = 'https://essencebusiness.com.br';
 	$siteUrlEn = 'https://essencebusiness.com.br/en';
-	$facebook = 'https://www.facebook.com/';
-	$instagram = 'https://www.instagram.com/';
+	$facebook = 'https://www.facebook.com/essencebusiness';
+	$instagram = 'https://www.instagram.com/_essencebusiness';
 	$email = 'contato@essencebusiness.com.br';
 	$whatsapp = 'https://api.whatsapp.com/send?phone=5541985106276';
 

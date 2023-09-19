@@ -205,30 +205,6 @@ function initFancybox() {
 	})
 }
 
-// init the top menu
-function initTopMenu() {
-	
-	let currentScroll = 0
-	let isScrollingDown = true
-	var topMenu = document.getElementById('top-menu')
-
-	$('#top-menu').addClass('fixed')
-
-	window.addEventListener('scroll', function(){
-	
-		if ( window.pageYOffset > currentScroll ) {
-			isScrollingDown = true
-			topMenu.classList.remove('fixed')
-		} else {
-			isScrollingDown = false
-			topMenu.classList.add('fixed')
-		}
-		
-		currentScroll = window.pageYOffset
-		
-	})
-}
-
 // validate footer newsletter
 function validateForms() {
 	if ($('.form-validate').length) {
@@ -259,10 +235,8 @@ function validateForms() {
 
 					$.ajax({
 						type: 'POST',
-						// this is the localhost location of the php file (comment when going live)
-						url: location.origin + '/clients/essence-business/assets/php/sender.php',
-						// and this if the final location of the php file (comment the code above, uncomment this one and rename it accordingly)
-						// url: location.origin + '/_temp/assets/php/sender.php',
+						// url: location.origin + '/clients/essence-business/assets/php/sender.php',	// localhost
+						url: location.origin + '/assets/php/sender.php',								// final url
 						data: dataparam,
 						dataType: 'html',
                 		crossDomain: true,
@@ -784,7 +758,6 @@ function initScript() {
 	scrollTriggerAnimations()
 	initScrollSmoother()
 	initCopyright()
-	initTopMenu()
 	initMouseCursor()
 }
 
