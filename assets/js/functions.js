@@ -271,11 +271,13 @@ function updateMenu() {
 	$('#fs-menu .menu a').removeClass('active')
 
 	setTimeout(function(){
+		var currentUrl = window.location.href
+		$("link[rel='canonical']").attr('href', currentUrl)
 
 		if($('#main-content').hasClass('home')) {
 			$('#fs-menu .menu > li:first-child a').addClass('active')
 		}
-	}, 100)
+	}, 50)
 }
 
 // page transition in
