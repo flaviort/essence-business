@@ -106,7 +106,7 @@
 
 					<b>We have strong partners for the marketing</b> of formulated products, limestone, granulated gypsum and others.<br /><br />
 
-					<b>Essence Business professionals</b> regardless of commercialized grains (soy, corn, wheat, cotton, sorghum, sunflower and others) or fertilizers (urea, potassium chloride and others) <b>are fully attentive to the market and its marketing demands.</b><br /><br />
+					<b>Essence Business professionals</b> regardless of commercialized grains (soybeans, corn, wheat, cotton, sorghum, sunflower and others) or fertilizers (urea, potassium chloride and others) <b>are fully attentive to the market and its marketing demands.</b><br /><br />
 
 					<b>We always seek the best result for the producer and the end customer</b>, analyzing the cost per ton at origin, nationalized product or in the grain bag, spread included, logistics and port costs, etc.
 				</p>

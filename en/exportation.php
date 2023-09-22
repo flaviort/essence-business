@@ -49,7 +49,7 @@
 			<div class='col-md-6 col-md-pull-6 left'>
 
 				<p>
-					We are experts in exporting a wide variety of <b>essential grains to the global market</b>, and we are proud to supply certified grains such as soybeans, corn, cotton, sorghum and wheat, meeting customer demands across the world. world.
+					We are experts in exporting a wide variety of <b>essential grains to the global market</b>, and we are proud to supply certified grains such as soybeans, corn, cotton, sorghum and wheat, meeting customer demands across the world.
 				</p>
 
 				<p class='featured no-space'>
@@ -59,7 +59,7 @@
 				</p>
 
 				<p>
-					which allows us to serve the Chinese market with our <b>soy and corn exports</b>, in addition to other countries that also require due authorization from MAPA. To ensure quality and compliance, we acquire each batch of grains from highly qualified and reliable suppliers, strictly observing all ANEC and GAFTA requirements for commercialization in the export and/or domestic market, thus complying with all required regulations and standards.
+					which allows us to serve the Chinese market with our <b>soybeans and corn exports</b>, in addition to other countries that also require due authorization from MAPA. To ensure quality and compliance, we acquire each batch of grains from highly qualified and reliable suppliers, strictly observing all ANEC and GAFTA requirements for commercialization in the export and/or domestic market, thus complying with all required regulations and standards.
 				</p>
 
 			</div>
@@ -73,7 +73,7 @@
 	<div class='full-slider'>
 
 		<div class='photo'>
-			<img data-src='../assets/img/soy.jpg' alt='Soy' class='lazy cover'>
+			<img data-src='../assets/img/soy.jpg' alt='Soybeans' class='lazy cover'>
 		</div>
 
 		<div class='photo'>
@@ -102,17 +102,17 @@
 			<div class='col-lg-6 right'>
 
 				<div class='photo'>
-					<img data-src='../assets/img/soy.jpg' alt='Soy' class='lazy cover'>
+					<img data-src='../assets/img/soy.jpg' alt='Soybeans' class='lazy cover'>
 				</div>
 
 				<div class='block pin-01'>
 
 					<h2 class='text-bigger white'>
-						Soy
+						Soybeans
 					</h2>
 
 					<p>
-						Our soybeans, one of our main export products, are widely known for their versatility and nutritional value. <b>We export high quality soy</b>, which is widely used in the food, feed and oil industries, meeting the needs of our national and international customers in various segments.
+						Our soybeans, one of our main export products, are widely known for their versatility and nutritional value. <b>We export high quality soybeans</b>, which is widely used in the food, feed and oil industries, meeting the needs of our national and international customers in various segments.
 					</p>
 
 				</div>

@@ -41,6 +41,15 @@
 			<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'>
 			<link rel='stylesheet' href='../assets/css/framework.min.css' type='text/css'>
 			<link rel='stylesheet' href='../assets/css/main.css' type='text/css'>
+
+			<!-- Google tag (gtag.js) -->
+			<script async src='https://www.googletagmanager.com/gtag/js?id=G-5PLX4NHR80'></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'G-5PLX4NHR80');
+			</script>
 			
 		</head>
 

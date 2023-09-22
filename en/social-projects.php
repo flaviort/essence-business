@@ -19,7 +19,7 @@
 
 				<h1 class='text-bigger'>
 					<span>
-						ASE - Active and Solidarity Essence
+						EAS - Active and Solidarity Essence
 					</span>
 				</h1>
 

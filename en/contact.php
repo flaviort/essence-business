@@ -41,7 +41,7 @@
 			<div class='col-md-6 left'>
 
 				<p>
-					We appreciate your interest in our company and look forward to the opportunity to serve you. Your satisfaction is our priority, and we will do our best to ensure a quick and efficient response.<br /><br />
+					We appreciate your interest in our company and look forward to the opportunity to serve you. Your satisfaction is our priority, and we will do our best to ensure a quick and efficient answer for you.<br /><br />
 
 					<b>Contact us today and find out how we can meet your needs.</b>
 				</p>
@@ -121,7 +121,7 @@
 			<div class='col-lg-7 right'>
 
 				<p>
-					<b>ESSENCE BUSINESS HEADQUARTERS</b><br/ >
+					<b>ESSENCE BUSINESS HEADQUARTER</b><br/ >
 					Av. Anita Garibaldi, 850, Cabral, Curitiba / PR
 				</p>
 

@@ -150,7 +150,7 @@
 
 					As part of our team, you will have the chance to work on <b>innovative projects</b>, interact with experienced professionals and gain valuable knowledge in a constantly evolving sector. Additionally, we offer <b>professional development opportunities and training programs to help you reach your full potential.</b><br /><br />
 
-					If you are looking for a new opportunity and want to be part of a team committed to excellence and growth, we invite you to apply for one of our vacancies.<br /><br />
+					If you are looking for a new opportunity and want to be part of a team committed to excellence and growth, we invite you to apply for one of our job positions.<br /><br />
 
 					<b>We look forward to meeting you and discovering how your skills and talents can contribute to the success of our company.</b>
 				</p>

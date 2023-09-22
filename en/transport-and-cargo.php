@@ -61,7 +61,7 @@
 				</p>
 
 				<p>
-					<b>By having our own fleet of trucks, we will be able to minimize the influence of freight price increases, have more security and quickly adapt to the specific transportation needs of OUR BUSINESS, becoming more independent and resilient in the face of the challenges facing the sector. imposes.</b>
+					<b>By having our own fleet of trucks, we will be able to minimize the influence of freight price increases, have more security and quickly adapt to the specific transportation needs of OUR BUSINESS, becoming more independent and resilient in the face of the challenges facing the sector imposes.</b>
 				</p>
 
 			</div>
