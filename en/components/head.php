@@ -10,23 +10,23 @@
 			<meta name='format-detection' content='telephone=no'>
 			<link rel='shortcut icon' href='../favicon.png'>
 
-			<meta name='author' content='Essence Business - Importation and Exportation'>
+			<meta name='author' content='Essence Business - Import and Export'>
 
 			<meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests'>
 
-			<title>Essence Business - Importation and Exportation <?php echo htmlspecialchars($page);?></title>
+			<title>Essence Business - Import and Export <?php echo htmlspecialchars($page);?></title>
 
 			<!-- google -->
-			<meta name='description' content='Essence Business - Importation and Exportation - Efficient Solutions to boost agribusiness growth.'/>
+			<meta name='description' content='Essence Business - Import and Export - Efficient Solutions to boost agribusiness growth.'/>
 			<link rel='canonical' href='<?php echo($siteUrl); ?>' />
 				
 			<!-- facebook -->
 			<meta property='og:locale' content='en_US' />
 			<meta property='og:type' content='website' />
-			<meta property='og:title' content='Essence Business - Importation and Exportation' />
-			<meta property='og:description' content='Essence Business - Importation and Exportation - Efficient Solutions to boost agribusiness growth.' />
+			<meta property='og:title' content='Essence Business - Import and Export' />
+			<meta property='og:description' content='Essence Business - Import and Export - Efficient Solutions to boost agribusiness growth.' />
 			<meta property='og:url' content='<?php echo($siteUrl); ?>/' />
-			<meta property='og:site_name' content='Essence Business - Importation and Exportation' />
+			<meta property='og:site_name' content='Essence Business - Import and Export' />
 			<meta property='og:image' content='<?php echo($siteUrl); ?>/assets/img/og-image.jpg' />
 			<meta property='og:image:secure_url' content='<?php echo($siteUrl); ?>/assets/img/og-image.jpg' />
 			<meta property='og:image:width' content='1200' />
