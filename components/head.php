@@ -56,7 +56,6 @@
 		<body data-barba='wrapper'>
 
 			<header>
-				<?php include('components/top-menu.php');?>
 				<?php include('components/fs-menu.php');?>
 				<?php include('components/page-transition.php');?>
 				<?php include('components/floating-whatsapp.php');?>
@@ -66,3 +65,5 @@
 			<main id='main-content' data-barba='container' data-barba-namespace='<?php echo($currentPage); ?>' class='<?php echo($currentPage); ?>'>
 				<div id='smooth-content'>
 					<div class='main-wrap'>
+
+						<?php include('components/top-menu.php');?>

@@ -125,11 +125,11 @@
 		<div class='slide slide-01'>
 
 			<a href='<?php echo($importation); ?>' class='image'>
-				<img data-src='../assets/img/services-01.jpg' alt='Importation' class='lazy cover' />
+				<img data-src='../assets/img/services-01.jpg' alt='Import' class='lazy cover' />
 			</a>
 
 			<h3 class='text-big'>
-				Importation
+				Import
 				<span></span>
 			</h3>
 
@@ -144,11 +144,11 @@
 		<div class='slide slide-02'>
 
 			<a href='<?php echo($exportation); ?>' class='image'>
-				<img data-src='../assets/img/services-02.jpg' alt='Exportation' class='lazy cover' />
+				<img data-src='../assets/img/services-02.jpg' alt='Export' class='lazy cover' />
 			</a>
 
 			<h3 class='text-big'>
-				Exportation
+				Export
 				<span></span>
 			</h3>
 

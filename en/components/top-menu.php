@@ -26,14 +26,14 @@
 
                                 <li>
                                     <a href='<?php echo($importation); ?>'>
-                                        <span>Importation</span>
+                                        <span>Import</span>
                                         <?php echo file_get_contents('../assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href='<?php echo($exportation); ?>'>
-                                        <span>Exportation</span>
+                                        <span>Export</span>
                                         <?php echo file_get_contents('../assets/svg/ux/long-arrow-right.svg'); ?>
                                     </a>
                                 </li>

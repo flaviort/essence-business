@@ -690,11 +690,6 @@ function openingAnimation() {
 		initScript()
 	})
 
-	opening.to('#top-menu', {
-		y: '-110%',
-		duration: 0
-	})
-
 	opening.set('#home-banner .bg', {
 		autoAlpha: 0
 	})
@@ -733,14 +728,13 @@ function openingAnimation() {
 		duration: 1
 	}, '-=1')
 
-	opening.to('#top-menu', {
-		y: 0,
+	opening.from('#top-menu', {
+		autoAlpha: 0,
 		duration: 1
-	}, '-=2')
+	}, '-=.75')
 
 	opening.call(function(){
 		ScrollTrigger.refresh()
-		$('#top-menu').addClass('fixed')
 	})
 
 	opening.to('#top-menu', {

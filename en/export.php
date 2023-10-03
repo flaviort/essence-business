@@ -6,7 +6,7 @@
 <section id='internal-banner' class='top-banner'>
 
 	<div class='bg'>
-		<img data-src='../assets/img/services-02.jpg' alt='Exportation' class='lazy cover'>
+		<img data-src='../assets/img/services-02.jpg' alt='Export' class='lazy cover'>
 	</div>
 
 	<div class='container container-big once-in'>
@@ -19,7 +19,7 @@
 
 				<h1 class='text-bigger'>
 					<span>
-						Exportation
+						Export
 					</span>
 				</h1>
 

@@ -37,13 +37,13 @@
 
                                 <li>
                                     <a href='<?php echo($importation); ?>'>
-                                        Importation
+                                        Import
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href='<?php echo($exportation); ?>'>
-                                        Exportation
+                                        Export
                                     </a>
                                 </li>
 

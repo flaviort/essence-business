@@ -45,13 +45,13 @@
 
                                                             <li>
                                                                 <a href='<?php echo($importation); ?>' class='hover-underline'>
-                                                                    Importation
+                                                                    Import
                                                                 </a>
                                                             </li>
 
                                                             <li>
                                                                 <a href='<?php echo($exportation); ?>' class='hover-underline'>
-                                                                    Exportation
+                                                                    Export
                                                                 </a>
                                                             </li>
 

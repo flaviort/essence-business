@@ -19,8 +19,8 @@
 	$about = 'who-we-are';
 	$team = 'experts';
 	$mission = 'mission-vision-values';
-	$importation = 'importation';
-	$exportation = 'exportation';
+	$importation = 'import';
+	$exportation = 'export';
 	$transports = 'transport-and-cargo';
 	$courses = 'courses-and-training';
 	$fuel = 'fuels';
