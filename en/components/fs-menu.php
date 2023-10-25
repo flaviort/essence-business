@@ -103,7 +103,7 @@
 
                         <li>
                             <a href='<?php echo($logistics); ?>'>
-                                Commercialization and Logistics
+                                Trading and Logistics
                             </a>
                         </li>
 

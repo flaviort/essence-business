@@ -24,7 +24,7 @@
 	$transports = 'transport-and-cargo';
 	$courses = 'courses-and-training';
 	$fuel = 'fuels';
-	$logistics = 'commercialization-and-logistics';
+	$logistics = 'trading-and-logistics';
 	$social = 'social-projects';
 	$contact = 'contact';
 	$work = 'work-with-us';

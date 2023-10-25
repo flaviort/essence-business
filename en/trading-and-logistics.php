@@ -6,7 +6,7 @@
 <section id='internal-banner' class='top-banner'>
 
 	<div class='bg'>
-		<img data-src='../assets/img/silos-sunset.jpg' alt='Commercialization and Logistics' class='lazy cover'>
+		<img data-src='../assets/img/silos-sunset.jpg' alt='Trading and Logistics' class='lazy cover'>
 	</div>
 
 	<div class='container container-big once-in'>
@@ -15,7 +15,7 @@
 
 				<h1 class='text-bigger small'>
 					<span>
-						Commercialization and Logistics
+						Trading and Logistics
 					</span>
 				</h1>
 
@@ -87,7 +87,7 @@
 <section class='full-section'>
 
 	<div class='big-image'>
-		<img data-src='../assets/img/harvest.jpg' alt='Commercialization' class='lazy cover parallax-img position-right'>
+		<img data-src='../assets/img/harvest.jpg' alt='Trading' class='lazy cover parallax-img position-right'>
 	</div>
 
 	<div class='container'>
@@ -98,7 +98,7 @@
 			<div class='col-lg-6 right'>
 
 				<h2 class='text-bigger reveal-text white'>
-					Commercialization
+					Trading
 				</h2>
 
 				<p>
